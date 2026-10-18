@@ -1,0 +1,124 @@
+{
+  "placeholderImages": [
+    {
+      "id": "app_icon",
+      "description": "The main application icon.",
+      "imageUrl": "https://l.top4top.io/p_3899p00zm1.png",
+      "imageHint": "app icon"
+    },
+    {
+      "id": "app_logo",
+      "description": "The main application logo.",
+      "imageUrl": "https://k.top4top.io/p_36885vv362.png",
+      "imageHint": "app logo"
+    },
+    {
+      "id": "mourning_logo",
+      "description": "App logo for Mourning Day.",
+      "imageUrl": "https://c.top4top.io/p_3917mkdmh1.png",
+      "imageHint": "mourning logo"
+    },
+    {
+      "id": "iraqi_independence_logo",
+      "description": "App logo for Iraqi Independence Day 2026.",
+      "imageUrl": "https://d.top4top.io/p_3928xkymg1.png",
+      "imageHint": "iraqi logo"
+    },
+    {
+      "id": "ad_3",
+      "imageUrl": "https://k.top4top.io/p_3688n8ctc1.png",
+      "imageHint": "advertisement banner"
+    },
+    {
+      "id": "ad_5",
+      "imageUrl": "https://a.top4top.io/p_36889d96i3.jpeg",
+      "imageHint": "advertisement banner"
+    },
+    {
+      "id": "ad_7",
+      "imageUrl": "https://c.top4top.io/p_3688pkgai5.png",
+      "imageHint": "advertisement banner"
+    },
+    {
+      "id": "ad_17",
+      "imageUrl": "https://c.top4top.io/p_3688jvw4m6.png",
+      "imageHint": "advertisement banner"
+    },
+    {
+      "id": "ad_22",
+      "imageUrl": "https://g.top4top.io/p_36885ninz2.png",
+      "imageHint": "advertisement banner"
+    },
+    {
+      "id": "ad_23",
+      "imageUrl": "https://h.top4top.io/p_3688rqhtt3.png",
+      "imageHint": "advertisement banner"
+    },
+    {
+      "id": "ad_24",
+      "description": "Advertisement banner",
+      "imageUrl": "https://k.top4top.io/p_37004bmzh1.png",
+      "imageHint": "advertisement banner"
+    },
+    {
+      "id": "ad_25",
+      "description": "New advertisement banner",
+      "imageUrl": "https://j.top4top.io/p_375155wl61.png",
+      "imageHint": "advertisement banner"
+    },
+    {
+      "id": "ad_26",
+      "description": "New advertisement banner",
+      "imageUrl": "https://a.top4top.io/p_3753msm2b1.png",
+      "imageHint": "advertisement banner"
+    },
+    {
+      "id": "ad_27",
+      "description": "New advertisement banner",
+      "imageUrl": "https://f.top4top.io/p_37537ph001.png",
+      "imageHint": "advertisement banner"
+    },
+    {
+      "id": "ad_28",
+      "description": "New advertisement banner",
+      "imageUrl": "https://b.top4top.io/p_3758t6dng1.png",
+      "imageHint": "advertisement banner"
+    },
+    {
+      "id": "ad_29",
+      "description": "New advertisement banner",
+      "imageUrl": "https://b.top4top.io/p_37660iru21.png",
+      "imageHint": "advertisement banner"
+    },
+    {
+      "id": "ad_30",
+      "description": "New advertisement banner",
+      "imageUrl": "https://a.top4top.io/p_3778x2a7z1.png",
+      "imageHint": "advertisement banner"
+    },
+    {
+      "id": "ad_31",
+      "description": "New advertisement banner",
+      "imageUrl": "https://h.top4top.io/p_3792nw45d1.png",
+      "imageHint": "advertisement banner"
+    },
+    {
+      "id": "ad_32",
+      "description": "New advertisement banner",
+      "imageUrl": "https://b.top4top.io/p_38550zkac1.png",
+      "imageHint": "advertisement banner"
+    },
+    {
+      "id": "ad_33",
+      "description": "New advertisement banner",
+      "imageUrl": "https://e.top4top.io/p_389277jgw1.png",
+      "imageHint": "advertisement banner"
+    },
+    {
+      "id": "ad_34",
+      "description": "New advertisement banner",
+      "imageUrl": "https://h.top4top.io/p_3910cqwy91.png",
+      "imageHint": "advertisement banner"
+    }
+  ]
+}
