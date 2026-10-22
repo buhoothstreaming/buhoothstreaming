@@ -154,15 +154,8 @@ export default function ChannelsSidebar({ isOpen, onOpenChange, currentChannelId
 
   const getChannelSubtitle = (channel: any) => {
     if (selectedCategory === 'other' && channel.category === 'OTHER') {
-        const globalNum = parseInt(channel.number, 10);
-        // Sequential numbering for "Other" category.
-        // There are 74 channels before "Other" globally now.
-        const localNum = globalNum - 74;
-        return localNum.toString().padStart(4, '0');
-    }
-    if (selectedCategory === 'all') {
-        const allNonExclusive = channels.filter(c => c.category !== 'OUR_CHANNELS');
-        const index = allNonExclusive.findIndex(c => c.id === channel.id);
+        const otherChannels = channels.filter(c => c.category === 'OTHER');
+        const index = otherChannels.findIndex(c => c.id === channel.id);
         if (index !== -1) return (index + 1).toString().padStart(4, '0');
     }
     return channel.number;

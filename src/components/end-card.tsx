@@ -20,7 +20,7 @@ const COUNTDOWN_SECONDS = 5;
 export default function EndCard({ series, nextEpisode, onPlayNext, onExit }: EndCardProps) {
   const { t } = useLanguage();
   const [progress, setProgress] = useState(0);
-  const intervalRef = useRef<NodeJS.Timeout>();
+  const intervalRef = useRef<NodeJS.Timeout | undefined>(undefined);
 
   useEffect(() => {
     intervalRef.current = setInterval(() => {

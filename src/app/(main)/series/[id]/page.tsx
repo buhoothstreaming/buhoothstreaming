@@ -407,7 +407,7 @@ export default function SeriesInfoPage() {
                     {displayedEpisodes.map((episode, idx) => (
                         <Link 
                           key={`${episode.episodeNumber}-${idx}`} 
-                          href={isPremiered ? `/series/${s.id}/play?season=${selectedSeason.seasonNumber}&episode=${episode.episodeNumber}` : '#'}
+                          href={isPremiered && selectedSeason ? `/series/${s.id}/play?season=${selectedSeason.seasonNumber}&episode=${episode.episodeNumber}` : '#'}
                           className={cn(
                             "w-full flex items-center gap-4 p-2 rounded-md hover:bg-muted/50",
                             !isPremiered && "opacity-50 cursor-not-allowed"

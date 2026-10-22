@@ -142,7 +142,8 @@ export default function SeriesPage() {
         item.id === 'bobby-world' ||
         item.id === 'the-purge' ||
         item.id === 'kvgd69' ||
-        item.id === 'blades-magic'
+        item.id === 'blades-magic' ||
+        item.id === 'mystreet'
       );
     } else if (activeChip === vivaChip) {
       filteredSeries = shuffledSeries.filter(item => item.category === 'VIVA');
@@ -153,12 +154,12 @@ export default function SeriesPage() {
     } else if (activeChip === youthClassicsChip) {
         filteredSeries = shuffledSeries.filter(item => 
           item.category === 'Youth Classics' || 
-          ['mystery-lies', 'the-music-freaks', 'telegachers', 'love-island-minescope', 'bobby-world', 'the-purge', 'kvgd69', 'blades-magic'].includes(item.id)
+          ['mystery-lies', 'the-music-freaks', 'telegachers', 'love-island-minescope', 'bobby-world', 'the-purge', 'kvgd69', 'blades-magic', 'mystreet'].includes(item.id)
         );
     } else if (activeChip === animationCategoryChip) {
       filteredSeries = shuffledSeries.filter(item => item.category === 'رسوم متحركة');
     } else if (activeChip === fantasySeriesChip) {
-        filteredSeries = shuffledSeries.filter(item => item.category === 'Fantasy Series' || item.id === 'blades-magic');
+        filteredSeries = shuffledSeries.filter(item => item.category === 'Fantasy Series' || item.id === 'blades-magic' || item.id === 'mystreet' || item.genres.includes('Fantasy'));
     } else if (activeChip === comedySeriesChip) {
         filteredSeries = shuffledSeries.filter(item => item.category === 'Comedy Series' || item.id === 'abousi-al-jameel' || item.id === 'yomyat-saleh-yasser' || item.id === 'blades-magic' || item.genres.includes('Comedy'));
     } else if (activeChip === dramaSeriesChip) {

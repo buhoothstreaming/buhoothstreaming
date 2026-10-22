@@ -7,7 +7,7 @@ import { LanguageProvider } from '@/contexts/language-context';
 export const metadata: Metadata = {
   title: 'بحوث Streaming',
   description: 'المنصة رقم #1 في العالم',
-  genre: 'Entertainment'
+  category: 'Entertainment'
 };
 
 export default function RootLayout({

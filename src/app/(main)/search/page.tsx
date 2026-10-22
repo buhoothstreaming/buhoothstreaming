@@ -192,11 +192,11 @@ export default function SearchPage() {
               s.category === 'MineScope' || 
               s.category === 'VIVA' ||
               s.category === 'VirginsOne' ||
-              ['yomyat-daaboul-wa-alishko', 'yomyat-hamody-saif', 'kaido-moon-craft', 'sharara-show', 'deviantart-arabic', 'dont-mess-with-the-angel', 'love-island-minescope', 'mystery-lies', 'bobby-world', 'the-purge', 'kvgd69', 'blades-magic'].includes(s.id)
+              ['yomyat-daaboul-wa-alishko', 'yomyat-hamody-saif', 'kaido-moon-craft', 'sharara-show', 'deviantart-arabic', 'dont-mess-with-the-angel', 'love-island-minescope', 'mystery-lies', 'bobby-world', 'the-purge', 'kvgd69', 'blades-magic', 'mystreet'].includes(s.id)
             );
             allContent.push(...getFiltered(mineScopeSeries).map(s => ({...s, type: 'series' as const})));
         } else if (activeChip === joyt1Chip) {
-            const joyt1Series = allSeriesPool.filter(s => ['love-island-minescope', 'mystery-lies', 'bobby-world', 'the-purge', 'blades-magic'].includes(s.id));
+            const joyt1Series = allSeriesPool.filter(s => ['love-island-minescope', 'mystery-lies', 'bobby-world', 'the-purge', 'blades-magic', 'mystreet'].includes(s.id));
             allContent.push(...getFiltered(joyt1Series).map(s => ({...s, type: 'series' as const})));
             
             const joyt1ChannelIds = ['joyt1', 'joyt9', 'filmo', 'youth-classics-channel'];
@@ -293,7 +293,7 @@ export default function SearchPage() {
     const isAdult = activeChip === t('adultContent');
     
     const pepinOriginalResults = isAdult 
-      ? results.filter(r => r.category === 'Pepin Original')
+      ? results.filter((r): r is ((Movie & { type: 'movie' }) | (SeriesType & { type: 'series' })) => r.type !== 'channel' && r.category === 'Pepin Original')
       : [];
 
     const channelsResults = results.filter(r => r.type === 'channel');

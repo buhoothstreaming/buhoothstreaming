@@ -91,16 +91,8 @@ export default function ChannelsPage() {
 
   const getChannelSubtitle = (channel: any) => {
     if (activeCategoryId === 'other' && channel.category === 'OTHER') {
-        const globalNum = parseInt(channel.number, 10);
-        // Sequential numbering for "Other" category.
-        // Total channels before "Other" is now 74 (including 11 exclusive + 63 regular/new C10SAT).
-        // Wait, C10SAT goes up to 0074 now (Siyan Classic).
-        const localNum = globalNum - 74;
-        return localNum.toString().padStart(4, '0');
-    }
-    if (activeCategoryId === 'all') {
-        const allNonExclusive = channels.filter(c => c.category !== 'OUR_CHANNELS');
-        const index = allNonExclusive.findIndex(c => c.id === channel.id);
+        const otherChannels = channels.filter(c => c.category === 'OTHER');
+        const index = otherChannels.findIndex(c => c.id === channel.id);
         if (index !== -1) return (index + 1).toString().padStart(4, '0');
     }
     return channel.number;

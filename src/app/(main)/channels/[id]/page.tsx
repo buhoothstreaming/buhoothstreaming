@@ -57,6 +57,16 @@ export default function ChannelPlayerPage() {
       let finalUrl = rawUrl;
       if (rawUrl.includes('drive.google.com')) {
         finalUrl = rawUrl.replace('/view?usp=drive_link', '/preview');
+      } else if (rawUrl.includes('youtu.be/')) {
+        const id = rawUrl.split('youtu.be/')[1]?.split('?')[0];
+        if (id) {
+          finalUrl = `https://www.youtube.com/embed/${id}?autoplay=1`;
+        }
+      } else if (rawUrl.includes('youtube.com/watch?v=')) {
+        const id = rawUrl.split('watch?v=')[1]?.split('&')[0];
+        if (id) {
+          finalUrl = `https://www.youtube.com/embed/${id}?autoplay=1`;
+        }
       }
 
       setStreamUrl(finalUrl);
@@ -112,8 +122,7 @@ export default function ChannelPlayerPage() {
   // We strictly check for video file extensions to use the CustomVideoPlayer.
   const isVideo = streamUrl.toLowerCase().includes('.mp4') || 
                   streamUrl.toLowerCase().includes('.mov') || 
-                  streamUrl.toLowerCase().includes('.m3u8') ||
-                  streamUrl.includes('youtube.com/embed');
+                  streamUrl.toLowerCase().includes('.m3u8');
                   
   const isOurChannel = currentChannel.category === 'OUR_CHANNELS';
 
@@ -130,21 +139,11 @@ export default function ChannelPlayerPage() {
 
     // 2. If browsing context was Other, use Other localized numbering
     if (context === 'other' && channel.category === 'OTHER') {
-        const globalNum = parseInt(channel.number, 10);
-        // Sequential numbering for "Other" category.
-        // Starts globally after C10SAT renumbering.
-        // Total channels before "Other" is now 74.
-        const localNum = globalNum - 74;
-        return localNum.toString().padStart(4, '0');
+        const otherChannels = channels.filter(c => c.category === 'OTHER');
+        const index = otherChannels.findIndex(c => c.id === channel.id);
+        if (index !== -1) return (index + 1).toString().padStart(4, '0');
     }
 
-    // 3. If context is All or if no specific context matches, use All sequence numbering
-    const allNonExclusive = channels.filter(c => c.category !== 'OUR_CHANNELS');
-    const index = allNonExclusive.findIndex(c => c.id === channel.id);
-    if (index !== -1) {
-        return (index + 1).toString().padStart(4, '0');
-    }
-    
     return channel.number;
   };
 
