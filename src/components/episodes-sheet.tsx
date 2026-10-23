@@ -105,7 +105,7 @@ export default function EpisodesSheet({
                 </div>
                 <div className={cn("flex-1 text-sm", direction === 'rtl' ? 'text-right' : 'text-left')}>
                     <p className="font-semibold">{t('episode')} {episode.episodeNumber}</p>
-                    <p className="text-muted-foreground">{episode.description ? t(episode.description) : `${t('episode')} ${episode.episodeNumber}`}</p>
+                    <p className="text-muted-foreground">{episode.description ? t(episode.description) : (episode.title && t(episode.title) !== episode.title ? t(episode.title) : `${t('episode')} ${episode.episodeNumber}`)}</p>
                 </div>
               </button>
             ))}
