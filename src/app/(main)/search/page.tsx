@@ -61,15 +61,16 @@ export default function SearchPage() {
 
   const virginsOneChip = 'VirginsOne';
   const joyt1Chip = 'Joyt1';
+  const youthClassicsChip = t('youthClassics');
   const docStoryChip = t('docStory');
   const familyContentChip = t('familyContent');
   const adultContentChip = t('adultContent');
   const allChannelsChip = t('allChannels');
 
   const chips = useMemo(() => {
-    const base = [t('all'), allChannelsChip, t('allMovies'), t('allSeries'), virginsOneChip, joyt1Chip, docStoryChip, familyContentChip];
+    const base = [t('all'), allChannelsChip, t('allMovies'), t('allSeries'), virginsOneChip, joyt1Chip, youthClassicsChip, docStoryChip, familyContentChip];
     return hideAdult ? base : [...base, adultContentChip];
-  }, [t, hideAdult, allChannelsChip, docStoryChip, familyContentChip, virginsOneChip, joyt1Chip]);
+  }, [t, hideAdult, allChannelsChip, docStoryChip, familyContentChip, virginsOneChip, joyt1Chip, youthClassicsChip]);
   
   const BackIcon = direction === 'rtl' ? ArrowRight : ArrowLeft;
 
@@ -184,19 +185,19 @@ export default function SearchPage() {
               m.category === '4Entertainment Original' ||
               m.category === 'VIVA' ||
               m.category === 'VirginsOne' ||
-              ['the-final-revenge', 'creepypasta', 'obaydfox-imitating-middle-eastern-clips', 'minescope-red-wedding'].includes(m.id)
+              ['the-final-revenge', 'creepypasta', 'obaydfox-imitating-middle-eastern-clips', 'minescope-red-wedding', 'best-vs-mbc6'].includes(m.id)
             );
             allContent.push(...getFiltered(mineScopeMovies).map(m => ({...m, type: 'movie' as const})));
             const mineScopeSeries = allSeriesPool.filter(s => 
               s.category === '4Entertainment' || 
               s.category === 'MineScope' || 
-              s.category === 'VIVA' ||
+              s.category === 'VIVA' || 
               s.category === 'VirginsOne' ||
-              ['yomyat-daaboul-wa-alishko', 'yomyat-hamody-saif', 'kaido-moon-craft', 'sharara-show', 'deviantart-arabic', 'dont-mess-with-the-angel', 'love-island-minescope', 'mystery-lies', 'bobby-world', 'the-purge', 'kvgd69', 'blades-magic', 'mystreet'].includes(s.id)
+              ['yomyat-daaboul-wa-alishko', 'yomyat-hamody-saif', 'kaido-moon-craft', 'sharara-show', 'deviantart-arabic', 'dont-mess-with-the-angel', 'love-island-minescope', 'mystery-lies', 'bobby-world', 'the-purge', 'kvgd69', 'blades-magic', 'mystreet', 'yuzumi-rinelia', 'karusel-disney-9', 'speedpaint'].includes(s.id)
             );
             allContent.push(...getFiltered(mineScopeSeries).map(s => ({...s, type: 'series' as const})));
         } else if (activeChip === joyt1Chip) {
-            const joyt1Series = allSeriesPool.filter(s => ['love-island-minescope', 'mystery-lies', 'bobby-world', 'the-purge', 'blades-magic', 'mystreet'].includes(s.id));
+            const joyt1Series = allSeriesPool.filter(s => ['love-island-minescope', 'mystery-lies', 'bobby-world', 'the-purge', 'blades-magic', 'mystreet', 'yuzumi-rinelia', 'karusel-disney-9', 'speedpaint'].includes(s.id));
             allContent.push(...getFiltered(joyt1Series).map(s => ({...s, type: 'series' as const})));
             
             const joyt1ChannelIds = ['joyt1', 'joyt9', 'filmo', 'youth-classics-channel'];
@@ -205,6 +206,23 @@ export default function SearchPage() {
               .filter((c): c is Channel => !!c);
             
             allContent.push(...getFiltered(joyt1Channels).map(c => ({...c, type: 'channel' as const})));
+        } else if (activeChip === youthClassicsChip) {
+            const youthClassicsIds = [
+              'mystery-lies',
+              'love-island-minescope',
+              'the-music-freaks',
+              'telegachers',
+              'blades-magic',
+              'bobby-world',
+              'the-purge',
+              'kvgd69',
+              'mystreet',
+              'yuzumi-rinelia',
+              'karusel-disney-9',
+              'speedpaint'
+            ];
+            const youthClassicsSeries = allSeriesPool.filter(s => youthClassicsIds.includes(s.id));
+            allContent.push(...getFiltered(youthClassicsSeries).map(s => ({...s, type: 'series' as const})));
         } else if (activeChip === docStoryChip) {
             const docMovies = allMoviesPool.filter(m => m.category === 'DocStory');
             allContent.push(...getFiltered(docMovies).map(m => ({...m, type: 'movie' as const})));
@@ -247,7 +265,7 @@ export default function SearchPage() {
             allContent.push(...getFiltered(adultSeriesPool).map(s => ({...s, type: 'series' as const})));
         }
 
-        const randomizedChips = [virginsOneChip, joyt1Chip, docStoryChip, t('allMovies'), t('allSeries'), t('adultContent')];
+        const randomizedChips = [virginsOneChip, joyt1Chip, youthClassicsChip, docStoryChip, t('allMovies'), t('allSeries'), t('adultContent')];
         if (randomizedChips.includes(activeChip)) {
             if (activeChip === virginsOneChip) {
                 const channelsPart = allContent.filter(r => r.type === 'channel');
@@ -269,7 +287,7 @@ export default function SearchPage() {
     const searchTimer = setTimeout(processContent, 500);
     return () => clearTimeout(searchTimer);
 
-  }, [debouncedQuery, activeChip, t, hideAdult, loading, virginsOneChip, joyt1Chip, docStoryChip, familyContentChip, allChannelsChip]);
+  }, [debouncedQuery, activeChip, t, hideAdult, loading, virginsOneChip, joyt1Chip, youthClassicsChip, docStoryChip, familyContentChip, allChannelsChip]);
 
   const renderResults = () => {
     if (searching) {
@@ -300,9 +318,10 @@ export default function SearchPage() {
     const moviesResults = results.filter(r => r.type === 'movie');
     const seriesResults = results.filter(r => r.type === 'series');
 
-    const youthCinemaIds = ['the-final-revenge', 'creepypasta', 'obaydfox-imitating-middle-eastern-clips', 'minescope-red-wedding'];
+    const youthCinemaIds = ['the-final-revenge', 'creepypasta', 'obaydfox-imitating-middle-eastern-clips', 'minescope-red-wedding', 'best-vs-mbc6'];
     const is4Ent = activeChip === virginsOneChip;
     const isJoyt1 = activeChip === joyt1Chip;
+    const isYouthClassics = activeChip === youthClassicsChip;
     const isDoc = activeChip === docStoryChip;
     const isFamily = activeChip === familyContentChip;
     const isAll = activeChip === t('all');
@@ -326,7 +345,7 @@ export default function SearchPage() {
       : [];
     
     const moviesHeader = isDoc ? t('documentaryFilms') : (is4Ent ? t('originalMovies') : t('allMovies'));
-    const seriesHeader = (is4Ent || isDoc || isJoyt1) ? t('originalSeriesAndShows') : t('allSeries');
+    const seriesHeader = (is4Ent || isDoc || isJoyt1 || isYouthClassics) ? t('originalSeriesAndShows') : t('allSeries');
 
     const containerClass = isScrollable 
         ? "flex flex-nowrap overflow-x-auto gap-4 pb-4 no-scrollbar" 
@@ -504,18 +523,12 @@ export default function SearchPage() {
           </>
         ) : (
           <>
-            {is4Ent ? (
+            {is4Ent || isJoyt1 || isYouthClassics ? (
                <>
                 {channelsBlock}
                 {moviesBlock}
                 {seriesBlock}
                </>
-            ) : isJoyt1 ? (
-                <>
-                {channelsBlock}
-                {moviesBlock}
-                {seriesBlock}
-                </>
             ) : (
                 <>
                 {channelsBlock}
@@ -633,12 +646,18 @@ export default function SearchPage() {
                         key={chip} 
                         size="sm" 
                         variant={activeChip === chip ? "default": "secondary"} 
+                        style={activeChip === chip && chip === youthClassicsChip ? {
+                            background: 'linear-gradient(to right, #6912ff, #12d4ff, #ff1231, #4912ff)',
+                            color: 'white',
+                            border: 'none'
+                        } : {}}
                         className={cn(
                             "rounded-full whitespace-nowrap h-7 px-3 shrink-0 text-[13px] transition-all font-medium border-transparent",
                             activeChip === chip 
                                 ? (chip === joyt1Chip ? "bg-[#ff4529] text-white hover:bg-[#ff4529]/90" :
                                    chip === docStoryChip ? "bg-black text-white hover:bg-black/90" : 
                                    chip === familyContentChip ? "bg-[linear-gradient(to_right,#0477EE,#D40006,#FF8B00)] text-white hover:opacity-90" :
+                                   chip === youthClassicsChip ? "" :
                                    "bg-[#008cff] text-white hover:bg-[#008cff]/90")
                                 : "bg-[#182343] text-white hover:bg-[#25305a]",
                             activeChip === chip && chip === virginsOneChip && "bg-[#e30000] text-white hover:bg-[#e30000]/90",

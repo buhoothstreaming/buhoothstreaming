@@ -59,6 +59,7 @@ export default function MoviesPage() {
       { id: 'all', label: getLabel(t('all')) },
       { id: 'minescope', label: getLabel("MineScope Original Movies") },
       { id: 'four-ent', label: getLabel("4Entertainment Original Movies") },
+      { id: 'youth-cinema', label: getLabel(t('youthCinema')) },
       { id: 'docstory', label: getLabel("DocStory") },
     ];
 
@@ -130,6 +131,12 @@ export default function MoviesPage() {
         break;
       case 'four-ent':
         filteredMovies = shuffledMovies.filter(movie => movie.category === '4Entertainment Original');
+        break;
+      case 'youth-cinema':
+        filteredMovies = shuffledMovies.filter(movie => 
+          movie.category === 'سينما الشباب' || 
+          ['the-final-revenge', 'creepypasta', 'obaydfox-imitating-middle-eastern-clips', 'minescope-red-wedding', 'best-vs-mbc6'].includes(movie.id)
+        );
         break;
       case 'docstory':
         filteredMovies = shuffledMovies.filter(movie => movie.category === 'DocStory');
@@ -207,6 +214,7 @@ export default function MoviesPage() {
                 activeChip === chip.label && chip.id === 'adult-toggle' && "bg-gradient-to-r from-[#cf2929] to-[#e80000] text-white border-transparent",
                 activeChip === chip.label && chip.id === 'minescope' && "bg-[#ff0000] hover:bg-[#ff0000]/90 text-white",
                 activeChip === chip.label && chip.id === 'four-ent' && "bg-gradient-to-r from-[#000000] to-[#121212] text-white border-transparent",
+                activeChip === chip.label && chip.id === 'youth-cinema' && "bg-[#d90429] hover:bg-[#d90429]/90 text-white border-transparent",
                 activeChip === chip.label && chip.id === 'docstory' && "bg-black text-white hover:bg-black/90",
                 activeChip === chip.label && chip.id === 'pepin' && "bg-[linear-gradient(to_right,#001e4a,#000000,#630000,#e30000)] text-white border-transparent",
                 activeChip === chip.label && chip.id === 'family' && "bg-gradient-to-r from-[#ffaa00] to-[#ff0000] text-white border-transparent",

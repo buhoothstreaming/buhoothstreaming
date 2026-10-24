@@ -143,7 +143,10 @@ export default function SeriesPage() {
         item.id === 'the-purge' ||
         item.id === 'kvgd69' ||
         item.id === 'blades-magic' ||
-        item.id === 'mystreet'
+        item.id === 'mystreet' ||
+        item.id === 'yuzumi-rinelia' ||
+        item.id === 'karusel-disney-9' ||
+        item.id === 'speedpaint'
       );
     } else if (activeChip === vivaChip) {
       filteredSeries = shuffledSeries.filter(item => item.category === 'VIVA');
@@ -154,7 +157,7 @@ export default function SeriesPage() {
     } else if (activeChip === youthClassicsChip) {
         filteredSeries = shuffledSeries.filter(item => 
           item.category === 'Youth Classics' || 
-          ['mystery-lies', 'the-music-freaks', 'telegachers', 'love-island-minescope', 'bobby-world', 'the-purge', 'kvgd69', 'blades-magic', 'mystreet'].includes(item.id)
+          ['mystery-lies', 'the-music-freaks', 'telegachers', 'love-island-minescope', 'bobby-world', 'the-purge', 'kvgd69', 'blades-magic', 'mystreet', 'yuzumi-rinelia', 'karusel-disney-9', 'speedpaint'].includes(item.id)
         );
     } else if (activeChip === animationCategoryChip) {
       filteredSeries = shuffledSeries.filter(item => item.category === 'رسوم متحركة');
@@ -167,7 +170,7 @@ export default function SeriesPage() {
     } else if (activeChip === ramadanChip) {
       filteredSeries = shuffledSeries.filter(item => item.category === 'Ramadan' || item.id === 'tango' || item.id === 'cello' || item.id === 'julia' || item.id === 'abousi-al-jameel' || item.id === 'yomyat-fawazeer');
     } else if (activeChip === adultContentChip) {
-        filteredSeries = shuffledSeries.filter(item => item.ageRating >= 18 || item.id === 'kvgd69');
+        filteredSeries = shuffledSeries.filter(item => item.ageRating >= 18);
     } else if (activeChip === favoritesChip) {
         filteredSeries = shuffledSeries.filter(item => favorites.has(item.id));
     }
