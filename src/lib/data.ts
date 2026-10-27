@@ -2320,6 +2320,22 @@ export const movies: Movie[] = [
     streamUrl: 'https://e.top4top.io/m_3949zard51.mp4',
     audioTracks: [],
     subtitleTracks: [],
+  },
+  {
+    id: 'spider-man-across-the-spider-verse',
+    title: 'spiderManAcrossTheSpiderVerseTitle',
+    year: 2023,
+    posterUrl: 'https://j.top4top.io/p_395253tiq1.jpg',
+    ageRating: 12,
+    rating: 8.7,
+    genres: ['Action', 'Adventure', 'Animation', 'Superhero'],
+    description: 'spiderManAcrossTheSpiderVersePlot',
+    category: 'Marvel',
+    subCategories: ['أفلام أبطال خارقين', 'Superhero', 'Marvel'],
+    streamUrl: 'https://vipserver.liiivideo.com/embed-v38rzplxzrup.html',
+    trailerUrl: 'https://k.top4top.io/m_39522nbdh1.mp4',
+    audioTracks: ['English'],
+    subtitleTracks: [],
   }
 ];
 

@@ -1156,7 +1156,12 @@ export const translations: Record<Language, Record<string, string>> = {
         "myStreetTitle": "ماي ستريت",
         "myStreetPlot": "عندما تنتقل أفماو وأفضل صديقاتها كيتلين وكاواي-تشان إلى حي سكني جديد ونابض بالحياة، يشعرن بالحماس لاكتشاف أن أصدقاء المدرسة الثانوية القدامى قد انتقلوا للعيش في الجهة المقابلة من الشارع مباشرة. تمتلئ الأيام الأولى بالمسرحيات الحيّة، ونوبات مقهى الخادمات الفوضوية، ورومانسية الصيف المزدهرة. ولكن تحت السحر الظاهري لحيّهم الهادئ، يكمن ارتباط عميق وخفي بأساطير سحرية قديمة. يتحطم واقع المجموعة خلال رحلة إلى نزل جبلي منعزل، كاشفاً عن أسرار مظلمة حول سلالة آرون بصفته مستذئب الألتيما المحظور. مع إجبارهم على خوض معركة ضد جرعات التحكم بالعقول، والخيانات المأساوية، والسحر السماوي، يجب على مجموعة الأصدقاء المقربين التحول من شباب عاديين إلى أبطال. ومع تلاشي الحدود بين عالمهم الحديث وماضٍ أسطوري، يجب على أفماو وآرون الكفاح لتجاوز فقدان الذاكرة، والأرواح المحطمة، والكيانات المدمرة للكون للعودة إلى بعضهما مجدداً.",
         "supernatural": "خارق للطبيعة",
-        "2015-": "2015-"
+        "2015-": "2015-",
+        "spiderManAcrossTheSpiderVerseTitle": "سبايدرمان: عبر عالم العنكبوت",
+        "spiderManAcrossTheSpiderVersePlot": "ينطلق مايلز موراليس في مغامرة ملحمية عبر الأكوان المتعددة، حيث يلتقي بفريق من أبطال سبايدر المكلفين بحماية وجودها. وعندما يختلف الأبطال حول كيفية التعامل مع تهديد جديد، يجب على مايلز إعادة تعريف معنى أن يكون بطلاً لإنقاذ من يحبهم.",
+        "superheroMovies": "أفلام أبطال خارقين",
+        "Marvel": "Marvel",
+        "marvel": "Marvel"
     },
     en: {
         "laBreaTitle": "La Brea",
@@ -2314,6 +2319,12 @@ export const translations: Record<Language, Record<string, string>> = {
         "myStreetTitle": "MyStreet",
         "myStreetPlot": "When Aphmau and her best friends Katelyn and Kawaii~Chan move into a vibrant new suburban neighborhood, they are thrilled to find that their old high school friends have moved in right across the street. Initial days are filled with neighborhood plays, chaotic maid café shifts, and blossoming summer romance. But beneath the superficial charm of their cozy neighborhood lies a deep, hidden connection to an ancient magical lore. The group's reality shatters during a trip to a remote mountain lodge, uncovering dark secrets about Aaron's lineage as the forbidden Ultima werewolf. Forced into a battle against mind-control potions, tragic betrayals, and celestial magic, the tight-knit group of friends must transition from ordinary young adults into heroes. As lines blur between their modern world and a legendary past, Aphmau and Aaron must fight through amnesia, broken spirits, and universe-ending entities just to find their way back to each other.",
         "supernatural": "Supernatural",
-        "2015-": "2015-"
+        "2015-": "2015-",
+        "spiderManAcrossTheSpiderVerseTitle": "Spider-Man: Across the Spider-Verse",
+        "spiderManAcrossTheSpiderVersePlot": "Miles Morales catapults across the Multiverse, where he encounters a team of Spider-People charged with protecting its very existence. When the heroes clash on how to handle a new threat, Miles must redefine what it means to be a hero to save the people he loves most.",
+        "superheroMovies": "Superhero Movies",
+        "Marvel": "Marvel",
+        "marvel": "Marvel",
+        "originalSeriesAndShows": "Original Series & Shows"
     }
 };

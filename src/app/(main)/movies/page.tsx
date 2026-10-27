@@ -61,12 +61,8 @@ export default function MoviesPage() {
       { id: 'four-ent', label: getLabel("4Entertainment Original Movies") },
       { id: 'youth-cinema', label: getLabel(t('youthCinema')) },
       { id: 'docstory', label: getLabel("DocStory") },
+      { id: 'marvel', label: getLabel("Marvel") },
     ];
-
-    // Conditionally add Pepin Original (Adult Content)
-    if (!hideAdult) {
-      categories.push({ id: 'pepin', label: getLabel("Pepin Original") });
-    }
 
     // Add remaining public categories
     categories.push(
@@ -75,11 +71,17 @@ export default function MoviesPage() {
       { id: 'action', label: getLabel(t('actionMovies')) },
       { id: 'egyptian', label: getLabel(t('egyptianMovies')) },
       { id: 'russian', label: getLabel(t('russianMovies')) },
+      { id: 'superhero', label: getLabel(t('superheroMovies')) },
       { id: 'horror', label: getLabel(t('horrorMovies')) },
       { id: 'drama', label: getLabel(t('dramaMovies')) },
       { id: 'comedy', label: getLabel(t('comedyMovies')) },
       { id: 'fantasy', label: getLabel(t('fantasyMovies')) }
     );
+
+    // Conditionally add Pepin Original (Adult Content)
+    if (!hideAdult) {
+      categories.push({ id: 'pepin', label: getLabel("Pepin Original") });
+    }
 
     // Add general Adult Content toggle chip if not hidden
     if (!hideAdult) {
@@ -140,6 +142,24 @@ export default function MoviesPage() {
         break;
       case 'docstory':
         filteredMovies = shuffledMovies.filter(movie => movie.category === 'DocStory');
+        break;
+      case 'marvel':
+        filteredMovies = shuffledMovies.filter(movie => 
+          movie.category === 'Marvel' || 
+          movie.subCategories?.includes('Marvel') || 
+          movie.genres.includes('Marvel') || 
+          movie.id === 'spider-man-across-the-spider-verse'
+        );
+        break;
+      case 'superhero':
+        filteredMovies = shuffledMovies.filter(movie => 
+          movie.category === 'Superhero' || 
+          movie.category === 'أفلام أبطال خارقين' || 
+          movie.subCategories?.includes('أفلام أبطال خارقين') || 
+          movie.subCategories?.includes('Superhero') || 
+          movie.genres.includes('Superhero') || 
+          movie.id === 'spider-man-across-the-spider-verse'
+        );
         break;
       case 'pepin':
         filteredMovies = shuffledMovies.filter(movie => movie.category === 'Pepin Original');
@@ -216,12 +236,14 @@ export default function MoviesPage() {
                 activeChip === chip.label && chip.id === 'four-ent' && "bg-gradient-to-r from-[#000000] to-[#121212] text-white border-transparent",
                 activeChip === chip.label && chip.id === 'youth-cinema' && "bg-[#d90429] hover:bg-[#d90429]/90 text-white border-transparent",
                 activeChip === chip.label && chip.id === 'docstory' && "bg-black text-white hover:bg-black/90",
+                activeChip === chip.label && chip.id === 'marvel' && "bg-[#e21b22] hover:bg-[#c4151b] text-white border-transparent shadow-sm",
                 activeChip === chip.label && chip.id === 'pepin' && "bg-[linear-gradient(to_right,#001e4a,#000000,#630000,#e30000)] text-white border-transparent",
                 activeChip === chip.label && chip.id === 'family' && "bg-gradient-to-r from-[#ffaa00] to-[#ff0000] text-white border-transparent",
                 activeChip === chip.label && chip.id === 'romantic' && "bg-[#ff3da1] hover:bg-[#ff3da1]/90 text-white",
                 activeChip === chip.label && chip.id === 'action' && "bg-yellow-400 text-black hover:bg-yellow-400/90",
                 activeChip === chip.label && chip.id === 'egyptian' && "bg-gradient-to-r from-[#ff1100] via-[#ffffff] to-[#000000] text-[#a37000] border-transparent",
                 activeChip === chip.label && chip.id === 'russian' && "bg-gradient-to-r from-red-600 to-blue-600 text-white border-transparent",
+                activeChip === chip.label && chip.id === 'superhero' && "bg-gradient-to-r from-[#0055ff] to-[#e62429] text-white border-transparent",
                 activeChip === chip.label && chip.id === 'horror' && "bg-gradient-to-r from-[#780000] to-[#4d0000] text-white border-transparent",
                 activeChip === chip.label && chip.id === 'drama' && "bg-gradient-to-r from-[#9003fc] to-[#6200ad] text-white border-transparent",
                 activeChip === chip.label && chip.id === 'comedy' && "bg-[linear-gradient(to_right,#ffa200,#ff8400)] text-white border-transparent",
