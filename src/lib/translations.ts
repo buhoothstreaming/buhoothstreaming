@@ -1161,7 +1161,15 @@ export const translations: Record<Language, Record<string, string>> = {
         "spiderManAcrossTheSpiderVersePlot": "ينطلق مايلز موراليس في مغامرة ملحمية عبر الأكوان المتعددة، حيث يلتقي بفريق من أبطال سبايدر المكلفين بحماية وجودها. وعندما يختلف الأبطال حول كيفية التعامل مع تهديد جديد، يجب على مايلز إعادة تعريف معنى أن يكون بطلاً لإنقاذ من يحبهم.",
         "superheroMovies": "أفلام أبطال خارقين",
         "Marvel": "Marvel",
-        "marvel": "Marvel"
+        "marvel": "Marvel",
+        "kpopDemonHuntersTitle": "صائدو الشياطين كي بوب",
+        "kpopDemonHuntersPlot": "عندما تتسلل قوى شيطانية خارقة إلى العالم، تتحد نجمات فرقة كي بوب في مهمة سرية مزدوجة كمطربات وصيادات للشياطين لحماية العالم وإنقاذ معجبيهن.",
+        "blackpinkTheMovieTitle": "بلاك بينك: الفيلم",
+        "blackpinkTheMoviePlot": "يحتفل الفيلم الوثائقي الموسيقي بالذكرى الخامسة لفرقة الفتيات الكورية العالمية الشهيرة بلاك بينك، متضمناً لقطات حصرية وراء الكواليس وعروضاً موسيقية حية لا تُنسى.",
+        "alwaysLalisaTitle": "أولويز لاليسا",
+        "alwaysLalisaPlot": "نظرة وثائقية حميمة وشاملة على مسيرة النجمة العالمية لاليسا مانوبان، مسلطة الضوء على رحلتها الموسيقية، إبداعها الفني، وحضورها الأيقوني العالمي.",
+        "musicalMovies": "أفلام موسيقية",
+        "documentaryMovies": "أفلام وثائقية"
     },
     en: {
         "laBreaTitle": "La Brea",
@@ -2325,6 +2333,14 @@ export const translations: Record<Language, Record<string, string>> = {
         "superheroMovies": "Superhero Movies",
         "Marvel": "Marvel",
         "marvel": "Marvel",
-        "originalSeriesAndShows": "Original Series & Shows"
+        "originalSeriesAndShows": "Original Series & Shows",
+        "kpopDemonHuntersTitle": "KPop Demon Hunters",
+        "kpopDemonHuntersPlot": "When supernatural demonic forces infiltrate the world, the members of a superstar K-Pop girl group take on a secret double life as fierce demon hunters to protect humanity and save their fans.",
+        "blackpinkTheMovieTitle": "Blackpink: The Movie",
+        "blackpinkTheMoviePlot": "A celebrated musical documentary marking the fifth anniversary of the globally acclaimed girl group BLACKPINK, featuring exclusive behind-the-scenes interviews, concert footage, and unreleased memories.",
+        "alwaysLalisaTitle": "Always Lalisa",
+        "alwaysLalisaPlot": "An intimate and in-depth documentary exploring the stellar career and musical journey of superstar Lalisa Manobal, showcasing her artistry, creativity, and iconic presence.",
+        "musicalMovies": "Musical Movies",
+        "documentaryMovies": "Documentary Movies"
     }
 };

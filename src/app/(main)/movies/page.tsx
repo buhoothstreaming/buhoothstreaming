@@ -61,6 +61,7 @@ export default function MoviesPage() {
       { id: 'four-ent', label: getLabel("4Entertainment Original Movies") },
       { id: 'youth-cinema', label: getLabel(t('youthCinema')) },
       { id: 'docstory', label: getLabel("DocStory") },
+      { id: 'netflix', label: getLabel("Netflix") },
       { id: 'marvel', label: getLabel("Marvel") },
     ];
 
@@ -74,6 +75,8 @@ export default function MoviesPage() {
       { id: 'superhero', label: getLabel(t('superheroMovies')) },
       { id: 'horror', label: getLabel(t('horrorMovies')) },
       { id: 'drama', label: getLabel(t('dramaMovies')) },
+      { id: 'musical', label: getLabel(t('musicalMovies')) },
+      { id: 'documentary', label: getLabel(t('documentaryMovies')) },
       { id: 'comedy', label: getLabel(t('comedyMovies')) },
       { id: 'fantasy', label: getLabel(t('fantasyMovies')) }
     );
@@ -143,12 +146,42 @@ export default function MoviesPage() {
       case 'docstory':
         filteredMovies = shuffledMovies.filter(movie => movie.category === 'DocStory');
         break;
+      case 'netflix':
+        filteredMovies = shuffledMovies.filter(movie => 
+          movie.category === 'Netflix' || 
+          movie.subCategories?.includes('Netflix') || 
+          movie.genres.includes('Netflix') || 
+          movie.id === 'kpop-demon-hunters'
+        );
+        break;
       case 'marvel':
         filteredMovies = shuffledMovies.filter(movie => 
           movie.category === 'Marvel' || 
           movie.subCategories?.includes('Marvel') || 
           movie.genres.includes('Marvel') || 
           movie.id === 'spider-man-across-the-spider-verse'
+        );
+        break;
+      case 'musical':
+        filteredMovies = shuffledMovies.filter(movie => 
+          movie.category === 'Musical' || 
+          movie.category === 'أفلام موسيقية' || 
+          movie.subCategories?.includes('أفلام موسيقية') || 
+          movie.subCategories?.includes('Musical') || 
+          movie.genres.includes('Musical') || 
+          movie.genres.includes('Music') || 
+          ['kpop-demon-hunters', 'blackpink-the-movie', 'always-lalisa', 'ladybug-cat-noir-the-movie'].includes(movie.id)
+        );
+        break;
+      case 'documentary':
+        filteredMovies = shuffledMovies.filter(movie => 
+          movie.category === 'Documentary' || 
+          movie.category === 'أفلام وثائقية' || 
+          movie.category === 'DocStory' || 
+          movie.subCategories?.includes('أفلام وثائقية') || 
+          movie.subCategories?.includes('Documentary') || 
+          movie.genres.includes('Documentary') || 
+          ['blackpink-the-movie', 'always-lalisa', 'minescope-old-and-creative-memories'].includes(movie.id)
         );
         break;
       case 'superhero':
@@ -236,6 +269,7 @@ export default function MoviesPage() {
                 activeChip === chip.label && chip.id === 'four-ent' && "bg-gradient-to-r from-[#000000] to-[#121212] text-white border-transparent",
                 activeChip === chip.label && chip.id === 'youth-cinema' && "bg-[#d90429] hover:bg-[#d90429]/90 text-white border-transparent",
                 activeChip === chip.label && chip.id === 'docstory' && "bg-black text-white hover:bg-black/90",
+                activeChip === chip.label && chip.id === 'netflix' && "bg-[#E50914] text-white hover:bg-[#E50914]/90 border-transparent",
                 activeChip === chip.label && chip.id === 'marvel' && "bg-[#e21b22] hover:bg-[#c4151b] text-white border-transparent shadow-sm",
                 activeChip === chip.label && chip.id === 'pepin' && "bg-[linear-gradient(to_right,#001e4a,#000000,#630000,#e30000)] text-white border-transparent",
                 activeChip === chip.label && chip.id === 'family' && "bg-gradient-to-r from-[#ffaa00] to-[#ff0000] text-white border-transparent",
@@ -246,6 +280,8 @@ export default function MoviesPage() {
                 activeChip === chip.label && chip.id === 'superhero' && "bg-gradient-to-r from-[#0055ff] to-[#e62429] text-white border-transparent",
                 activeChip === chip.label && chip.id === 'horror' && "bg-gradient-to-r from-[#780000] to-[#4d0000] text-white border-transparent",
                 activeChip === chip.label && chip.id === 'drama' && "bg-gradient-to-r from-[#9003fc] to-[#6200ad] text-white border-transparent",
+                activeChip === chip.label && chip.id === 'musical' && "bg-gradient-to-r from-[#ba03fc] to-[#fc03ba] text-white border-transparent",
+                activeChip === chip.label && chip.id === 'documentary' && "bg-gradient-to-r from-[#313d39] to-[#313a3d] text-white border-transparent",
                 activeChip === chip.label && chip.id === 'comedy' && "bg-[linear-gradient(to_right,#ffa200,#ff8400)] text-white border-transparent",
                 activeChip === chip.label && chip.id === 'fantasy' && "bg-gradient-to-r from-[#007d73] to-[#00c99a] text-white border-transparent"
               )}
