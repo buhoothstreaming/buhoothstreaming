@@ -242,7 +242,7 @@ export default function SeriesInfoPage() {
             <div className="space-y-4">
                 <div className="grid md:grid-cols-3 gap-8">
                     <div className="md:col-span-1">
-                        <Image src={s.posterUrl} alt={t(s.title)} width={400} height={225} className="rounded-lg w-full object-cover" data-ai-hint="series poster"/>
+                        <Image src={s.posterUrl} alt={t(s.title)} width={400} height={225} className="rounded-lg w-full object-cover" referrerPolicy="no-referrer" data-ai-hint="series poster"/>
                     </div>
                     <div className="md:col-span-2 space-y-4">
                         <h1 className="text-4xl font-bold">{t(s.title)}</h1>
@@ -373,7 +373,7 @@ export default function SeriesInfoPage() {
                         <Link href={playHref} className="block">
                             <div className="flex items-center gap-4 p-2 rounded-md hover:bg-muted/50">
                                 <div className="relative w-32 aspect-video flex-shrink-0 overflow-hidden rounded-md">
-                                    <Image src={continueWatchingEpisodeData.thumbnailUrl || s.posterUrl} alt={t(continueWatchingEpisodeData.title)} fill className="object-cover" data-ai-hint="episode thumbnail" />
+                                    <Image src={continueWatchingEpisodeData.thumbnailUrl || s.posterUrl} alt={t(continueWatchingEpisodeData.title)} fill className="object-cover" referrerPolicy="no-referrer" data-ai-hint="episode thumbnail" />
                                     <AgeRatingBadge rating={continueWatchingEpisodeData.ageRating ?? s.ageRating} className={cn("absolute top-1 z-10", direction === 'rtl' ? 'left-1' : 'right-1')} />
                                 </div>
                                 <div className={cn("flex-1 text-sm", direction === 'rtl' ? 'text-right' : 'text-left')}>
@@ -413,7 +413,7 @@ export default function SeriesInfoPage() {
                             !isPremiered && "opacity-50 cursor-not-allowed"
                           )}>
                              <div className="relative w-1/3 aspect-video flex-shrink-0 overflow-hidden rounded-md">
-                                <Image src={episode.thumbnailUrl || s.posterUrl} alt={t(episode.title)} fill className="object-cover" data-ai-hint="episode thumbnail" />
+                                <Image src={episode.thumbnailUrl || s.posterUrl} alt={t(episode.title)} fill className="object-cover" referrerPolicy="no-referrer" data-ai-hint="episode thumbnail" />
                                 {episode.ageRating && <AgeRatingBadge rating={episode.ageRating} className={cn("absolute top-1 z-10", direction === 'rtl' ? 'left-1' : 'right-1')} />}
                             </div>
                             <div className={cn("flex-1 text-sm", direction === 'rtl' ? 'text-right' : 'text-left')}>

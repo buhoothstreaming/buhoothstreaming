@@ -56,7 +56,7 @@ export default function AdvertBanner() {
           {displayedImages.map((image) => (
             <CarouselItem key={image.id}>
               <div className="aspect-[4/1] relative overflow-hidden rounded-lg">
-                <Image src={image.imageUrl} alt={image.description || "Advertisement"} fill className="object-cover" data-ai-hint={image.imageHint} />
+                <Image src={image.imageUrl} alt={image.description || "Advertisement"} fill className="object-cover" referrerPolicy="no-referrer" data-ai-hint={image.imageHint} />
               </div>
             </CarouselItem>
           ))}

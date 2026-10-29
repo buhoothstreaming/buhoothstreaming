@@ -191,7 +191,7 @@ export default function ChannelPlayerPage() {
                   <p className="text-xs text-white/70">{getLocalizedChannelNumber(currentChannel)}</p>
               </div>
               <div className={cn("relative h-[30px] w-12 overflow-hidden rounded-[5px] bg-black/40 ring-1 ring-white/10")}>
-                <Image src={currentChannel.logo} alt={currentChannel.name} fill className="object-cover" />
+                <Image src={currentChannel.logo} alt={currentChannel.name} fill className="object-cover" referrerPolicy="no-referrer" />
               </div>
           </div>
         </div>

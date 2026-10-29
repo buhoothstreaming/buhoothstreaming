@@ -100,7 +100,7 @@ export default function EpisodesSheet({
                 currentSeasonNumber === selectedSeason.seasonNumber && currentEpisodeNumber === episode.episodeNumber ? "bg-muted" : "hover:bg-muted/50"
               )}>
                 <div className="relative w-16 aspect-video flex-shrink-0 overflow-hidden rounded-md">
-                    <Image src={episode.thumbnailUrl || series.posterUrl} alt={t(episode.title)} fill className="object-cover" data-ai-hint="episode thumbnail" />
+                    <Image src={episode.thumbnailUrl || series.posterUrl} alt={t(episode.title)} fill className="object-cover" referrerPolicy="no-referrer" data-ai-hint="episode thumbnail" />
                     <AgeRatingBadge rating={episode.ageRating ?? series.ageRating} className={cn("absolute top-1 z-10 px-1 py-0 text-[8px]", direction === 'rtl' ? 'left-1' : 'right-1')} />
                 </div>
                 <div className={cn("flex-1 text-sm", direction === 'rtl' ? 'text-right' : 'text-left')}>

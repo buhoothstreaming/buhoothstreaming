@@ -25,6 +25,12 @@
       "imageHint": "iraqi logo"
     },
     {
+      "id": "halloween_logo",
+      "description": "App logo for Halloween Day 2026.",
+      "imageUrl": "/assets/aistudio/Buhooth_Streaming_Halloween_2026_Logo_5a75f10f.png",
+      "imageHint": "halloween logo"
+    },
+    {
       "id": "ad_3",
       "imageUrl": "https://k.top4top.io/p_3688n8ctc1.png",
       "imageHint": "advertisement banner"

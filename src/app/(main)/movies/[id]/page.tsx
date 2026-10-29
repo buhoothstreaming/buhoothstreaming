@@ -165,7 +165,7 @@ export default function MovieInfoPage() {
         <div className="p-4 md:p-8 max-w-5xl mx-auto">
           <div className="grid md:grid-cols-3 gap-8">
             <div className="md:col-span-1">
-              <Image src={movie.posterUrl} alt={t(movie.title)} width={300} height={450} className="rounded-lg w-full object-cover" data-ai-hint="movie poster"/>
+              <Image src={movie.posterUrl} alt={t(movie.title)} width={300} height={450} className="rounded-lg w-full object-cover" referrerPolicy="no-referrer" data-ai-hint="movie poster"/>
             </div>
             <div className="md:col-span-2 space-y-4">
               <h1 className="text-4xl font-bold">{t(movie.title)}</h1>

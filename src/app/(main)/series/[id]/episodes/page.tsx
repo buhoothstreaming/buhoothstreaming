@@ -96,7 +96,7 @@ export default function SeriesEpisodesPage() {
                             className="group flex flex-col gap-3 p-3 rounded-xl bg-card/40 border border-white/5 hover:bg-white/5 transition-all shadow-sm"
                         >
                             <div className="relative aspect-video w-full overflow-hidden rounded-lg">
-                                <Image src={episode.thumbnailUrl || s.posterUrl} alt={t(episode.title || 'episode')} fill className="object-cover transition-transform duration-500 group-hover:scale-105" data-ai-hint="episode thumbnail" />
+                                <Image src={episode.thumbnailUrl || s.posterUrl} alt={t(episode.title || 'episode')} fill className="object-cover transition-transform duration-500 group-hover:scale-105" referrerPolicy="no-referrer" data-ai-hint="episode thumbnail" />
                                 <div className="absolute inset-0 bg-black/20 group-hover:bg-black/10 transition-colors" />
                                 {episode.ageRating && <AgeRatingBadge rating={episode.ageRating} className={cn("absolute top-2 z-10", direction === 'rtl' ? 'left-2' : 'right-2')} />}
                                 <div className="absolute bottom-2 ltr:right-2 rtl:left-2 bg-black/60 px-2 py-1 rounded text-[10px] font-bold text-white">

@@ -60,13 +60,14 @@ export default function EndCard({ series, nextEpisode, onPlayNext, onExit }: End
         alt={t(series.title)}
         fill
         className="object-cover opacity-30 blur-sm"
+        referrerPolicy="no-referrer"
         data-ai-hint="series poster"
       />
       <div className="absolute inset-0 flex flex-col items-center justify-center text-white p-8">
         <div className="w-full max-w-2xl text-center">
           <h2 className="text-xl font-semibold text-muted-foreground mb-2">{t('nextEpisode')}</h2>
           <div className="relative aspect-video w-full max-w-lg mx-auto rounded-lg overflow-hidden shadow-2xl mb-4">
-              <Image src={nextEpisode.thumbnailUrl || series.posterUrl} alt={t(nextEpisode.title)} fill className="object-cover" data-ai-hint="episode thumbnail" />
+              <Image src={nextEpisode.thumbnailUrl || series.posterUrl} alt={t(nextEpisode.title)} fill className="object-cover" referrerPolicy="no-referrer" data-ai-hint="episode thumbnail" />
               <div className="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent" />
               <div className="absolute bottom-4 left-4 right-4">
                   <div className="flex items-center gap-2">

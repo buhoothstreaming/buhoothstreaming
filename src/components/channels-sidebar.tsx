@@ -193,7 +193,7 @@ export default function ChannelsSidebar({ isOpen, onOpenChange, currentChannelId
                                         <category.icon className="h-5 w-5 text-primary" />
                                 ) : (
                                     <div className="relative w-full h-full p-1">
-                                        <Image src={category.icon as string} alt={category.name} fill className="object-contain" />
+                                        <Image src={category.icon as string} alt={category.name} fill className="object-contain" referrerPolicy="no-referrer" />
                                     </div>
                                 )}
                             </div>
@@ -230,7 +230,7 @@ export default function ChannelsSidebar({ isOpen, onOpenChange, currentChannelId
                                     dir={direction}
                                 >
                                     <div className="relative h-10 w-16 overflow-hidden rounded-md flex-shrink-0 bg-black/40 ring-1 ring-white/10 group-hover:ring-white/20">
-                                        <Image src={channel.logo} alt={channel.name} fill className="object-cover" />
+                                        <Image src={channel.logo} alt={channel.name} fill className="object-cover" referrerPolicy="no-referrer" />
                                     </div>
                                     <div className={cn(
                                       "flex-1",

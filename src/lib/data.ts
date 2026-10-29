@@ -2341,7 +2341,7 @@ export const movies: Movie[] = [
     id: 'kpop-demon-hunters',
     title: 'kpopDemonHuntersTitle',
     year: 2025,
-    posterUrl: 'https://k.top4top.io/p_3953v0dpm1.png',
+    posterUrl: '/images/kpop-demon-hunters.png',
     ageRating: 12,
     rating: 8.6,
     genres: ['Animation', 'Action', 'Musical', 'Fantasy'],

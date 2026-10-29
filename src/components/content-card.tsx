@@ -6,6 +6,8 @@ import Link from 'next/link';
 import AgeRatingBadge from './age-rating-badge';
 import { useLanguage } from '@/contexts/language-context';
 
+import { useState, useEffect } from 'react';
+
 type ContentCardProps = {
   id: string;
   title: string;
@@ -19,6 +21,11 @@ type ContentCardProps = {
 
 export default function ContentCard({ id, title, subtitle, imageUrl, type, ageRating, isFavorite, onFavoriteToggle }: ContentCardProps) {
   const { direction, t } = useLanguage();
+  const [imgSrc, setImgSrc] = useState(imageUrl);
+
+  useEffect(() => {
+    setImgSrc(imageUrl);
+  }, [imageUrl]);
 
   const href = type === 'series' ? `/series/${id}` : `/${type}s/${id}`;
   const aspectRatio = type === 'movie' ? 'aspect-[9/16]' : 'aspect-video';
@@ -27,7 +34,15 @@ export default function ContentCard({ id, title, subtitle, imageUrl, type, ageRa
     <Link href={href} className="block group">
       <div className="space-y-2">
         <div className={cn('relative overflow-hidden rounded-lg shadow-lg', aspectRatio)}>
-          <Image src={imageUrl} alt={title} fill className="object-cover" data-ai-hint="movie poster" />
+          <Image
+            src={imgSrc || '/images/placeholder-poster.png'}
+            alt={title}
+            fill
+            className="object-cover"
+            referrerPolicy="no-referrer"
+            onError={() => setImgSrc('/images/placeholder-poster.png')}
+            data-ai-hint="movie poster"
+          />
           
           <button
             onClick={(e) => {
