@@ -30,6 +30,8 @@ const nextConfig: NextConfig = {
         port: '',
         pathname: '/**',
       },
+      { protocol: 'https', hostname: '**.top4top.io', port: '', pathname: '/**' },
+      { protocol: 'https', hostname: 'top4top.io', port: '', pathname: '/**' },
       { protocol: 'https', hostname: 'k.top4top.io', port: '', pathname: '/**' },
       { protocol: 'https', hostname: 'l.top4top.io', port: '', pathname: '/**' },
       { protocol: 'https', hostname: 'a.top4top.io', port: '', pathname: '/**' },

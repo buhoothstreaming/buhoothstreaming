@@ -36,9 +36,18 @@ export default function MovieInfoPage() {
   const [isFavorite, setIsFavorite] = useState(false);
   const [isPremiered, setIsPremiere] = useState(true);
   const [timeLeft, setTimeLeft] = useState<{days: number, hours: number, minutes: number, seconds: number} | null>(null);
+  const [posterSrc, setPosterSrc] = useState(movie?.posterUrl || '/images/placeholder-poster.png');
+  const [posterError, setPosterError] = useState(false);
 
   const { t, direction, language } = useLanguage();
   const BackIcon = direction === 'rtl' ? ArrowRight : ArrowLeft;
+
+  useEffect(() => {
+    if (movie?.posterUrl) {
+      setPosterSrc(movie.posterUrl);
+      setPosterError(false);
+    }
+  }, [movie?.posterUrl]);
 
   useEffect(() => {
     const timer = setTimeout(() => setLoading(false), 1500);
@@ -165,7 +174,30 @@ export default function MovieInfoPage() {
         <div className="p-4 md:p-8 max-w-5xl mx-auto">
           <div className="grid md:grid-cols-3 gap-8">
             <div className="md:col-span-1">
-              <Image src={movie.posterUrl} alt={t(movie.title)} width={300} height={450} className="rounded-lg w-full object-cover" referrerPolicy="no-referrer" data-ai-hint="movie poster"/>
+              <div className="relative aspect-[2/3] w-full overflow-hidden rounded-xl shadow-2xl bg-card border border-white/10">
+                {posterError ? (
+                  <div className="absolute inset-0 bg-gradient-to-br from-slate-900 via-indigo-950 to-slate-900 flex flex-col items-center justify-center p-4 text-center">
+                    <Clapperboard className="w-12 h-12 text-primary/70 mb-3" />
+                    <span className="text-sm font-semibold text-white/90 line-clamp-2">{t(movie.title)}</span>
+                  </div>
+                ) : (
+                  <Image 
+                    src={posterSrc} 
+                    alt={t(movie.title)} 
+                    fill 
+                    className="object-cover" 
+                    referrerPolicy="no-referrer" 
+                    onError={() => {
+                      if (posterSrc !== '/images/placeholder-poster.png') {
+                        setPosterSrc('/images/placeholder-poster.png');
+                      } else {
+                        setPosterError(true);
+                      }
+                    }}
+                    data-ai-hint="movie poster"
+                  />
+                )}
+              </div>
             </div>
             <div className="md:col-span-2 space-y-4">
               <h1 className="text-4xl font-bold">{t(movie.title)}</h1>

@@ -1,6 +1,6 @@
 'use client';
 import Image from 'next/image';
-import { Heart } from 'lucide-react';
+import { Heart, Clapperboard } from 'lucide-react';
 import { cn } from '@/lib/utils';
 import Link from 'next/link';
 import AgeRatingBadge from './age-rating-badge';
@@ -22,9 +22,11 @@ type ContentCardProps = {
 export default function ContentCard({ id, title, subtitle, imageUrl, type, ageRating, isFavorite, onFavoriteToggle }: ContentCardProps) {
   const { direction, t } = useLanguage();
   const [imgSrc, setImgSrc] = useState(imageUrl);
+  const [hasError, setHasError] = useState(false);
 
   useEffect(() => {
     setImgSrc(imageUrl);
+    setHasError(false);
   }, [imageUrl]);
 
   const href = type === 'series' ? `/series/${id}` : `/${type}s/${id}`;
@@ -33,16 +35,29 @@ export default function ContentCard({ id, title, subtitle, imageUrl, type, ageRa
   return (
     <Link href={href} className="block group">
       <div className="space-y-2">
-        <div className={cn('relative overflow-hidden rounded-lg shadow-lg', aspectRatio)}>
-          <Image
-            src={imgSrc || '/images/placeholder-poster.png'}
-            alt={title}
-            fill
-            className="object-cover"
-            referrerPolicy="no-referrer"
-            onError={() => setImgSrc('/images/placeholder-poster.png')}
-            data-ai-hint="movie poster"
-          />
+        <div className={cn('relative overflow-hidden rounded-lg shadow-lg bg-card border border-white/5', aspectRatio)}>
+          {hasError ? (
+            <div className="absolute inset-0 bg-gradient-to-br from-slate-900 via-indigo-950 to-slate-900 flex flex-col items-center justify-center p-3 text-center">
+              <Clapperboard className="w-8 h-8 text-primary/70 mb-2" />
+              <span className="text-xs font-semibold text-white/90 line-clamp-2 px-1">{title}</span>
+            </div>
+          ) : (
+            <Image
+              src={imgSrc || '/images/placeholder-poster.png'}
+              alt={title}
+              fill
+              className="object-cover transition-transform duration-300 group-hover:scale-105"
+              referrerPolicy="no-referrer"
+              onError={() => {
+                if (imgSrc !== '/images/placeholder-poster.png') {
+                  setImgSrc('/images/placeholder-poster.png');
+                } else {
+                  setHasError(true);
+                }
+              }}
+              data-ai-hint="movie poster"
+            />
+          )}
           
           <button
             onClick={(e) => {
