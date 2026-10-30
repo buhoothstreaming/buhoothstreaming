@@ -10,6 +10,7 @@ import { useLanguage } from '@/contexts/language-context';
 import { ScrollArea } from './ui/scroll-area';
 import { Heart, LayoutGrid } from 'lucide-react';
 import { Skeleton } from '@/components/ui/skeleton';
+import { getAppLogo } from '@/lib/app-logo';
 
 interface ChannelsSidebarProps {
   isOpen: boolean;
@@ -38,7 +39,7 @@ export default function ChannelsSidebar({ isOpen, onOpenChange, currentChannelId
   const categories = useMemo(() => [
       { name: t('ourChannels'), id: 'our-channels', icon: LayoutGrid, type: 'icon' as const },
       { name: `01. ${t('favorites')}`, id: 'favorites', icon: Heart, type: 'icon' as const },
-      { name: `02. ${t('all')}`, id: 'all', icon: 'https://k.top4top.io/p_36885vv362.png', type: 'image' as const },
+      { name: `02. ${t('all')}`, id: 'all', icon: getAppLogo(), type: 'image' as const },
       { name: `03. ${t('other')}`, id: 'other', icon: 'https://a.top4top.io/p_37640qpys1.png', type: 'image' as const },
       { name: '04. C10SAT', id: 'c10sat', icon: 'https://f.top4top.io/p_3690gy8zy1.png', type: 'image' as const }
   ], [t]);
@@ -193,7 +194,7 @@ export default function ChannelsSidebar({ isOpen, onOpenChange, currentChannelId
                                         <category.icon className="h-5 w-5 text-primary" />
                                 ) : (
                                     <div className="relative w-full h-full p-1">
-                                        <Image src={category.icon as string} alt={category.name} fill className="object-contain" referrerPolicy="no-referrer" />
+                                        <Image src={category.icon as string} alt={category.name} fill className="object-contain" />
                                     </div>
                                 )}
                             </div>
@@ -230,7 +231,7 @@ export default function ChannelsSidebar({ isOpen, onOpenChange, currentChannelId
                                     dir={direction}
                                 >
                                     <div className="relative h-10 w-16 overflow-hidden rounded-md flex-shrink-0 bg-black/40 ring-1 ring-white/10 group-hover:ring-white/20">
-                                        <Image src={channel.logo} alt={channel.name} fill className="object-cover" referrerPolicy="no-referrer" />
+                                        <Image src={channel.logo} alt={channel.name} fill className="object-cover" />
                                     </div>
                                     <div className={cn(
                                       "flex-1",

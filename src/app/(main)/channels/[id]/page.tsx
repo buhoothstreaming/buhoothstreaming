@@ -22,12 +22,22 @@ export default function ChannelPlayerPage() {
   const overlayTimerRef = useRef<NodeJS.Timeout | null>(null);
 
   const [streamUrl, setStreamUrl] = useState('');
+  const [streamIndex, setStreamIndex] = useState<number>(0);
   
   const currentChannel = channels.find(c => c.id === params.id);
 
   useEffect(() => {
+    if (currentChannel && Array.isArray(currentChannel.streamUrl)) {
+      const randomIndex = Math.floor(Math.random() * currentChannel.streamUrl.length);
+      setStreamIndex(randomIndex);
+    } else {
+      setStreamIndex(0);
+    }
+  }, [currentChannel]);
+
+  useEffect(() => {
     if (currentChannel) {
-      let rawUrl;
+      let rawUrl: string = '';
       const now = new Date();
       
       // Special logic for Buhooth 1 launch date: 4 May 2026 at 11:00am
@@ -36,7 +46,7 @@ export default function ChannelPlayerPage() {
         if (now >= launchDate) {
           rawUrl = 'https://canva.link/h9m5kscggi5ztwn';
         } else {
-          rawUrl = Array.isArray(currentChannel.streamUrl) ? currentChannel.streamUrl[0] : currentChannel.streamUrl;
+          rawUrl = Array.isArray(currentChannel.streamUrl) ? (currentChannel.streamUrl[streamIndex] || currentChannel.streamUrl[0]) : currentChannel.streamUrl;
         }
       } else if (currentChannel.id === 'buhooth-showcase') {
         // Special logic for Buhooth Showcase launch date: 4 May 2026 at 11:15am
@@ -45,11 +55,10 @@ export default function ChannelPlayerPage() {
           // Updated post-launch URL
           rawUrl = 'https://canva.link/k028xok68icdgos';
         } else {
-          rawUrl = Array.isArray(currentChannel.streamUrl) ? currentChannel.streamUrl[0] : currentChannel.streamUrl;
+          rawUrl = Array.isArray(currentChannel.streamUrl) ? (currentChannel.streamUrl[streamIndex] || currentChannel.streamUrl[0]) : currentChannel.streamUrl;
         }
       } else if (Array.isArray(currentChannel.streamUrl)) {
-        const randomIndex = Math.floor(Math.random() * currentChannel.streamUrl.length);
-        rawUrl = currentChannel.streamUrl[randomIndex];
+        rawUrl = currentChannel.streamUrl[streamIndex] || currentChannel.streamUrl[0];
       } else {
         rawUrl = currentChannel.streamUrl;
       }
@@ -71,7 +80,7 @@ export default function ChannelPlayerPage() {
 
       setStreamUrl(finalUrl);
     }
-  }, [currentChannel]);
+  }, [currentChannel, streamIndex]);
 
   useEffect(() => {
     if (isSidebarOpen) {
@@ -182,6 +191,28 @@ export default function ChannelPlayerPage() {
               <BackIcon className="h-6 w-6" />
           </button>
           
+          {Array.isArray(currentChannel.streamUrl) && currentChannel.streamUrl.length > 1 && (
+            <div className="flex items-center gap-1.5 bg-black/60 backdrop-blur-md px-2.5 py-1 rounded-full border border-white/10 shadow-lg mx-2 pointer-events-auto">
+              {currentChannel.streamUrl.map((_, idx) => (
+                <button
+                  key={idx}
+                  onClick={(e) => {
+                    e.stopPropagation();
+                    setStreamIndex(idx);
+                  }}
+                  className={cn(
+                    "px-3 py-1 text-xs font-medium rounded-full transition-all",
+                    streamIndex === idx
+                      ? "bg-red-600 text-white shadow"
+                      : "text-white/70 hover:text-white hover:bg-white/10"
+                  )}
+                >
+                  {direction === 'rtl' ? `فيديو ${idx + 1}` : `Video ${idx + 1}`}
+                </button>
+              ))}
+            </div>
+          )}
+
           <div 
             className="flex items-center gap-4 text-white cursor-pointer"
             onClick={() => onSidebarChange(true)}
@@ -191,7 +222,7 @@ export default function ChannelPlayerPage() {
                   <p className="text-xs text-white/70">{getLocalizedChannelNumber(currentChannel)}</p>
               </div>
               <div className={cn("relative h-[30px] w-12 overflow-hidden rounded-[5px] bg-black/40 ring-1 ring-white/10")}>
-                <Image src={currentChannel.logo} alt={currentChannel.name} fill className="object-cover" referrerPolicy="no-referrer" />
+                <Image src={currentChannel.logo} alt={currentChannel.name} fill className="object-cover" />
               </div>
           </div>
         </div>

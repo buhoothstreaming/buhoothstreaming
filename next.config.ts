@@ -1,5 +1,8 @@
 import type {NextConfig} from 'next';
 
+// Disables TLS rejection for upstream media and image hosts (such as top4top.io) with expired SSL certs
+process.env.NODE_TLS_REJECT_UNAUTHORIZED = '0';
+
 const nextConfig: NextConfig = {
   output: 'standalone',
   distDir: process.env.NEXT_DIST_DIR || '.next',
