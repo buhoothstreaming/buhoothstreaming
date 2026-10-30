@@ -229,7 +229,7 @@ export default function SearchPage() {
             const docChannels = allChannelsPool.filter(c => c.name === 'DocStory');
             allContent.push(...getFiltered(docChannels).map(c => ({...c, type: 'channel' as const})));
         } else if (activeChip === familyContentChip) {
-            const familyChannelIds = ['kidztoonz-channel', 'story-tv', 'icefox-tv', 'mbc3', 'kartoon-channel'];
+            const familyChannelIds = ['kidztoonz-channel', 'story-tv', 'icefox-tv', 'mbc3'];
             const familyChannelsPool = familyChannelIds
                 .map((id, idx) => {
                     const ch = allChannelsPool.find(c => c.id === id);
