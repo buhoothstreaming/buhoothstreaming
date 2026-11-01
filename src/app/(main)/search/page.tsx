@@ -247,12 +247,12 @@ export default function SearchPage() {
                 'captain-underpants-the-first-epic-movie', 'the-boss-baby', 'the-boss-baby-family-business', 
                 'the-incredibles', 'incredibles-2', 'soul', 'meet-the-robinsons', 'lego-ninjago-movie', 
                 'trolls', 'inside-out', 'inside-out-2', 'spongebob-movie-1', 'spongebob-movie-2', 'spongebob-movie-3', 'spongebob-movie-4',
-                'turning-red'
+                'turning-red', 'a-minecraft-movie'
             ];
             const familySeriesIds = [
                 'lola-mila', 'miraculous', 'yomyat-daaboul-wa-alishko', 'poor-snake-troll',
                 'poor-snake-find-home', 'troll-pencil', 'leo-and-merae', 'troll-robber',
-                'ahmad-hero', 'd4'
+                'ahmad-hero', 'd4', 'dude-thats-my-ghost'
             ];
             const familyMovies = allMoviesPool.filter(m => familyMovieIds.includes(m.id));
             allContent.push(...getFiltered(familyMovies).map(m => ({...m, type: 'movie' as const})));

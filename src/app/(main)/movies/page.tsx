@@ -78,7 +78,8 @@ export default function MoviesPage() {
       { id: 'musical', label: getLabel(t('musicalMovies')) },
       { id: 'documentary', label: getLabel(t('documentaryMovies')) },
       { id: 'comedy', label: getLabel(t('comedyMovies')) },
-      { id: 'fantasy', label: getLabel(t('fantasyMovies')) }
+      { id: 'fantasy', label: getLabel(t('fantasyMovies')) },
+      { id: 'classic', label: getLabel(t('classicMovies')) }
     );
 
     // Conditionally add Pepin Original (Adult Content)
@@ -198,13 +199,24 @@ export default function MoviesPage() {
         filteredMovies = shuffledMovies.filter(movie => movie.category === 'Pepin Original');
         break;
       case 'family':
-        filteredMovies = shuffledMovies.filter(movie => movie.category === 'أفلام العائلة' || movie.id === 'al-hareefa' || movie.id === 'al-hareefa-2');
+        filteredMovies = shuffledMovies.filter(movie => 
+          movie.category === 'أفلام العائلة' || 
+          movie.category === 'أفلام عائلية' || 
+          movie.subCategories?.includes('أفلام العائلة') || 
+          movie.genres.includes('Family') || 
+          movie.id === 'al-hareefa' || 
+          movie.id === 'al-hareefa-2'
+        );
         break;
       case 'romantic':
         filteredMovies = shuffledMovies.filter(movie => movie.category === 'أفلام رومانسية' || movie.id === 'qessat-hob');
         break;
       case 'action':
-        filteredMovies = shuffledMovies.filter(movie => movie.category === 'أفلام الأكشن');
+        filteredMovies = shuffledMovies.filter(movie => 
+          movie.category === 'أفلام الأكشن' || 
+          movie.subCategories?.includes('أفلام الأكشن') || 
+          movie.genres.includes('Action')
+        );
         break;
       case 'egyptian':
         filteredMovies = shuffledMovies.filter(movie => 
@@ -226,6 +238,15 @@ export default function MoviesPage() {
         break;
       case 'fantasy':
         filteredMovies = shuffledMovies.filter(movie => movie.category === 'أفلام خيالية' || movie.genres.includes('Fantasy'));
+        break;
+      case 'classic':
+        filteredMovies = shuffledMovies.filter(movie => 
+          movie.category === 'أفلام كلاسيكية' || 
+          movie.subCategories?.includes('أفلام كلاسيكية') || 
+          movie.genres.includes('Classic') || 
+          movie.genres.includes('كلاسيكي') || 
+          movie.id === 'moody-and-troublemaker-friends'
+        );
         break;
       case 'adult-toggle':
         filteredMovies = shuffledMovies.filter(movie => movie.ageRating >= 18);
@@ -283,7 +304,8 @@ export default function MoviesPage() {
                 activeChip === chip.label && chip.id === 'musical' && "bg-gradient-to-r from-[#ba03fc] to-[#fc03ba] text-white border-transparent",
                 activeChip === chip.label && chip.id === 'documentary' && "bg-gradient-to-r from-[#313d39] to-[#313a3d] text-white border-transparent",
                 activeChip === chip.label && chip.id === 'comedy' && "bg-[linear-gradient(to_right,#ffa200,#ff8400)] text-white border-transparent",
-                activeChip === chip.label && chip.id === 'fantasy' && "bg-gradient-to-r from-[#007d73] to-[#00c99a] text-white border-transparent"
+                activeChip === chip.label && chip.id === 'fantasy' && "bg-gradient-to-r from-[#007d73] to-[#00c99a] text-white border-transparent",
+                activeChip === chip.label && chip.id === 'classic' && "bg-gradient-to-r from-[#4a4a4a] to-[#878787] text-white border-transparent"
               )}
               onClick={() => handleChipClick(chip.label)}
             >

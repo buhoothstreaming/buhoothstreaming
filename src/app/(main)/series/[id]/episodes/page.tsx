@@ -5,6 +5,7 @@ import { series } from "@/lib/data";
 import { ArrowLeft, ArrowRight } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
+import EpisodeThumbnail from "@/components/episode-thumbnail";
 import { notFound, useParams, useRouter, useSearchParams } from "next/navigation";
 import { useState, useEffect } from "react";
 import { Button } from "@/components/ui/button";
@@ -96,10 +97,17 @@ export default function SeriesEpisodesPage() {
                             className="group flex flex-col gap-3 p-3 rounded-xl bg-card/40 border border-white/5 hover:bg-white/5 transition-all shadow-sm"
                         >
                             <div className="relative aspect-video w-full overflow-hidden rounded-lg">
-                                <Image src={episode.thumbnailUrl || s.posterUrl} alt={t(episode.title || 'episode')} fill className="object-cover transition-transform duration-500 group-hover:scale-105" referrerPolicy="no-referrer" data-ai-hint="episode thumbnail" />
-                                <div className="absolute inset-0 bg-black/20 group-hover:bg-black/10 transition-colors" />
+                                <EpisodeThumbnail 
+                                    src={episode.thumbnailUrl} 
+                                    fallbackSrc={s.posterUrl}
+                                    streamUrl={episode.streamUrl}
+                                    alt={t(episode.title || 'episode')} 
+                                    episodeNumber={episode.episodeNumber}
+                                    className="transition-transform duration-500 group-hover:scale-105"
+                                />
+                                <div className="absolute inset-0 bg-black/20 group-hover:bg-black/10 transition-colors pointer-events-none" />
                                 {episode.ageRating && <AgeRatingBadge rating={episode.ageRating} className={cn("absolute top-2 z-10", direction === 'rtl' ? 'left-2' : 'right-2')} />}
-                                <div className="absolute bottom-2 ltr:right-2 rtl:left-2 bg-black/60 px-2 py-1 rounded text-[10px] font-bold text-white">
+                                <div className="absolute bottom-2 ltr:right-2 rtl:left-2 bg-black/60 px-2 py-1 rounded text-[10px] font-bold text-white z-10">
                                     {t('episode')} {episode.episodeNumber}
                                 </div>
                             </div>

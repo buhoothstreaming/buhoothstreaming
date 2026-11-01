@@ -1227,6 +1227,46 @@ export const channels: Channel[] = [
     streamUrl: 'https://www.canva.com/design/Ubg1d0--F0b5rU7kvY1snA/watch',
     category: 'OTHER',
   },
+  {
+    id: 'balwanaala',
+    name: 'BalwaNaala',
+    number: '0135',
+    logo: 'https://c.top4top.io/p_3956565z01.jpeg',
+    streamUrl: 'https://canva.link/2rt2tvl3icy7a5m',
+    category: 'OTHER',
+  },
+  {
+    id: 'balwanaala-2',
+    name: 'BalwaNaala 2',
+    number: '0136',
+    logo: 'https://d.top4top.io/p_3956yyqet2.jpeg',
+    streamUrl: 'https://canva.link/wo7xiljikv3dzjo',
+    category: 'OTHER',
+  },
+  {
+    id: 'balwanaala-humor',
+    name: 'BalwaNaala Humor',
+    number: '0137',
+    logo: 'https://e.top4top.io/p_39568ejc43.jpeg',
+    streamUrl: 'https://canva.link/qjd6z7wo5jk9u67',
+    category: 'OTHER',
+  },
+  {
+    id: 'balwanaala-kids',
+    name: 'BalwaNaala Kids',
+    number: '0138',
+    logo: 'https://f.top4top.io/p_3956174nq4.jpeg',
+    streamUrl: 'https://canva.link/dsrm7yj1tnreksb',
+    category: 'OTHER',
+  },
+  {
+    id: 'balwanaala-4k',
+    name: 'BalwaNaala 4K',
+    number: '0139',
+    logo: 'https://g.top4top.io/p_3956mwcuo5.jpeg',
+    streamUrl: 'https://canva.link/d0apnajecyy7i12',
+    category: 'OTHER',
+  },
 ];
 
 export const movies: Movie[] = [
@@ -2348,7 +2388,127 @@ export const movies: Movie[] = [
     streamUrl: 'https://www.youtube.com/embed/G141HpkUb4g?autoplay=1',
     audioTracks: ['English'],
     subtitleTracks: [],
-  }
+  },
+  {
+    id: 'john-wick-chapter-2',
+    title: 'johnWickChapter2Title',
+    year: 2017,
+    posterUrl: 'https://b.top4top.io/p_39567jjfc1.png',
+    ageRating: 18,
+    rating: 8.5,
+    genres: ['Action', 'Thriller', 'Crime'],
+    description: 'johnWickChapter2Plot',
+    category: 'أفلام الأكشن',
+    subCategories: ['أفلام الأكشن', 'Action', 'Adult Content'],
+    streamUrl: 'https://vipserver.liiivideo.com/embed-6r1jwqxn14wf.html',
+    audioTracks: ['English'],
+    subtitleTracks: [],
+  },
+  {
+    id: 'john-wick-chapter-3-parabellum',
+    title: 'johnWickChapter3ParabellumTitle',
+    year: 2019,
+    posterUrl: 'https://c.top4top.io/p_39564qv3x2.png',
+    ageRating: 18,
+    rating: 8.4,
+    genres: ['Action', 'Thriller', 'Crime'],
+    description: 'johnWickChapter3ParabellumPlot',
+    category: 'أفلام الأكشن',
+    subCategories: ['أفلام الأكشن', 'Action', 'Adult Content'],
+    streamUrl: 'https://hglink.to/e/f5t15rr0cn4c',
+    audioTracks: ['English'],
+    subtitleTracks: [],
+  },
+  {
+    id: 'john-wick-chapter-4',
+    title: 'johnWickChapter4Title',
+    year: 2023,
+    posterUrl: 'https://d.top4top.io/p_3956jio2d3.jpg',
+    ageRating: 18,
+    rating: 8.7,
+    genres: ['Action', 'Thriller', 'Crime'],
+    description: 'johnWickChapter4Plot',
+    category: 'أفلام الأكشن',
+    subCategories: ['أفلام الأكشن', 'Action', 'Adult Content'],
+    streamUrl: 'https://vipserver.liiivideo.com/embed-pneg0dg2e8tt.html',
+    audioTracks: ['English'],
+    subtitleTracks: [],
+  },
+  {
+    id: 'ballerina',
+    title: 'ballerinaTitle',
+    year: 2025,
+    posterUrl: 'https://e.top4top.io/p_3956rfa9s4.jpg',
+    ageRating: 18,
+    rating: 8.2,
+    genres: ['Action', 'Thriller'],
+    description: 'ballerinaPlot',
+    category: 'أفلام الأكشن',
+    subCategories: ['أفلام الأكشن', 'Action', 'Adult Content'],
+    streamUrl: 'https://vipserver.liiivideo.com/embed-vwcy424gmso0.html',
+    audioTracks: ['English'],
+    subtitleTracks: [],
+  },
+  {
+    id: 'a-minecraft-movie',
+    title: 'aMinecraftMovieTitle',
+    year: 2025,
+    posterUrl: 'https://a.top4top.io/p_3956ah9h71.jpg',
+    ageRating: 12,
+    rating: 8.0,
+    genres: ['Adventure', 'Action', 'Family', 'Comedy', 'Fantasy'],
+    description: 'aMinecraftMoviePlot',
+    category: 'أفلام العائلة',
+    subCategories: ['أفلام العائلة', 'Family'],
+    streamUrl: 'https://vipserver.liiivideo.com/embed-ibwkgldqvcw9.html',
+    audioTracks: ['English'],
+    subtitleTracks: [],
+  },
+  {
+    id: 'part-duke',
+    title: 'partDukeTitle',
+    year: 2026,
+    posterUrl: 'https://b.top4top.io/p_3956adwcj2.png',
+    ageRating: 18,
+    rating: 7.8,
+    genres: ['Romance', 'LGBTQ+', 'Gay', 'Comedy', 'Drama', 'Melodrama', 'Erotica'],
+    description: 'partDukePlot',
+    category: 'Pepin Original',
+    subCategories: ['Sex', 'Kiss', 'Nudity', 'Profanity'],
+    streamUrl: '',
+    audioTracks: ['Arabic'],
+    subtitleTracks: [],
+  },
+  {
+    id: 'moody-and-troublemaker-friends',
+    title: 'moodyAndTroublemakerFriendsTitle',
+    year: 1955,
+    posterUrl: 'https://h.top4top.io/p_395696qsa1.png',
+    ageRating: 7,
+    rating: 8.1,
+    genres: ['Classic', 'Comedy', 'Family', 'Short'],
+    description: 'moodyAndTroublemakerFriendsPlot',
+    category: 'أفلام كلاسيكية',
+    subCategories: ['أفلام كلاسيكية', 'Classic'],
+    streamUrl: 'https://www.youtube.com/embed/xNls50DBQQM?autoplay=1',
+    audioTracks: ['Arabic'],
+    subtitleTracks: [],
+  },
+  {
+    id: 'ali-shaker-cartoon-filmmaker',
+    title: 'aliShakerCartoonFilmmakerTitle',
+    year: 2023,
+    posterUrl: 'https://h.top4top.io/p_3956whhyw1.jpg',
+    ageRating: 12,
+    rating: 8.4,
+    genres: ['Documentary', 'Animation', 'Biography'],
+    description: 'aliShakerCartoonFilmmakerPlot',
+    category: 'MineScope Original',
+    subCategories: ['MineScope Original', 'Documentary'],
+    streamUrl: 'https://d.top4top.io/m_3956e1m7g1.mp4',
+    audioTracks: ['Arabic'],
+    subtitleTracks: [],
+  },
 ];
 
 export const series: Series[] = [
@@ -5553,6 +5713,733 @@ export const series: Series[] = [
           { episodeNumber: 20, title: 'Episode 20', streamUrl: 'https://www.youtube.com/embed/VRn3Nl4_wwU?autoplay=1', thumbnailUrl: 'https://img.youtube.com/vi/VRn3Nl4_wwU/0.jpg', ageRating: 12 },
           { episodeNumber: 21, title: 'Episode 21', streamUrl: 'https://www.youtube.com/embed/6bIo-Hrd0MU?autoplay=1', thumbnailUrl: 'https://img.youtube.com/vi/6bIo-Hrd0MU/0.jpg', ageRating: 12 },
           { episodeNumber: 22, title: 'Episode 22', streamUrl: 'https://www.youtube.com/embed/KE8aWfumozM?autoplay=1', thumbnailUrl: 'https://img.youtube.com/vi/KE8aWfumozM/0.jpg', ageRating: 12 }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "dude-thats-my-ghost",
+    "title": "dudeThatsMyGhostTitle",
+    "year": "2013",
+    "posterUrl": "https://f.top4top.io/p_39574tu9c1.png",
+    "ageRating": 7,
+    "rating": 8.2,
+    "genres": [
+      "Animation",
+      "Comedy",
+      "Family",
+      "Supernatural"
+    ],
+    "description": "dudeThatsMyGhostPlot",
+    "category": "رسوم متحركة",
+    "subCategories": [
+      "رسوم متحركة",
+      "Animation",
+      "Family"
+    ],
+    "audioTracks": [
+      "English"
+    ],
+    "subtitleTracks": [],
+    "seasons": [
+      {
+        "seasonNumber": 1,
+        "episodes": [
+          {
+            "episodeNumber": 1,
+            "title": "Episode 1",
+            "streamUrl": "https://www.youtube.com/embed/eDaXGFOGQAI?autoplay=1",
+            "thumbnailUrl": "https://img.youtube.com/vi/eDaXGFOGQAI/0.jpg",
+            "ageRating": 7
+          },
+          {
+            "episodeNumber": 2,
+            "title": "Episode 2",
+            "streamUrl": "https://www.youtube.com/embed/QajLbOfcBK0?autoplay=1",
+            "thumbnailUrl": "https://img.youtube.com/vi/QajLbOfcBK0/0.jpg",
+            "ageRating": 7
+          },
+          {
+            "episodeNumber": 3,
+            "title": "Episode 3",
+            "streamUrl": "https://www.youtube.com/embed/3zCGgALiENk?autoplay=1",
+            "thumbnailUrl": "https://img.youtube.com/vi/3zCGgALiENk/0.jpg",
+            "ageRating": 7
+          },
+          {
+            "episodeNumber": 4,
+            "title": "Episode 4",
+            "streamUrl": "https://www.youtube.com/embed/RrMFbeJ97v0?autoplay=1",
+            "thumbnailUrl": "https://img.youtube.com/vi/RrMFbeJ97v0/0.jpg",
+            "ageRating": 7
+          },
+          {
+            "episodeNumber": 5,
+            "title": "Episode 5",
+            "streamUrl": "https://www.youtube.com/embed/OZeMVqeSHGI?autoplay=1",
+            "thumbnailUrl": "https://img.youtube.com/vi/OZeMVqeSHGI/0.jpg",
+            "ageRating": 7
+          },
+          {
+            "episodeNumber": 6,
+            "title": "Episode 6",
+            "streamUrl": "https://www.youtube.com/embed/M_2MKK3tieQ?autoplay=1",
+            "thumbnailUrl": "https://img.youtube.com/vi/M_2MKK3tieQ/0.jpg",
+            "ageRating": 7
+          },
+          {
+            "episodeNumber": 7,
+            "title": "Episode 7",
+            "streamUrl": "https://www.youtube.com/embed/GtG05I92r_4?autoplay=1",
+            "thumbnailUrl": "https://img.youtube.com/vi/GtG05I92r_4/0.jpg",
+            "ageRating": 7
+          },
+          {
+            "episodeNumber": 8,
+            "title": "Episode 8",
+            "streamUrl": "https://www.youtube.com/embed/ChZIUO0DId0?autoplay=1",
+            "thumbnailUrl": "https://img.youtube.com/vi/ChZIUO0DId0/0.jpg",
+            "ageRating": 7
+          },
+          {
+            "episodeNumber": 9,
+            "title": "Episode 9",
+            "streamUrl": "https://www.youtube.com/embed/HqyUHbmE8jE?autoplay=1",
+            "thumbnailUrl": "https://img.youtube.com/vi/HqyUHbmE8jE/0.jpg",
+            "ageRating": 7
+          },
+          {
+            "episodeNumber": 10,
+            "title": "Episode 10",
+            "streamUrl": "https://www.youtube.com/embed/CAh42dIpBVE?autoplay=1",
+            "thumbnailUrl": "https://img.youtube.com/vi/CAh42dIpBVE/0.jpg",
+            "ageRating": 7
+          },
+          {
+            "episodeNumber": 11,
+            "title": "Episode 11",
+            "streamUrl": "https://www.youtube.com/embed/XFtPC3W-Szc?autoplay=1",
+            "thumbnailUrl": "https://img.youtube.com/vi/XFtPC3W-Szc/0.jpg",
+            "ageRating": 7
+          },
+          {
+            "episodeNumber": 12,
+            "title": "Episode 12",
+            "streamUrl": "https://www.youtube.com/embed/SiTNRWk-qrE?autoplay=1",
+            "thumbnailUrl": "https://img.youtube.com/vi/SiTNRWk-qrE/0.jpg",
+            "ageRating": 7
+          },
+          {
+            "episodeNumber": 13,
+            "title": "Episode 13",
+            "streamUrl": "https://www.youtube.com/embed/k9zfZaedzco?autoplay=1",
+            "thumbnailUrl": "https://img.youtube.com/vi/k9zfZaedzco/0.jpg",
+            "ageRating": 7
+          },
+          {
+            "episodeNumber": 14,
+            "title": "Episode 14",
+            "streamUrl": "https://www.youtube.com/embed/z-gQMF6cpiY?autoplay=1",
+            "thumbnailUrl": "https://img.youtube.com/vi/z-gQMF6cpiY/0.jpg",
+            "ageRating": 7
+          },
+          {
+            "episodeNumber": 15,
+            "title": "Episode 15",
+            "streamUrl": "https://www.youtube.com/embed/hweA04vGCDM?autoplay=1",
+            "thumbnailUrl": "https://img.youtube.com/vi/hweA04vGCDM/0.jpg",
+            "ageRating": 7
+          },
+          {
+            "episodeNumber": 16,
+            "title": "Episode 16",
+            "streamUrl": "https://www.youtube.com/embed/JUjREoqmvPo?autoplay=1",
+            "thumbnailUrl": "https://img.youtube.com/vi/JUjREoqmvPo/0.jpg",
+            "ageRating": 7
+          },
+          {
+            "episodeNumber": 17,
+            "title": "Episode 17",
+            "streamUrl": "https://www.youtube.com/embed/UwrAMA9p9Ps?autoplay=1",
+            "thumbnailUrl": "https://img.youtube.com/vi/UwrAMA9p9Ps/0.jpg",
+            "ageRating": 7
+          },
+          {
+            "episodeNumber": 18,
+            "title": "Episode 18",
+            "streamUrl": "https://www.youtube.com/embed/gTQp3YSXiPo?autoplay=1",
+            "thumbnailUrl": "https://img.youtube.com/vi/gTQp3YSXiPo/0.jpg",
+            "ageRating": 7
+          },
+          {
+            "episodeNumber": 19,
+            "title": "Episode 19",
+            "streamUrl": "https://www.youtube.com/embed/RZCzPNGV3fw?autoplay=1",
+            "thumbnailUrl": "https://img.youtube.com/vi/RZCzPNGV3fw/0.jpg",
+            "ageRating": 7
+          },
+          {
+            "episodeNumber": 20,
+            "title": "Episode 20",
+            "streamUrl": "https://www.youtube.com/embed/0QCo_PaBSBc?autoplay=1",
+            "thumbnailUrl": "https://img.youtube.com/vi/0QCo_PaBSBc/0.jpg",
+            "ageRating": 7
+          },
+          {
+            "episodeNumber": 21,
+            "title": "Episode 21",
+            "streamUrl": "https://www.youtube.com/embed/5abzKNeEKs4?autoplay=1",
+            "thumbnailUrl": "https://img.youtube.com/vi/5abzKNeEKs4/0.jpg",
+            "ageRating": 7
+          },
+          {
+            "episodeNumber": 22,
+            "title": "Episode 22",
+            "streamUrl": "https://www.youtube.com/embed/_9orRwj-y-8?autoplay=1",
+            "thumbnailUrl": "https://img.youtube.com/vi/_9orRwj-y-8/0.jpg",
+            "ageRating": 7
+          },
+          {
+            "episodeNumber": 23,
+            "title": "Episode 23",
+            "streamUrl": "https://www.youtube.com/embed/1_XVkoVo6gw?autoplay=1",
+            "thumbnailUrl": "https://img.youtube.com/vi/1_XVkoVo6gw/0.jpg",
+            "ageRating": 7
+          },
+          {
+            "episodeNumber": 24,
+            "title": "Episode 24",
+            "streamUrl": "https://www.youtube.com/embed/3wgYOwdhpz8?autoplay=1",
+            "thumbnailUrl": "https://img.youtube.com/vi/3wgYOwdhpz8/0.jpg",
+            "ageRating": 7
+          },
+          {
+            "episodeNumber": 25,
+            "title": "Episode 25",
+            "streamUrl": "https://www.youtube.com/embed/Vb3r1aVWNdk?autoplay=1",
+            "thumbnailUrl": "https://img.youtube.com/vi/Vb3r1aVWNdk/0.jpg",
+            "ageRating": 7
+          },
+          {
+            "episodeNumber": 26,
+            "title": "Episode 26",
+            "streamUrl": "https://www.youtube.com/embed/d4VaQhq7-uM?autoplay=1",
+            "thumbnailUrl": "https://img.youtube.com/vi/d4VaQhq7-uM/0.jpg",
+            "ageRating": 7
+          },
+          {
+            "episodeNumber": 27,
+            "title": "Episode 27",
+            "streamUrl": "https://www.youtube.com/embed/KngQicuXKnk?autoplay=1",
+            "thumbnailUrl": "https://img.youtube.com/vi/KngQicuXKnk/0.jpg",
+            "ageRating": 7
+          },
+          {
+            "episodeNumber": 28,
+            "title": "Episode 28",
+            "streamUrl": "https://www.youtube.com/embed/4rbIBSObbQ4?autoplay=1",
+            "thumbnailUrl": "https://img.youtube.com/vi/4rbIBSObbQ4/0.jpg",
+            "ageRating": 7
+          },
+          {
+            "episodeNumber": 29,
+            "title": "Episode 29",
+            "streamUrl": "https://www.youtube.com/embed/aAsSVAuDEjM?autoplay=1",
+            "thumbnailUrl": "https://img.youtube.com/vi/aAsSVAuDEjM/0.jpg",
+            "ageRating": 7
+          },
+          {
+            "episodeNumber": 30,
+            "title": "Episode 30",
+            "streamUrl": "https://www.youtube.com/embed/eATywf6whKA?autoplay=1",
+            "thumbnailUrl": "https://img.youtube.com/vi/eATywf6whKA/0.jpg",
+            "ageRating": 7
+          },
+          {
+            "episodeNumber": 31,
+            "title": "Episode 31",
+            "streamUrl": "https://www.youtube.com/embed/6BtBDG2S6rw?autoplay=1",
+            "thumbnailUrl": "https://img.youtube.com/vi/6BtBDG2S6rw/0.jpg",
+            "ageRating": 7
+          },
+          {
+            "episodeNumber": 32,
+            "title": "Episode 32",
+            "streamUrl": "https://www.youtube.com/embed/t3julf_4MiE?autoplay=1",
+            "thumbnailUrl": "https://img.youtube.com/vi/t3julf_4MiE/0.jpg",
+            "ageRating": 7
+          },
+          {
+            "episodeNumber": 33,
+            "title": "Episode 33",
+            "streamUrl": "https://www.youtube.com/embed/qBB8a_Xd000?autoplay=1",
+            "thumbnailUrl": "https://img.youtube.com/vi/qBB8a_Xd000/0.jpg",
+            "ageRating": 7
+          },
+          {
+            "episodeNumber": 34,
+            "title": "Episode 34",
+            "streamUrl": "https://www.youtube.com/embed/ojRUnSsLhjE?autoplay=1",
+            "thumbnailUrl": "https://img.youtube.com/vi/ojRUnSsLhjE/0.jpg",
+            "ageRating": 7
+          },
+          {
+            "episodeNumber": 35,
+            "title": "Episode 35",
+            "streamUrl": "https://www.youtube.com/embed/gq_GuAEiN7E?autoplay=1",
+            "thumbnailUrl": "https://img.youtube.com/vi/gq_GuAEiN7E/0.jpg",
+            "ageRating": 7
+          },
+          {
+            "episodeNumber": 36,
+            "title": "Episode 36",
+            "streamUrl": "https://www.youtube.com/embed/4KDcMTxg54w?autoplay=1",
+            "thumbnailUrl": "https://img.youtube.com/vi/4KDcMTxg54w/0.jpg",
+            "ageRating": 7
+          },
+          {
+            "episodeNumber": 37,
+            "title": "Episode 37",
+            "streamUrl": "https://www.youtube.com/embed/olm9u66uhPs?autoplay=1",
+            "thumbnailUrl": "https://img.youtube.com/vi/olm9u66uhPs/0.jpg",
+            "ageRating": 7
+          },
+          {
+            "episodeNumber": 38,
+            "title": "Episode 38",
+            "streamUrl": "https://www.youtube.com/embed/TLHHr0hgiKg?autoplay=1",
+            "thumbnailUrl": "https://img.youtube.com/vi/TLHHr0hgiKg/0.jpg",
+            "ageRating": 7
+          },
+          {
+            "episodeNumber": 39,
+            "title": "Episode 39",
+            "streamUrl": "https://www.youtube.com/embed/eu8WW229vfQ?autoplay=1",
+            "thumbnailUrl": "https://img.youtube.com/vi/eu8WW229vfQ/0.jpg",
+            "ageRating": 7
+          },
+          {
+            "episodeNumber": 40,
+            "title": "Episode 40",
+            "streamUrl": "https://www.youtube.com/embed/0NJ2BhgrYXI?autoplay=1",
+            "thumbnailUrl": "https://img.youtube.com/vi/0NJ2BhgrYXI/0.jpg",
+            "ageRating": 7
+          },
+          {
+            "episodeNumber": 41,
+            "title": "Episode 41",
+            "streamUrl": "https://www.youtube.com/embed/i0Yk43_SvPk?autoplay=1",
+            "thumbnailUrl": "https://img.youtube.com/vi/i0Yk43_SvPk/0.jpg",
+            "ageRating": 7
+          },
+          {
+            "episodeNumber": 42,
+            "title": "Episode 42",
+            "streamUrl": "https://www.youtube.com/embed/69sd84NofCU?autoplay=1",
+            "thumbnailUrl": "https://img.youtube.com/vi/69sd84NofCU/0.jpg",
+            "ageRating": 7
+          },
+          {
+            "episodeNumber": 43,
+            "title": "Episode 43",
+            "streamUrl": "https://www.youtube.com/embed/O5ugrSdKw5M?autoplay=1",
+            "thumbnailUrl": "https://img.youtube.com/vi/O5ugrSdKw5M/0.jpg",
+            "ageRating": 7
+          },
+          {
+            "episodeNumber": 44,
+            "title": "Episode 44",
+            "streamUrl": "https://www.youtube.com/embed/B8tiHVSNwls?autoplay=1",
+            "thumbnailUrl": "https://img.youtube.com/vi/B8tiHVSNwls/0.jpg",
+            "ageRating": 7
+          },
+          {
+            "episodeNumber": 45,
+            "title": "Episode 45",
+            "streamUrl": "https://www.youtube.com/embed/Hfh-e_2HD4U?autoplay=1",
+            "thumbnailUrl": "https://img.youtube.com/vi/Hfh-e_2HD4U/0.jpg",
+            "ageRating": 7
+          },
+          {
+            "episodeNumber": 46,
+            "title": "Episode 46",
+            "streamUrl": "https://www.youtube.com/embed/Hk969IMUZfc?autoplay=1",
+            "thumbnailUrl": "https://img.youtube.com/vi/Hk969IMUZfc/0.jpg",
+            "ageRating": 7
+          },
+          {
+            "episodeNumber": 47,
+            "title": "Episode 47",
+            "streamUrl": "https://www.youtube.com/embed/KsCp6swO_IU?autoplay=1",
+            "thumbnailUrl": "https://img.youtube.com/vi/KsCp6swO_IU/0.jpg",
+            "ageRating": 7
+          },
+          {
+            "episodeNumber": 48,
+            "title": "Episode 48",
+            "streamUrl": "https://www.youtube.com/embed/yqCNrdzHreY?autoplay=1",
+            "thumbnailUrl": "https://img.youtube.com/vi/yqCNrdzHreY/0.jpg",
+            "ageRating": 7
+          },
+          {
+            "episodeNumber": 49,
+            "title": "Episode 49",
+            "streamUrl": "https://www.youtube.com/embed/GSxoX49DYQ4?autoplay=1",
+            "thumbnailUrl": "https://img.youtube.com/vi/GSxoX49DYQ4/0.jpg",
+            "ageRating": 7
+          },
+          {
+            "episodeNumber": 50,
+            "title": "Episode 50",
+            "streamUrl": "https://www.youtube.com/embed/gw3q_LS0kRM?autoplay=1",
+            "thumbnailUrl": "https://img.youtube.com/vi/gw3q_LS0kRM/0.jpg",
+            "ageRating": 7
+          },
+          {
+            "episodeNumber": 51,
+            "title": "Episode 51",
+            "streamUrl": "https://www.youtube.com/embed/Rg_5FbEoPsw?autoplay=1",
+            "thumbnailUrl": "https://img.youtube.com/vi/Rg_5FbEoPsw/0.jpg",
+            "ageRating": 7
+          },
+          {
+            "episodeNumber": 52,
+            "title": "Episode 52",
+            "streamUrl": "https://www.youtube.com/embed/Ji9vxCbqDd4?autoplay=1",
+            "thumbnailUrl": "https://img.youtube.com/vi/Ji9vxCbqDd4/0.jpg",
+            "ageRating": 7
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "squid-game",
+    "title": "squidGameTitle",
+    "year": "2021-2025",
+    "posterUrl": "https://l.top4top.io/p_3957jp08t1.png",
+    "ageRating": 18,
+    "rating": 8.8,
+    "genres": [
+      "Drama",
+      "Thriller",
+      "Mystery",
+      "Action"
+    ],
+    "description": "squidGamePlot",
+    "category": "Netflix",
+    "subCategories": [
+      "Netflix",
+      "Thriller",
+      "Adult Content"
+    ],
+    "audioTracks": [
+      "Korean"
+    ],
+    "subtitleTracks": [],
+    "seasons": [
+      {
+        "seasonNumber": 1,
+        "episodes": [
+          {
+            "episodeNumber": 1,
+            "title": "Episode 1",
+            "streamUrl": "https://vipserver.liiivideo.com/embed-d5oo3yvztbbg.html",
+            "thumbnailUrl": "https://l.top4top.io/p_3957jp08t1.png",
+            "ageRating": 18
+          },
+          {
+            "episodeNumber": 2,
+            "title": "Episode 2",
+            "streamUrl": "https://vipserver.liiivideo.com/embed-ciq9bny3dypc.html",
+            "thumbnailUrl": "https://l.top4top.io/p_3957jp08t1.png",
+            "ageRating": 18
+          },
+          {
+            "episodeNumber": 3,
+            "title": "Episode 3",
+            "streamUrl": "https://vipserver.liiivideo.com/embed-cysgjpfznhxz.html",
+            "thumbnailUrl": "https://l.top4top.io/p_3957jp08t1.png",
+            "ageRating": 18
+          },
+          {
+            "episodeNumber": 4,
+            "title": "Episode 4",
+            "streamUrl": "https://vipserver.liiivideo.com/embed-durpuc76ng6r.html",
+            "thumbnailUrl": "https://l.top4top.io/p_3957jp08t1.png",
+            "ageRating": 18
+          },
+          {
+            "episodeNumber": 5,
+            "title": "Episode 5",
+            "streamUrl": "https://vipserver.liiivideo.com/embed-x92okn5hx2lb.html",
+            "thumbnailUrl": "https://l.top4top.io/p_3957jp08t1.png",
+            "ageRating": 18
+          },
+          {
+            "episodeNumber": 6,
+            "title": "Episode 6",
+            "streamUrl": "https://vipserver.liiivideo.com/embed-8a9umbqy9plk.html",
+            "thumbnailUrl": "https://l.top4top.io/p_3957jp08t1.png",
+            "ageRating": 18
+          },
+          {
+            "episodeNumber": 7,
+            "title": "Episode 7",
+            "streamUrl": "https://vipserver.liiivideo.com/embed-cm00pp9kidzs.html",
+            "thumbnailUrl": "https://l.top4top.io/p_3957jp08t1.png",
+            "ageRating": 18
+          },
+          {
+            "episodeNumber": 8,
+            "title": "Episode 8",
+            "streamUrl": "https://vipserver.liiivideo.com/embed-03zu5g8v0y3c.html",
+            "thumbnailUrl": "https://l.top4top.io/p_3957jp08t1.png",
+            "ageRating": 18
+          },
+          {
+            "episodeNumber": 9,
+            "title": "Episode 9",
+            "streamUrl": "https://vipserver.liiivideo.com/embed-5schrsymaphz.html",
+            "thumbnailUrl": "https://l.top4top.io/p_3957jp08t1.png",
+            "ageRating": 18
+          }
+        ]
+      },
+      {
+        "seasonNumber": 2,
+        "episodes": [
+          {
+            "episodeNumber": 1,
+            "title": "Episode 1",
+            "streamUrl": "https://vipserver.liiivideo.com/embed-xws5pf8am6jt.html",
+            "thumbnailUrl": "https://l.top4top.io/p_3957jp08t1.png",
+            "ageRating": 18
+          },
+          {
+            "episodeNumber": 2,
+            "title": "Episode 2",
+            "streamUrl": "https://vipserver.liiivideo.com/embed-czvg3kssp40f.html",
+            "thumbnailUrl": "https://l.top4top.io/p_3957jp08t1.png",
+            "ageRating": 18
+          },
+          {
+            "episodeNumber": 3,
+            "title": "Episode 3",
+            "streamUrl": "https://vipserver.liiivideo.com/embed-hwlcwzx2ln18.html",
+            "thumbnailUrl": "https://l.top4top.io/p_3957jp08t1.png",
+            "ageRating": 18
+          },
+          {
+            "episodeNumber": 4,
+            "title": "Episode 4",
+            "streamUrl": "https://vipserver.liiivideo.com/embed-d27i6vqzh4s5.html",
+            "thumbnailUrl": "https://l.top4top.io/p_3957jp08t1.png",
+            "ageRating": 18
+          },
+          {
+            "episodeNumber": 5,
+            "title": "Episode 5",
+            "streamUrl": "https://vipserver.liiivideo.com/embed-opf5bratw15o.html",
+            "thumbnailUrl": "https://l.top4top.io/p_3957jp08t1.png",
+            "ageRating": 18
+          },
+          {
+            "episodeNumber": 6,
+            "title": "Episode 6",
+            "streamUrl": "https://vipserver.liiivideo.com/embed-37aolffe2pp6.html",
+            "thumbnailUrl": "https://l.top4top.io/p_3957jp08t1.png",
+            "ageRating": 18
+          },
+          {
+            "episodeNumber": 7,
+            "title": "Episode 7",
+            "streamUrl": "https://vipserver.liiivideo.com/embed-95twmpw0blld.html",
+            "thumbnailUrl": "https://l.top4top.io/p_3957jp08t1.png",
+            "ageRating": 18
+          }
+        ]
+      },
+      {
+        "seasonNumber": 3,
+        "episodes": [
+          {
+            "episodeNumber": 1,
+            "title": "Episode 1",
+            "streamUrl": "https://vipserver.liiivideo.com/embed-jgee7to10xdl.html",
+            "thumbnailUrl": "https://l.top4top.io/p_3957jp08t1.png",
+            "ageRating": 18
+          },
+          {
+            "episodeNumber": 2,
+            "title": "Episode 2",
+            "streamUrl": "https://vipserver.liiivideo.com/embed-40kej62c2fry.html",
+            "thumbnailUrl": "https://l.top4top.io/p_3957jp08t1.png",
+            "ageRating": 18
+          },
+          {
+            "episodeNumber": 3,
+            "title": "Episode 3",
+            "streamUrl": "https://vipserver.liiivideo.com/embed-jktkr7165y5g.html",
+            "thumbnailUrl": "https://l.top4top.io/p_3957jp08t1.png",
+            "ageRating": 18
+          },
+          {
+            "episodeNumber": 4,
+            "title": "Episode 4",
+            "streamUrl": "https://vipserver.liiivideo.com/embed-w6dijf66dfj6.html",
+            "thumbnailUrl": "https://l.top4top.io/p_3957jp08t1.png",
+            "ageRating": 18
+          },
+          {
+            "episodeNumber": 5,
+            "title": "Episode 5",
+            "streamUrl": "https://vipserver.liiivideo.com/embed-h72houo79sh5.html",
+            "thumbnailUrl": "https://l.top4top.io/p_3957jp08t1.png",
+            "ageRating": 18
+          },
+          {
+            "episodeNumber": 6,
+            "title": "Episode 6",
+            "streamUrl": "https://vipserver.liiivideo.com/embed-kioypt61jolu.html",
+            "thumbnailUrl": "https://l.top4top.io/p_3957jp08t1.png",
+            "ageRating": 18
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "al-fashla",
+    "title": "alFashlaTitle",
+    "year": "2021",
+    "posterUrl": "https://j.top4top.io/p_3957hotab1.jpeg",
+    "ageRating": 14,
+    "rating": 8,
+    "genres": [
+      "Comedy",
+      "Animation"
+    ],
+    "description": "alFashlaPlot",
+    "category": "Comedy Series",
+    "subCategories": [
+      "Comedy Series",
+      "مسلسلات كوميدية",
+      "Comedy"
+    ],
+    "audioTracks": [
+      "Arabic"
+    ],
+    "subtitleTracks": [],
+    "seasons": [
+      {
+        "seasonNumber": 1,
+        "episodes": [
+          {
+            "episodeNumber": 1,
+            "title": "Episode 1",
+            "streamUrl": "https://g.top4top.io/m_39577b8h41.mp4",
+            "thumbnailUrl": "https://j.top4top.io/p_3957hotab1.jpeg",
+            "ageRating": 14
+          },
+          {
+            "episodeNumber": 2,
+            "title": "Episode 2",
+            "streamUrl": "https://b.top4top.io/m_395749dst1.mp4",
+            "thumbnailUrl": "https://j.top4top.io/p_3957hotab1.jpeg",
+            "ageRating": 14
+          },
+          {
+            "episodeNumber": 3,
+            "title": "Episode 3",
+            "streamUrl": "https://c.top4top.io/m_3957qodcb2.mp4",
+            "thumbnailUrl": "https://j.top4top.io/p_3957hotab1.jpeg",
+            "ageRating": 14
+          },
+          {
+            "episodeNumber": 4,
+            "title": "Episode 4",
+            "streamUrl": "https://d.top4top.io/m_3957rsnwy3.mp4",
+            "thumbnailUrl": "https://j.top4top.io/p_3957hotab1.jpeg",
+            "ageRating": 14
+          },
+          {
+            "episodeNumber": 5,
+            "title": "Episode 5",
+            "streamUrl": "https://g.top4top.io/m_3957ubdkf1.mp4",
+            "thumbnailUrl": "https://j.top4top.io/p_3957hotab1.jpeg",
+            "ageRating": 14
+          },
+          {
+            "episodeNumber": 6,
+            "title": "Episode 6",
+            "streamUrl": "https://f.top4top.io/m_3957x4pjp1.mp4",
+            "thumbnailUrl": "https://j.top4top.io/p_3957hotab1.jpeg",
+            "ageRating": 14
+          },
+          {
+            "episodeNumber": 7,
+            "title": "Episode 7",
+            "streamUrl": "https://g.top4top.io/m_3957nzalt2.mp4",
+            "thumbnailUrl": "https://j.top4top.io/p_3957hotab1.jpeg",
+            "ageRating": 14
+          },
+          {
+            "episodeNumber": 8,
+            "title": "Episode 8",
+            "streamUrl": "https://h.top4top.io/m_3957t9d3q3.mp4",
+            "thumbnailUrl": "https://j.top4top.io/p_3957hotab1.jpeg",
+            "ageRating": 14
+          },
+          {
+            "episodeNumber": 9,
+            "title": "Episode 9",
+            "streamUrl": "https://i.top4top.io/m_39571jmdm4.mp4",
+            "thumbnailUrl": "https://j.top4top.io/p_3957hotab1.jpeg",
+            "ageRating": 14
+          },
+          {
+            "episodeNumber": 10,
+            "title": "Episode 10",
+            "streamUrl": "https://j.top4top.io/m_3957glse05.mp4",
+            "thumbnailUrl": "https://j.top4top.io/p_3957hotab1.jpeg",
+            "ageRating": 14
+          },
+          {
+            "episodeNumber": 11,
+            "title": "Episode 11",
+            "streamUrl": "https://i.top4top.io/m_3957p4os51.mp4",
+            "thumbnailUrl": "https://j.top4top.io/p_3957hotab1.jpeg",
+            "ageRating": 14
+          },
+          {
+            "episodeNumber": 12,
+            "title": "Episode 12",
+            "streamUrl": "https://j.top4top.io/m_3957ixtm22.mp4",
+            "thumbnailUrl": "https://j.top4top.io/p_3957hotab1.jpeg",
+            "ageRating": 14
+          },
+          {
+            "episodeNumber": 13,
+            "title": "Episode 13",
+            "streamUrl": "https://k.top4top.io/m_3957l4n843.mp4",
+            "thumbnailUrl": "https://j.top4top.io/p_3957hotab1.jpeg",
+            "ageRating": 14
+          },
+          {
+            "episodeNumber": 14,
+            "title": "Episode 14",
+            "streamUrl": "https://l.top4top.io/m_39571qi3q4.mp4",
+            "thumbnailUrl": "https://j.top4top.io/p_3957hotab1.jpeg",
+            "ageRating": 14
+          },
+          {
+            "episodeNumber": 15,
+            "title": "Episode 15",
+            "streamUrl": "https://a.top4top.io/m_39575cn3o5.mp4",
+            "thumbnailUrl": "https://j.top4top.io/p_3957hotab1.jpeg",
+            "ageRating": 14
+          }
         ]
       }
     ]

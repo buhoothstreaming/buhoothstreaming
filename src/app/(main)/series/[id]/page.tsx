@@ -8,6 +8,7 @@ import { series } from "@/lib/data";
 import { Heart, Play, Star, ArrowLeft, ArrowRight, Clapperboard, ChevronRight, ChevronLeft, Timer } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
+import EpisodeThumbnail from "@/components/episode-thumbnail";
 import { notFound, useParams, useRouter } from "next/navigation";
 import { useState, useEffect } from "react";
 import { Skeleton } from "@/components/ui/skeleton";
@@ -404,7 +405,13 @@ export default function SeriesInfoPage() {
                         <Link href={playHref} className="block">
                             <div className="flex items-center gap-4 p-2 rounded-md hover:bg-muted/50">
                                 <div className="relative w-32 aspect-video flex-shrink-0 overflow-hidden rounded-md">
-                                    <Image src={continueWatchingEpisodeData.thumbnailUrl || s.posterUrl} alt={t(continueWatchingEpisodeData.title)} fill className="object-cover" referrerPolicy="no-referrer" data-ai-hint="episode thumbnail" />
+                                    <EpisodeThumbnail 
+                                        src={continueWatchingEpisodeData.thumbnailUrl} 
+                                        fallbackSrc={s.posterUrl}
+                                        streamUrl={continueWatchingEpisodeData.streamUrl}
+                                        alt={t(continueWatchingEpisodeData.title)} 
+                                        episodeNumber={continueWatching.episode}
+                                    />
                                     <AgeRatingBadge rating={continueWatchingEpisodeData.ageRating ?? s.ageRating} className={cn("absolute top-1 z-10", direction === 'rtl' ? 'left-1' : 'right-1')} />
                                 </div>
                                 <div className={cn("flex-1 text-sm", direction === 'rtl' ? 'text-right' : 'text-left')}>
@@ -444,7 +451,13 @@ export default function SeriesInfoPage() {
                             !isPremiered && "opacity-50 cursor-not-allowed"
                           )}>
                              <div className="relative w-1/3 aspect-video flex-shrink-0 overflow-hidden rounded-md">
-                                <Image src={episode.thumbnailUrl || s.posterUrl} alt={t(episode.title)} fill className="object-cover" referrerPolicy="no-referrer" data-ai-hint="episode thumbnail" />
+                                <EpisodeThumbnail 
+                                    src={episode.thumbnailUrl} 
+                                    fallbackSrc={s.posterUrl}
+                                    streamUrl={episode.streamUrl}
+                                    alt={t(episode.title || 'episode')} 
+                                    episodeNumber={episode.episodeNumber}
+                                />
                                 {episode.ageRating && <AgeRatingBadge rating={episode.ageRating} className={cn("absolute top-1 z-10", direction === 'rtl' ? 'left-1' : 'right-1')} />}
                             </div>
                             <div className={cn("flex-1 text-sm", direction === 'rtl' ? 'text-right' : 'text-left')}>
