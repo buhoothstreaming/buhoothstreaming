@@ -213,22 +213,19 @@ export const channels: Channel[] = [
     category: 'C10SAT',
   },
   {
-    id: 'kineko-tv-ms',
-    name: 'Kineko TV MS',
+    id: 'verta-channel',
+    name: 'Verta',
     number: '0009',
-    logo: 'https://k.top4top.io/p_3692d1e1x2.jpg',
-    streamUrl: 'https://drive.google.com/file/d/1-dsX5xcp2zl_e_eLcgMWMeXXt-m6XlBl/view?usp=drive_link',
+    logo: 'https://b.top4top.io/p_3959bnb6o1.jpeg',
+    streamUrl: 'https://canva.link/nbyv16bampq52g3',
     category: 'C10SAT',
   },
   {
-    id: 'viva-channel',
-    name: 'VIVA',
+    id: 'kineko-tv-ms',
+    name: 'Kineko TV MS',
     number: '0010',
-    logo: 'https://upload.wikimedia.org/wikipedia/commons/6/66/Viva_Iraq_Massia.jpg',
-    streamUrl: [
-      'https://canva.link/jk4ov3dxrmea2an',
-      'https://canva.link/ulloxf8ty840fs5'
-    ],
+    logo: 'https://k.top4top.io/p_3692d1e1x2.jpg',
+    streamUrl: 'https://drive.google.com/file/d/1-dsX5xcp2zl_e_eLcgMWMeXXt-m6XlBl/view?usp=drive_link',
     category: 'C10SAT',
   },
   {
@@ -3662,7 +3659,7 @@ export const series: Series[] = [
     rating: 8.0,
     genres: ["Comedy", "Fantasy", "Youth", "Adventure", "Animation"],
     description: "mouhibosSysShowPlot",
-    category: 'VIVA',
+    category: 'Verta',
     audioTracks: [],
     subtitleTracks: [],
     seasons: [
@@ -3722,7 +3719,7 @@ export const series: Series[] = [
     rating: 8.5,
     genres: ["Drama", "Romance", "Crime", "Thriller", "Horror", "Animation", "Fantasy"],
     description: "florensaPlot",
-    category: 'VIVA',
+    category: 'Verta',
     audioTracks: ['Arabic'],
     subtitleTracks: [],
     seasons: [
@@ -3955,7 +3952,7 @@ export const series: Series[] = [
     rating: 8.2,
     genres: ["Entertainment", "Youth", "Viral", "Animation"],
     description: "cimatorDescription",
-    category: 'VIVA',
+    category: 'Verta',
     seasons: [
       {
         seasonNumber: 1,
@@ -4246,7 +4243,7 @@ export const series: Series[] = [
     rating: 8.5,
     genres: ['Adventure', 'Animation', 'Youth', 'Comedy', 'Fantasy', 'sci-fi'],
     description: 'nqrlPlot',
-    category: 'VIVA',
+    category: 'Verta',
     audioTracks: ['Arabic'],
     subtitleTracks: [],
     seasons: [

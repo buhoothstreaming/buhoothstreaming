@@ -166,8 +166,8 @@ export default function SearchPage() {
         } else if (activeChip === virginsOneChip) {
             const virginsOneChannelIds = [
               'd-television', 'al-thania-iraq', 'r-plus-massia', 'kidztoonz-channel', 
-              'story-tv', 'rewind-tv', 'hits', 'ain-tv-hd', 'kineko-tv-ms', 
-              'viva-channel', 'mora-tv', 'star-rouge-tv', 'gizmo', 'cinema-al-shabab', 
+              'story-tv', 'rewind-tv', 'hits', 'ain-tv-hd', 'verta-channel', 
+              'kineko-tv-ms', 'mora-tv', 'star-rouge-tv', 'gizmo', 'cinema-al-shabab', 
               '1-passion', 'tiava-hd', 'eva', 
               'bravo', 'bravo-duo', 'bravo-trio', 
               'serial-plus', 'kino-plus', 'humor-plus', 'veralt-plus', 'iris-tv',
@@ -183,6 +183,7 @@ export default function SearchPage() {
               m.category === '4Entertainment' || 
               m.category === 'MineScope Original' || 
               m.category === '4Entertainment Original' ||
+              m.category === 'Verta' ||
               m.category === 'VIVA' ||
               m.category === 'VirginsOne' ||
               ['the-final-revenge', 'creepypasta', 'obaydfox-imitating-middle-eastern-clips', 'minescope-red-wedding', 'best-vs-mbc6'].includes(m.id)
@@ -191,6 +192,7 @@ export default function SearchPage() {
             const mineScopeSeries = allSeriesPool.filter(s => 
               s.category === '4Entertainment' || 
               s.category === 'MineScope' || 
+              s.category === 'Verta' || 
               s.category === 'VIVA' || 
               s.category === 'VirginsOne' ||
               ['yomyat-daaboul-wa-alishko', 'yomyat-hamody-saif', 'kaido-moon-craft', 'sharara-show', 'deviantart-arabic', 'dont-mess-with-the-angel', 'love-island-minescope', 'mystery-lies', 'bobby-world', 'the-purge', 'kvgd69', 'blades-magic', 'mystreet', 'yuzumi-rinelia', 'karusel-disney-9', 'speedpaint'].includes(s.id)
@@ -334,7 +336,7 @@ export default function SearchPage() {
     const regularMoviesResults = moviesResults;
 
     const vivaOriginalResults = is4Ent
-      ? results.filter(r => r.category === 'VIVA' && r.id !== 'love-island-minescope')
+      ? results.filter(r => (r.category === 'Verta' || r.category === 'VIVA') && r.id !== 'love-island-minescope')
       : [];
 
     const showExclusive = (activeChip === t('all') || activeChip === allChannelsChip);
@@ -373,8 +375,8 @@ export default function SearchPage() {
             } else if (activeChip === virginsOneChip) {
                 const v1Ids = [
                   'd-television', 'al-thania-iraq', 'r-plus-massia', 'kidztoonz-channel', 
-                  'story-tv', 'rewind-tv', 'hits', 'ain-tv-hd', 'kineko-tv-ms', 
-                  'viva-channel', 'mora-tv', 'star-rouge-tv', 'gizmo', 'cinema-al-shabab', 
+                  'story-tv', 'rewind-tv', 'hits', 'ain-tv-hd', 'verta-channel', 
+                  'kineko-tv-ms', 'mora-tv', 'star-rouge-tv', 'gizmo', 'cinema-al-shabab', 
                   '1-passion', 'tiava-hd', 'eva', 
                   'bravo', 'bravo-duo', 'bravo-trio', 
                   'serial-plus', 'kino-plus', 'humor-plus', 'veralt-plus', 'iris-tv',

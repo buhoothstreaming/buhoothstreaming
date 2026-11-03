@@ -62,7 +62,7 @@ export default function SeriesPage() {
   }, []);
 
   const entertainment4Chip = "03. 4Entertainment";
-  const vivaChip = "04. VIVA";
+  const vertaChip = "04. Verta";
   const virginsOneChip = "05. VirginsOne";
   const netflixChip = "06. Netflix";
   const youthClassicsChip = "07. " + t('youthClassics');
@@ -77,7 +77,7 @@ export default function SeriesPage() {
       `01. ${t('favorites')}`, 
       `02. ${t('all')}`, 
       entertainment4Chip, 
-      vivaChip,
+      vertaChip,
       virginsOneChip,
       netflixChip,
       youthClassicsChip,
@@ -132,6 +132,7 @@ export default function SeriesPage() {
       filteredSeries = shuffledSeries.filter(item => 
         item.category === '4Entertainment' || 
         item.category === 'MineScope' || 
+        item.category === 'Verta' ||
         item.category === 'VIVA' ||
         item.id === 'yomyat-daaboul-wa-alishko' ||
         item.id === 'yomyat-hamody-saif' ||
@@ -148,8 +149,8 @@ export default function SeriesPage() {
         item.id === 'karusel-disney-9' ||
         item.id === 'speedpaint'
       );
-    } else if (activeChip === vivaChip) {
-      filteredSeries = shuffledSeries.filter(item => item.category === 'VIVA');
+    } else if (activeChip === vertaChip) {
+      filteredSeries = shuffledSeries.filter(item => item.category === 'Verta' || item.category === 'VIVA');
     } else if (activeChip === virginsOneChip) {
         filteredSeries = shuffledSeries.filter(item => item.category === 'VirginsOne');
     } else if (activeChip === netflixChip) {
@@ -213,7 +214,7 @@ export default function SeriesPage() {
               className={cn("rounded-full h-7 px-3 shrink-0",
                 activeChip === chip && chip === adultContentChip && "bg-gradient-to-r from-[#cf2929] to-[#e80000] text-white border-transparent",
                 activeChip === chip && chip === entertainment4Chip && "bg-gradient-to-r from-[#000000] to-[#121212] text-white border-transparent",
-                activeChip === chip && chip === vivaChip && "bg-[#752EE5] hover:bg-[#752EE5]/90 text-white border-transparent",
+                activeChip === chip && chip === vertaChip && "bg-[#752EE5] hover:bg-[#752EE5]/90 text-white border-transparent",
                 activeChip === chip && chip === virginsOneChip && "bg-[#e30000] text-white hover:bg-[#e30000]/90",
                 activeChip === chip && chip === netflixChip && "bg-[#E50914] text-white hover:bg-[#E50914]/90 border-transparent",
                 activeChip === chip && chip === animationCategoryChip && "bg-gradient-to-r from-blue-500 to-cyan-500 text-white",
