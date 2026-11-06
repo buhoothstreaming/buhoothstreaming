@@ -3,7 +3,6 @@
 import { channels } from '@/lib/data';
 import { notFound, useParams, useRouter } from 'next/navigation';
 import { useLanguage } from '@/contexts/language-context';
-import { Button } from '@/components/ui/button';
 import { ArrowLeft, ArrowRight } from 'lucide-react';
 import { useState, useEffect, useRef } from 'react';
 import Image from 'next/image';
@@ -191,28 +190,6 @@ export default function ChannelPlayerPage() {
               <BackIcon className="h-6 w-6" />
           </button>
           
-          {Array.isArray(currentChannel.streamUrl) && currentChannel.streamUrl.length > 1 && (
-            <div className="flex items-center gap-1.5 bg-black/60 backdrop-blur-md px-2.5 py-1 rounded-full border border-white/10 shadow-lg mx-2 pointer-events-auto">
-              {currentChannel.streamUrl.map((_, idx) => (
-                <button
-                  key={idx}
-                  onClick={(e) => {
-                    e.stopPropagation();
-                    setStreamIndex(idx);
-                  }}
-                  className={cn(
-                    "px-3 py-1 text-xs font-medium rounded-full transition-all",
-                    streamIndex === idx
-                      ? "bg-red-600 text-white shadow"
-                      : "text-white/70 hover:text-white hover:bg-white/10"
-                  )}
-                >
-                  {direction === 'rtl' ? `فيديو ${idx + 1}` : `Video ${idx + 1}`}
-                </button>
-              ))}
-            </div>
-          )}
-
           <div 
             className="flex items-center gap-4 text-white cursor-pointer"
             onClick={() => onSidebarChange(true)}
