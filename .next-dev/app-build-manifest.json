@@ -15,11 +15,6 @@
       "static/chunks/webpack.js",
       "static/chunks/main-app.js",
       "static/chunks/app/(main)/series/[id]/page.js"
-    ],
-    "/(main)/series/[id]/episodes/page": [
-      "static/chunks/webpack.js",
-      "static/chunks/main-app.js",
-      "static/chunks/app/(main)/series/[id]/episodes/page.js"
     ]
   }
 }
