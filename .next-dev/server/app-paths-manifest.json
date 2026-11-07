@@ -1,3 +1,4 @@
 {
-  "/page": "app/page.js"
+  "/(main)/series/[id]/page": "app/(main)/series/[id]/page.js",
+  "/(main)/series/[id]/episodes/page": "app/(main)/series/[id]/episodes/page.js"
 }
