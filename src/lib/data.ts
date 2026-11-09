@@ -2815,6 +2815,14 @@ export const series: Series[] = [
             thumbnailUrl: 'https://f.top4top.io/p_3907po01k1.jpeg',
             description: 'voices_s1e9_desc',
             ageRating: 12,
+          },
+          {
+            episodeNumber: 10,
+            title: 'voices_s1e10_title',
+            streamUrl: 'https://b.top4top.io/m_39651g0qn1.mp4',
+            thumbnailUrl: 'https://b.top4top.io/p_3965mtpzd1.jpeg',
+            description: 'voices_s1e10_desc',
+            ageRating: 12,
           }
         ]
       }
@@ -2824,7 +2832,7 @@ export const series: Series[] = [
   {
     id: 'demo-series',
     title: 'demoSeries',
-    year: '2023-',
+    year: '2023-2026',
     posterUrl: 'https://b.top4top.io/p_3695nbjbr1.png',
     ageRating: 18,
     rating: 8.0,
@@ -3374,6 +3382,48 @@ export const series: Series[] = [
             description: 'demo_s2e5_desc',
             ageRating: 18,
           },
+          {
+            episodeNumber: 6,
+            title: 'demo_s2e6_title',
+            streamUrl: 'https://l.top4top.io/m_39645uv3t1.mp4',
+            description: 'demo_s2e6_desc',
+            ageRating: 16,
+          },
+          {
+            episodeNumber: 7,
+            title: 'demo_s2e7_title',
+            streamUrl: 'https://a.top4top.io/m_3964jjlru1.mp4',
+            description: 'demo_s2e7_desc',
+            ageRating: 16,
+          },
+          {
+            episodeNumber: 8,
+            title: 'demo_s2e8_title',
+            streamUrl: 'https://a.top4top.io/m_3964hh9b91.mp4',
+            description: 'demo_s2e8_desc',
+            ageRating: 16,
+          },
+          {
+            episodeNumber: 9,
+            title: 'demo_s2e9_title',
+            streamUrl: 'https://h.top4top.io/m_3964sqn2b1.mp4',
+            description: 'demo_s2e9_desc',
+            ageRating: 16,
+          },
+          {
+            episodeNumber: 10,
+            title: 'demo_s2e10_title',
+            streamUrl: 'https://d.top4top.io/m_3964wmm5q1.mp4',
+            description: 'demo_s2e10_desc',
+            ageRating: 18,
+          },
+          {
+            episodeNumber: 11,
+            title: 'demo_s2e11_title',
+            streamUrl: 'https://f.top4top.io/m_39648k7fw1.mp4',
+            description: 'demo_s2e11_desc',
+            ageRating: 16,
+          }
         ]
       }
     ]
