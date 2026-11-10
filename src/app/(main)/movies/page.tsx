@@ -141,7 +141,7 @@ export default function MoviesPage() {
       case 'youth-cinema':
         filteredMovies = shuffledMovies.filter(movie => 
           movie.category === 'سينما الشباب' || 
-          ['the-final-revenge', 'creepypasta', 'obaydfox-imitating-middle-eastern-clips', 'minescope-red-wedding', 'best-vs-mbc6'].includes(movie.id)
+          ['the-final-revenge', 'creepypasta', 'obaydfox-imitating-middle-eastern-clips', 'minescope-red-wedding', 'best-vs-mbc6', 'master-x-home'].includes(movie.id)
         );
         break;
       case 'docstory':
