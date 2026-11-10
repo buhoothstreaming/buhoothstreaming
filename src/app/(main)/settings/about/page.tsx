@@ -46,7 +46,7 @@ export default function AboutPage() {
 
     // 2. Count specific UI Navigation Chips / Functional Categories
     const uiNavigationCategories = new Set([
-      'favorites-nav', 'all-nav', 'other-nav', 'c10sat-nav', // Channels page
+      'favorites-nav', 'all-nav', 'other-nav', 'yiv-nav', 'c10sat-nav', // Channels page
       'minescope-movies', '4ent-movies', 'docstory-movies', 'family-movies', 'romantic-movies', 'action-movies', 'egyptian-movies', 'russian-movies', 'horror-movies', 'drama-movies', 'comedy-movies', 'adult-movies', // Movies page chips
       'favorites-series', 'all-series', '4ent-series', 'verta-series', 'virginsone-series', 'netflix-series', 'animation-series', 'ramadan-series', // Series page chips
       'search-all', 'search-channels', 'search-movies', 'search-series', 'search-virginsone', 'search-joyt1', 'search-docstory', 'search-family', 'search-adult' // Search page chips

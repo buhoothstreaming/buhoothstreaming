@@ -1513,6 +1513,13 @@ video {
   --tw-bg-opacity: 1;
   background-color: rgb(229 9 20 / var(--tw-bg-opacity, 1));
 }
+.bg-\[\#FF5500\] {
+  --tw-bg-opacity: 1;
+  background-color: rgb(255 85 0 / var(--tw-bg-opacity, 1));
+}
+.bg-\[\#FF5500\]\/20 {
+  background-color: rgb(255 85 0 / 0.2);
+}
 .bg-\[\#d90429\] {
   --tw-bg-opacity: 1;
   background-color: rgb(217 4 41 / var(--tw-bg-opacity, 1));
@@ -2098,6 +2105,10 @@ video {
 .tracking-widest {
   letter-spacing: 0.1em;
 }
+.text-\[\#FF5500\] {
+  --tw-text-opacity: 1;
+  color: rgb(255 85 0 / var(--tw-text-opacity, 1));
+}
 .text-\[\#a37000\] {
   --tw-text-opacity: 1;
   color: rgb(163 112 0 / var(--tw-text-opacity, 1));
@@ -2283,6 +2294,9 @@ video {
 }
 .ring-inset {
   --tw-ring-inset: inset;
+}
+.ring-\[\#FF5500\]\/40 {
+  --tw-ring-color: rgb(255 85 0 / 0.4);
 }
 .ring-sidebar-ring {
   --tw-ring-color: hsl(var(--sidebar-ring));
@@ -2515,6 +2529,10 @@ video {
 
 .hover\:bg-\[\#E50914\]\/90:hover {
   background-color: rgb(229 9 20 / 0.9);
+}
+
+.hover\:bg-\[\#FF5500\]\/90:hover {
+  background-color: rgb(255 85 0 / 0.9);
 }
 
 .hover\:bg-\[\#c4151b\]:hover {

@@ -3,7 +3,7 @@
 import AdvertBanner from '@/components/advert-banner';
 import ContentCard from '@/components/content-card';
 import { Button } from '@/components/ui/button';
-import { channels } from '@/lib/data';
+import { channels, C10SAT_REMOVED_CHANNEL_IDS } from '@/lib/data';
 import { useEffect, useState, useMemo } from 'react';
 import { Separator } from '@/components/ui/separator';
 import ContentCardSkeleton from '@/components/content-card-skeleton';
@@ -12,6 +12,7 @@ import { cn } from '@/lib/utils';
 
 const FAVORITES_KEY = 'favorite_channels';
 const CONTEXT_KEY = 'browsing_category_context';
+const C10_REMOVED_SET = new Set(C10SAT_REMOVED_CHANNEL_IDS);
 
 export default function ChannelsPage() {
   const { t } = useLanguage();
@@ -21,7 +22,8 @@ export default function ChannelsPage() {
     { label: `01. ${t('favorites')}`, id: 'favorites' },
     { label: `02. ${t('all')}`, id: 'all' },
     { label: `03. ${t('other')}`, id: 'other' },
-    { label: '04. C10SAT', id: 'c10sat' }
+    { label: '04. Yiv', id: 'yiv' },
+    { label: '05. C10SAT', id: 'c10sat' }
   ], [t]);
 
   const [activeCategoryId, setActiveCategoryId] = useState('all'); 
@@ -71,8 +73,11 @@ export default function ChannelsPage() {
     if (activeCategoryId === 'other') {
         return channels.filter(channel => channel.category === 'OTHER');
     }
+    if (activeCategoryId === 'yiv') {
+        return channels.filter(channel => channel.category === 'C10SAT' || channel.category === 'Yiv');
+    }
     if (activeCategoryId === 'c10sat') {
-        return channels.filter(channel => channel.category === 'C10SAT');
+        return channels.filter(channel => channel.category === 'C10SAT' && !C10_REMOVED_SET.has(channel.id));
     }
     return channels.filter(channel => channel.category !== 'OUR_CHANNELS');
   }, [activeCategoryId, favorites]);
@@ -95,6 +100,11 @@ export default function ChannelsPage() {
         const index = otherChannels.findIndex(c => c.id === channel.id);
         if (index !== -1) return (index + 1).toString().padStart(4, '0');
     }
+    if (activeCategoryId === 'c10sat' && channel.category === 'C10SAT') {
+        const c10Channels = channels.filter(c => c.category === 'C10SAT' && !C10_REMOVED_SET.has(c.id));
+        const index = c10Channels.findIndex(c => c.id === channel.id);
+        if (index !== -1) return (index + 1).toString().padStart(4, '0');
+    }
     return channel.number;
   };
 
@@ -110,6 +120,7 @@ export default function ChannelsPage() {
               variant={activeCategoryId === cat.id ? 'default' : 'secondary'}
               className={cn("rounded-full h-7 px-3 shrink-0 transition-colors", 
                 activeCategoryId === cat.id && cat.id === 'other' && "bg-red-600 text-white hover:bg-red-700 border-transparent",
+                activeCategoryId === cat.id && cat.id === 'yiv' && "bg-[#FF5500] text-white hover:bg-[#FF5500]/90 border-transparent",
                 activeCategoryId === cat.id && cat.id === 'c10sat' && "bg-black text-white hover:bg-black/90"
               )}
               onClick={() => handleCategoryClick(cat.id)}

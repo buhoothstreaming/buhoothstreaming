@@ -1,6 +1,6 @@
 'use client'
 
-import { channels } from '@/lib/data';
+import { channels, C10SAT_REMOVED_CHANNEL_IDS } from '@/lib/data';
 import { notFound, useParams, useRouter } from 'next/navigation';
 import { useLanguage } from '@/contexts/language-context';
 import { ArrowLeft, ArrowRight } from 'lucide-react';
@@ -11,6 +11,7 @@ import ChannelsSidebar from '@/components/channels-sidebar';
 import CustomVideoPlayer from '@/components/custom-video-player';
 
 const CONTEXT_KEY = 'browsing_category_context';
+const C10_REMOVED_SET = new Set(C10SAT_REMOVED_CHANNEL_IDS);
 
 export default function ChannelPlayerPage() {
   const params = useParams<{ id: string }>();
@@ -149,6 +150,13 @@ export default function ChannelPlayerPage() {
     if (context === 'other' && channel.category === 'OTHER') {
         const otherChannels = channels.filter(c => c.category === 'OTHER');
         const index = otherChannels.findIndex(c => c.id === channel.id);
+        if (index !== -1) return (index + 1).toString().padStart(4, '0');
+    }
+
+    // 3. If browsing context was C10SAT, use C10SAT localized renumbering
+    if (context === 'c10sat' && channel.category === 'C10SAT' && !C10_REMOVED_SET.has(channel.id)) {
+        const c10Channels = channels.filter(c => c.category === 'C10SAT' && !C10_REMOVED_SET.has(c.id));
+        const index = c10Channels.findIndex(c => c.id === channel.id);
         if (index !== -1) return (index + 1).toString().padStart(4, '0');
     }
 

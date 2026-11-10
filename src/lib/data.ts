@@ -7047,3 +7047,17 @@ export const series: Series[] = [
     ]
   }
 ];
+
+export const C10SAT_REMOVED_CHANNEL_IDS: string[] = [
+  'hmd1', 'hmd-mousica', 'allosh-1', 'allosh-2x2', 'allosh-3', 'allosh-indigo',
+  'mirsat-al-shabab', 'mirsat-4show', 'mirsat-buhooth', 'ctv-iraq', 'rn-1',
+  'rn-star', 'rn-indigo', 'flixgo-tv', 'flixgo-2x2', 'flixgo-indigo', 'flixgo-funny',
+  'haiper-tv', 'haiper-2x2', 'ibro-1', 'mrt1-holy-dots', 'hs-al-shabab', 'massiasat-1',
+  'mdc1', 'mbt1', 'mts-holy-dots', 'mnt1', 'mnt-hamody-saif', 'mirahanna', 'mntc',
+  'mbs1', 'mas-one', '2tvc-al-shabab', '2tvc-indigo', 'digit-1', 'digit-star',
+  'digit-indigo', 'digit-cinema', 'ysc', 'ysc-kineko', 'ysc-indigo', 'mrh1', 'mtv1',
+  'msn1', 'cn-1', 'cn-gaming', 'cn-russia-2', 'asn-21', 'sotana-iraq',
+  'belamass-al-shabab', 'belamass-star', 'valamir-al-shabab', 'mtv-belamass',
+  'jadiria-al-shabab', 'jadiria-minescope', 'donstar-al-shabab'
+];
+

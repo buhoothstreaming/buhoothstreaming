@@ -2,7 +2,7 @@
 
 import { useState, useEffect, useMemo } from 'react';
 import { Sheet, SheetContent, SheetTitle } from '@/components/ui/sheet';
-import { channels } from '@/lib/data';
+import { channels, C10SAT_REMOVED_CHANNEL_IDS } from '@/lib/data';
 import { cn } from '@/lib/utils';
 import Image from 'next/image';
 import { useRouter } from 'next/navigation';
@@ -20,6 +20,7 @@ interface ChannelsSidebarProps {
 
 const FAVORITES_KEY = 'favorite_channels';
 const CONTEXT_KEY = 'browsing_category_context';
+const C10_REMOVED_SET = new Set(C10SAT_REMOVED_CHANNEL_IDS);
 
 const ChannelItemSkeleton = () => (
     <div className="flex items-center gap-3 p-3">
@@ -41,7 +42,8 @@ export default function ChannelsSidebar({ isOpen, onOpenChange, currentChannelId
       { name: `01. ${t('favorites')}`, id: 'favorites', icon: Heart, type: 'icon' as const },
       { name: `02. ${t('all')}`, id: 'all', icon: getAppLogo(), type: 'image' as const },
       { name: `03. ${t('other')}`, id: 'other', icon: 'https://a.top4top.io/p_37640qpys1.png', type: 'image' as const },
-      { name: '04. C10SAT', id: 'c10sat', icon: 'https://f.top4top.io/p_3690gy8zy1.png', type: 'image' as const }
+      { name: '04. Yiv', id: 'yiv', icon: 'https://a.top4top.io/p_39668objp1.png', type: 'image' as const },
+      { name: '05. C10SAT', id: 'c10sat', icon: 'https://f.top4top.io/p_3690gy8zy1.png', type: 'image' as const }
   ], [t]);
   
   const [selectedCategory, setSelectedCategory] = useState<string | null>(null);
@@ -71,7 +73,9 @@ export default function ChannelsSidebar({ isOpen, onOpenChange, currentChannelId
         initialCat = 'our-channels';
       } else if (context === 'other' && currentChannel?.category === 'OTHER') {
         initialCat = 'other';
-      } else if (context === 'c10sat' && currentChannel?.category === 'C10SAT') {
+      } else if (context === 'yiv' && (currentChannel?.category === 'C10SAT' || currentChannel?.category === 'Yiv')) {
+        initialCat = 'yiv';
+      } else if (context === 'c10sat' && currentChannel?.category === 'C10SAT' && !C10_REMOVED_SET.has(currentChannelId)) {
         initialCat = 'c10sat';
       } else if (context === 'all') {
         initialCat = 'all';
@@ -80,7 +84,7 @@ export default function ChannelsSidebar({ isOpen, onOpenChange, currentChannelId
         if (favs.has(currentChannelId)) initialCat = 'favorites';
         else if (currentChannel?.category === 'OUR_CHANNELS') initialCat = 'our-channels';
         else if (currentChannel?.category === 'OTHER') initialCat = 'other';
-        else if (currentChannel?.category === 'C10SAT') initialCat = 'c10sat';
+        else if (currentChannel?.category === 'C10SAT' && !C10_REMOVED_SET.has(currentChannelId)) initialCat = 'c10sat';
         else initialCat = 'all';
       }
 
@@ -128,8 +132,11 @@ export default function ChannelsSidebar({ isOpen, onOpenChange, currentChannelId
     if (selectedCategory === 'other') {
         return channels.filter(channel => channel.category === 'OTHER');
     }
+    if (selectedCategory === 'yiv') {
+        return channels.filter(channel => channel.category === 'C10SAT' || channel.category === 'Yiv');
+    }
     if (selectedCategory === 'c10sat') {
-        return channels.filter(channel => channel.category === 'C10SAT');
+        return channels.filter(channel => channel.category === 'C10SAT' && !C10_REMOVED_SET.has(channel.id));
     }
     // "All" excludes specific internal categories if they shouldn't mix
     return channels.filter(channel => channel.category !== 'OUR_CHANNELS');
@@ -159,6 +166,11 @@ export default function ChannelsSidebar({ isOpen, onOpenChange, currentChannelId
         const index = otherChannels.findIndex(c => c.id === channel.id);
         if (index !== -1) return (index + 1).toString().padStart(4, '0');
     }
+    if (selectedCategory === 'c10sat' && channel.category === 'C10SAT') {
+        const c10Channels = channels.filter(c => c.category === 'C10SAT' && !C10_REMOVED_SET.has(c.id));
+        const index = c10Channels.findIndex(c => c.id === channel.id);
+        if (index !== -1) return (index + 1).toString().padStart(4, '0');
+    }
     return channel.number;
   };
 
@@ -182,7 +194,8 @@ export default function ChannelsSidebar({ isOpen, onOpenChange, currentChannelId
                             key={category.id}
                             className={cn(
                                 "w-full flex items-center gap-3 p-3 text-sm transition-all hover:bg-white/5 group",
-                                selectedCategory === category.id && "bg-white/10 shadow-inner"
+                                selectedCategory === category.id && "bg-white/10 shadow-inner",
+                                selectedCategory === category.id && category.id === 'yiv' && "bg-[#FF5500]/20 text-[#FF5500] ring-1 ring-[#FF5500]/40"
                             )}
                             onClick={() => handleCategoryClick(category.id)}
                             dir={direction}
