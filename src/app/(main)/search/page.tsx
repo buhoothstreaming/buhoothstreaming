@@ -203,7 +203,7 @@ export default function SearchPage() {
             const joyt1Series = allSeriesPool.filter(s => ['love-island-minescope', 'mystery-lies', 'bobby-world', 'the-purge', 'blades-magic', 'mystreet', 'yuzumi-rinelia', 'karusel-disney-9', 'speedpaint'].includes(s.id));
             allContent.push(...getFiltered(joyt1Series).map(s => ({...s, type: 'series' as const})));
             
-            const joyt1ChannelIds = ['joyt1', 'joyt9', 'filmo', 'youth-classics-channel'];
+            const joyt1ChannelIds = ['joyt1', 'joyt9', 'micro-tv', 'filmo', 'youth-classics-channel'];
             const joyt1Channels = joyt1ChannelIds
               .map(id => allChannelsPool.find(c => c.id === id))
               .filter((c): c is Channel => !!c);
@@ -370,7 +370,7 @@ export default function SearchPage() {
                 const globalIndex = allNonExclusive.findIndex(c => c.id === item.id);
                 displayNum = globalIndex !== -1 ? (globalIndex + 1).toString().padStart(4, '0') : item.number;
             } else if (activeChip === joyt1Chip) {
-                const joyt1ChannelIds = ['joyt1', 'joyt9', 'filmo', 'youth-classics-channel'];
+                const joyt1ChannelIds = ['joyt1', 'joyt9', 'micro-tv', 'filmo', 'youth-classics-channel'];
                 const idx = joyt1ChannelIds.indexOf(item.id);
                 if (idx !== -1) displayNum = (idx + 1).toString().padStart(4, '0');
             } else if (activeChip === virginsOneChip) {
