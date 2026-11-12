@@ -11,20 +11,15 @@
       "static/chunks/main-app.js",
       "static/chunks/app/(main)/layout.js"
     ],
-    "/(main)/channels/page": [
+    "/(main)/movies/[id]/page": [
       "static/chunks/webpack.js",
       "static/chunks/main-app.js",
-      "static/chunks/app/(main)/channels/page.js"
+      "static/chunks/app/(main)/movies/[id]/page.js"
     ],
-    "/(main)/channels/[id]/page": [
+    "/(main)/movies/page": [
       "static/chunks/webpack.js",
       "static/chunks/main-app.js",
-      "static/chunks/app/(main)/channels/[id]/page.js"
-    ],
-    "/(main)/search/page": [
-      "static/chunks/webpack.js",
-      "static/chunks/main-app.js",
-      "static/chunks/app/(main)/search/page.js"
+      "static/chunks/app/(main)/movies/page.js"
     ]
   }
 }

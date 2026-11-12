@@ -2537,6 +2537,21 @@ export const movies: Movie[] = [
     audioTracks: ['Arabic'],
     subtitleTracks: [],
   },
+  {
+    id: 'frost-oath-the-boy-who-became-his-weakness',
+    title: 'frostOathTitle',
+    year: 2026,
+    posterUrl: 'https://c.top4top.io/p_39687i2q91.jpg',
+    ageRating: 18,
+    rating: 8.0,
+    genres: ['Romance', 'LGBTQ+', 'Gay', 'Drama', 'Sports', 'Animation', 'Anime'],
+    description: 'frostOathPlot',
+    category: 'Pepin Original',
+    subCategories: ['Gay', 'Kiss', 'Profanity', 'LGBTQ+', 'Violence', 'Sex'],
+    streamUrl: 'https://canva.link/ltmgqmm6bsfuj2x',
+    audioTracks: ['English'],
+    subtitleTracks: [],
+  },
 ];
 
 export const series: Series[] = [

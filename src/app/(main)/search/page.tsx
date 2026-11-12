@@ -262,8 +262,8 @@ export default function SearchPage() {
             const familySeries = allSeriesPool.filter(s => familySeriesIds.includes(s.id));
             allContent.push(...getFiltered(familySeries).map(s => ({...s, type: 'series' as const})));
         } else if (activeChip === t('adultContent')) {
-            const adultMoviesPool = allMoviesPool.filter(m => m.ageRating >= 18);
-            const adultSeriesPool = allSeriesPool.filter(s => s.ageRating >= 18);
+            const adultMoviesPool = movies.filter(m => m.ageRating >= 18);
+            const adultSeriesPool = series.filter(s => s.ageRating >= 18);
             allContent.push(...getFiltered(adultMoviesPool).map(m => ({...m, type: 'movie' as const})));
             allContent.push(...getFiltered(adultSeriesPool).map(s => ({...s, type: 'series' as const})));
         }
@@ -314,7 +314,7 @@ export default function SearchPage() {
     const isAdult = activeChip === t('adultContent');
     
     const pepinOriginalResults = isAdult 
-      ? results.filter((r): r is ((Movie & { type: 'movie' }) | (SeriesType & { type: 'series' })) => r.type !== 'channel' && r.category === 'Pepin Original')
+      ? results.filter((r): r is ((Movie & { type: 'movie' }) | (SeriesType & { type: 'series' })) => r.type !== 'channel' && (r.category === 'Pepin Original' || (('subCategories' in r) && r.subCategories?.includes('Pepin Original'))))
       : [];
 
     const channelsResults = results.filter(r => r.type === 'channel');
@@ -519,10 +519,10 @@ export default function SearchPage() {
           </>
         ) : isAdult ? (
           <>
+            {pepinOriginalBlock}
             {channelsBlock}
             {moviesBlock}
             {seriesBlock}
-            {pepinOriginalBlock}
           </>
         ) : (
           <>
