@@ -11,15 +11,10 @@
       "static/chunks/main-app.js",
       "static/chunks/app/(main)/layout.js"
     ],
-    "/(main)/movies/[id]/page": [
+    "/(main)/series/[id]/page": [
       "static/chunks/webpack.js",
       "static/chunks/main-app.js",
-      "static/chunks/app/(main)/movies/[id]/page.js"
-    ],
-    "/(main)/movies/page": [
-      "static/chunks/webpack.js",
-      "static/chunks/main-app.js",
-      "static/chunks/app/(main)/movies/page.js"
+      "static/chunks/app/(main)/series/[id]/page.js"
     ]
   }
 }

@@ -2861,6 +2861,14 @@ export const series: Series[] = [
             thumbnailUrl: 'https://b.top4top.io/p_3965mtpzd1.jpeg',
             description: 'voices_s1e10_desc',
             ageRating: 12,
+          },
+          {
+            episodeNumber: 11,
+            title: 'voices_s1e11_title',
+            streamUrl: 'https://d.top4top.io/m_3968qwore1.mov',
+            thumbnailUrl: 'https://c.top4top.io/p_3968oqvqs1.jpeg',
+            description: 'voices_s1e11_desc',
+            ageRating: 12,
           }
         ]
       }
