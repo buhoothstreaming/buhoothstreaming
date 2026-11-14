@@ -153,7 +153,14 @@ export default function ChannelPlayerPage() {
         if (index !== -1) return (index + 1).toString().padStart(4, '0');
     }
 
-    // 3. If browsing context was C10SAT, use C10SAT localized renumbering
+    // 3. If browsing context was Yiv, use Yiv localized numbering
+    if (context === 'yiv' && (channel.category === 'C10SAT' || channel.category === 'Yiv')) {
+        const yivChannels = channels.filter(c => c.category === 'C10SAT' || c.category === 'Yiv');
+        const index = yivChannels.findIndex(c => c.id === channel.id);
+        if (index !== -1) return (index + 1).toString().padStart(4, '0');
+    }
+
+    // 4. If browsing context was C10SAT, use C10SAT localized renumbering
     if (context === 'c10sat' && channel.category === 'C10SAT' && !C10_REMOVED_SET.has(channel.id)) {
         const c10Channels = channels.filter(c => c.category === 'C10SAT' && !C10_REMOVED_SET.has(c.id));
         const index = c10Channels.findIndex(c => c.id === channel.id);

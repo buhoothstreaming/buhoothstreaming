@@ -1280,6 +1280,14 @@ export const channels: Channel[] = [
     streamUrl: 'https://canva.link/d0apnajecyy7i12',
     category: 'OTHER',
   },
+  {
+    id: 'tv8-ms',
+    name: 'TV8 MS',
+    number: '0141',
+    logo: 'https://h.top4top.io/p_3970ycpl21.jpeg',
+    streamUrl: 'https://canva.link/a1bpzryfbpj469x',
+    category: 'C10SAT',
+  },
 ];
 
 export const movies: Movie[] = [
@@ -2865,7 +2873,7 @@ export const series: Series[] = [
           {
             episodeNumber: 11,
             title: 'voices_s1e11_title',
-            streamUrl: 'https://d.top4top.io/m_3968qwore1.mov',
+            streamUrl: 'https://f.top4top.io/m_3970a66lw1.mp4',
             thumbnailUrl: 'https://c.top4top.io/p_3968oqvqs1.jpeg',
             description: 'voices_s1e11_desc',
             ageRating: 12,

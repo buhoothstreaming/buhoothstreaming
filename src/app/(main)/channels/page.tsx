@@ -100,6 +100,11 @@ export default function ChannelsPage() {
         const index = otherChannels.findIndex(c => c.id === channel.id);
         if (index !== -1) return (index + 1).toString().padStart(4, '0');
     }
+    if (activeCategoryId === 'yiv' && (channel.category === 'C10SAT' || channel.category === 'Yiv')) {
+        const yivChannels = channels.filter(c => c.category === 'C10SAT' || c.category === 'Yiv');
+        const index = yivChannels.findIndex(c => c.id === channel.id);
+        if (index !== -1) return (index + 1).toString().padStart(4, '0');
+    }
     if (activeCategoryId === 'c10sat' && channel.category === 'C10SAT') {
         const c10Channels = channels.filter(c => c.category === 'C10SAT' && !C10_REMOVED_SET.has(c.id));
         const index = c10Channels.findIndex(c => c.id === channel.id);
