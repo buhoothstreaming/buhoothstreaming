@@ -102,6 +102,19 @@ export default function MoviePlayerPage() {
   const areSubtitlesDisabled = !movie?.subtitleTracks?.length;
 
   let streamUrl = movie.streamUrl || "https://www.youtube.com/embed/LXb3EKWsInQ?autoplay=1";
+  if (streamUrl.includes('youtube.com/watch')) {
+    try {
+      const watchUrl = new URL(streamUrl);
+      const videoId = watchUrl.searchParams.get('v');
+      const startTime = watchUrl.searchParams.get('t')?.replace(/s$/, '');
+      if (videoId) {
+        const embedUrl = new URL(`https://www.youtube.com/embed/${videoId}`);
+        embedUrl.searchParams.set('autoplay', '1');
+        if (startTime) embedUrl.searchParams.set('start', startTime);
+        streamUrl = embedUrl.toString();
+      }
+    } catch {}
+  }
   if (streamUrl.includes('youtube.com/embed') && origin) {
     const url = new URL(streamUrl);
     url.searchParams.set('origin', origin);

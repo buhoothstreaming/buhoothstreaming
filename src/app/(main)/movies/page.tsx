@@ -141,7 +141,7 @@ export default function MoviesPage() {
       case 'youth-cinema':
         filteredMovies = shuffledMovies.filter(movie => 
           movie.category === 'سينما الشباب' || 
-          ['the-final-revenge', 'creepypasta', 'obaydfox-imitating-middle-eastern-clips', 'minescope-red-wedding', 'best-vs-mbc6', 'master-x-home'].includes(movie.id)
+          ['the-final-revenge', 'creepypasta', 'obaydfox-imitating-middle-eastern-clips', 'minescope-red-wedding', 'best-vs-mbc6', 'master-x-home', 'mad-hound', 'enemies-to-lovers'].includes(movie.id)
         );
         break;
       case 'docstory':
@@ -288,7 +288,7 @@ export default function MoviesPage() {
                 activeChip === chip.label && chip.id === 'adult-toggle' && "bg-gradient-to-r from-[#cf2929] to-[#e80000] text-white border-transparent",
                 activeChip === chip.label && chip.id === 'minescope' && "bg-[#ff0000] hover:bg-[#ff0000]/90 text-white",
                 activeChip === chip.label && chip.id === 'four-ent' && "bg-gradient-to-r from-[#000000] to-[#121212] text-white border-transparent",
-                activeChip === chip.label && chip.id === 'youth-cinema' && "bg-[#d90429] hover:bg-[#d90429]/90 text-white border-transparent",
+                activeChip === chip.label && chip.id === 'youth-cinema' && "bg-gradient-to-r from-[#0022ff] to-[#00aeff] text-white border-transparent",
                 activeChip === chip.label && chip.id === 'docstory' && "bg-black text-white hover:bg-black/90",
                 activeChip === chip.label && chip.id === 'netflix' && "bg-[#E50914] text-white hover:bg-[#E50914]/90 border-transparent",
                 activeChip === chip.label && chip.id === 'marvel' && "bg-[#e21b22] hover:bg-[#c4151b] text-white border-transparent shadow-sm",
