@@ -1288,6 +1288,14 @@ export const channels: Channel[] = [
     streamUrl: 'https://canva.link/a1bpzryfbpj469x',
     category: 'C10SAT',
   },
+  {
+    id: 'tv8-plus',
+    name: 'TV8 Plus',
+    number: '0142',
+    logo: 'https://c.top4top.io/p_39724k9e21.jpeg',
+    streamUrl: 'https://canva.link/t5ra5yfwrvcy9pz',
+    category: 'C10SAT',
+  },
 ];
 
 export const movies: Movie[] = [
