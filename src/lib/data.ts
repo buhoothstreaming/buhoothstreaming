@@ -198,7 +198,7 @@ export const channels: Channel[] = [
     id: 'rewind-tv',
     name: 'Rewind TV',
     number: '0006',
-    logo: 'https://upload.wikimedia.org/wikipedia/commons/3/3a/Rewind_TV_Iraq.png',
+    logo: 'https://g.top4top.io/p_3973tvnu71.png',
     streamUrl: 'https://canva.link/4vknf369ip0zhv5',
     category: 'C10SAT',
   },
@@ -1294,6 +1294,14 @@ export const channels: Channel[] = [
     number: '0142',
     logo: 'https://c.top4top.io/p_39724k9e21.jpeg',
     streamUrl: 'https://canva.link/t5ra5yfwrvcy9pz',
+    category: 'C10SAT',
+  },
+  {
+    id: 'tv8-action',
+    name: 'TV8 Action',
+    number: '0143',
+    logo: 'https://e.top4top.io/p_3973oypcm1.jpeg',
+    streamUrl: 'https://canva.link/u06k2z0mmz87prr',
     category: 'C10SAT',
   },
 ];

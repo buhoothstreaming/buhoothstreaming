@@ -1520,10 +1520,6 @@ video {
 .bg-\[\#FF5500\]\/20 {
   background-color: rgb(255 85 0 / 0.2);
 }
-.bg-\[\#d90429\] {
-  --tw-bg-opacity: 1;
-  background-color: rgb(217 4 41 / var(--tw-bg-opacity, 1));
-}
 .bg-\[\#e21b22\] {
   --tw-bg-opacity: 1;
   background-color: rgb(226 27 34 / var(--tw-bg-opacity, 1));
@@ -1703,6 +1699,11 @@ video {
   --tw-gradient-to: rgb(0 27 71 / 0) var(--tw-gradient-to-position);
   --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to);
 }
+.from-\[\#0022ff\] {
+  --tw-gradient-from: #0022ff var(--tw-gradient-from-position);
+  --tw-gradient-to: rgb(0 34 255 / 0) var(--tw-gradient-to-position);
+  --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to);
+}
 .from-\[\#0055ff\] {
   --tw-gradient-from: #0055ff var(--tw-gradient-from-position);
   --tw-gradient-to: rgb(0 85 255 / 0) var(--tw-gradient-to-position);
@@ -1791,6 +1792,9 @@ video {
 }
 .to-\[\#000f5c\] {
   --tw-gradient-to: #000f5c var(--tw-gradient-to-position);
+}
+.to-\[\#00aeff\] {
+  --tw-gradient-to: #00aeff var(--tw-gradient-to-position);
 }
 .to-\[\#00c99a\] {
   --tw-gradient-to: #00c99a var(--tw-gradient-to-position);
@@ -2538,10 +2542,6 @@ video {
 .hover\:bg-\[\#c4151b\]:hover {
   --tw-bg-opacity: 1;
   background-color: rgb(196 21 27 / var(--tw-bg-opacity, 1));
-}
-
-.hover\:bg-\[\#d90429\]\/90:hover {
-  background-color: rgb(217 4 41 / 0.9);
 }
 
 .hover\:bg-\[\#e30000\]\/90:hover {
