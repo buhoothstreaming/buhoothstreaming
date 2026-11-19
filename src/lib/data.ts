@@ -5508,6 +5508,13 @@ export const series: Series[] = [
           { episodeNumber: 44, title: 'd4_s1e44_title', description: 'd4_s1e44_desc', streamUrl: 'https://www.youtube.com/embed/NC9mmrGv4k8?autoplay=1', thumbnailUrl: 'https://img.youtube.com/vi/NC9mmrGv4k8/0.jpg', ageRating: 7 },
           { episodeNumber: 45, title: 'd4_s1e45_title', description: 'd4_s1e45_desc', streamUrl: 'https://www.youtube.com/embed/Cd4GjQDa__0?autoplay=1', thumbnailUrl: 'https://img.youtube.com/vi/Cd4GjQDa__0/0.jpg', ageRating: 7 }
         ]
+      },
+      {
+        seasonNumber: 2,
+        episodes: [
+          { episodeNumber: 1, title: 'd4_s2e1_title', description: 'd4_s2e1_desc', streamUrl: 'https://www.youtube.com/embed/s3rQkKmI7l4?autoplay=1', thumbnailUrl: 'https://img.youtube.com/vi/s3rQkKmI7l4/0.jpg', ageRating: 7 },
+          { episodeNumber: 2, title: 'd4_s2e2_title', description: 'd4_s2e2_desc', streamUrl: 'https://www.youtube.com/embed/iwGuiAqV4v0?autoplay=1', thumbnailUrl: 'https://img.youtube.com/vi/iwGuiAqV4v0/0.jpg', ageRating: 7 }
+        ]
       }
     ]
   },
