@@ -16,8 +16,13 @@ export default function customImageLoader({
     return src;
   }
 
+  // YouTube thumbnail CDN supports valid HTTPS and CORS directly
+  if (src.startsWith('https://img.youtube.com/')) {
+    return src;
+  }
+
   // Route remote images through our internal image proxy endpoint to bypass:
   // 1) Vercel 402 OPTIMIZED_IMAGE_REQUEST_PAYMENT_REQUIRED quota blocks
   // 2) Upstream SSL CERT_HAS_EXPIRED errors (such as on top4top.io)
-  return `/api/image-proxy?url=${encodeURIComponent(src)}`;
+  return `/api/image-proxy?v=2&url=${encodeURIComponent(src)}`;
 }
