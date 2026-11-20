@@ -5520,7 +5520,9 @@ export const series: Series[] = [
         seasonNumber: 2,
         episodes: [
           { episodeNumber: 1, title: 'd4_s2e1_title', description: 'd4_s2e1_desc', streamUrl: 'https://www.youtube.com/embed/s3rQkKmI7l4?autoplay=1', thumbnailUrl: 'https://img.youtube.com/vi/s3rQkKmI7l4/0.jpg', ageRating: 7 },
-          { episodeNumber: 2, title: 'd4_s2e2_title', description: 'd4_s2e2_desc', streamUrl: 'https://www.youtube.com/embed/iwGuiAqV4v0?autoplay=1', thumbnailUrl: 'https://img.youtube.com/vi/iwGuiAqV4v0/0.jpg', ageRating: 7 }
+          { episodeNumber: 2, title: 'd4_s2e2_title', description: 'd4_s2e2_desc', streamUrl: 'https://www.youtube.com/embed/iwGuiAqV4v0?autoplay=1', thumbnailUrl: 'https://img.youtube.com/vi/iwGuiAqV4v0/0.jpg', ageRating: 7 },
+          { episodeNumber: 3, title: 'd4_s2e3_title', description: 'd4_s2e3_desc', streamUrl: 'https://www.youtube.com/embed/na6a2zqLhXo?autoplay=1', thumbnailUrl: 'https://img.youtube.com/vi/na6a2zqLhXo/0.jpg', ageRating: 7 },
+          { episodeNumber: 4, title: 'd4_s2e4_title', description: 'd4_s2e4_desc', streamUrl: 'https://www.youtube.com/embed/6eoXIyNIZeg?autoplay=1', thumbnailUrl: 'https://img.youtube.com/vi/6eoXIyNIZeg/0.jpg', ageRating: 7 }
         ]
       }
     ]
