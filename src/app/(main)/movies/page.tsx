@@ -152,7 +152,7 @@ export default function MoviesPage() {
           movie.category === 'Netflix' || 
           movie.subCategories?.includes('Netflix') || 
           movie.genres.includes('Netflix') || 
-          movie.id === 'kpop-demon-hunters'
+          ['kpop-demon-hunters', 'ladybug-cat-noir-the-movie'].includes(movie.id)
         );
         break;
       case 'marvel':

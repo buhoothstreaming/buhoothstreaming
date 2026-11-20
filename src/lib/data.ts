@@ -1451,6 +1451,7 @@ export const movies: Movie[] = [
     genres: ['Animation', 'Action', 'Adventure', 'Family', 'Musical'],
     description: 'ladybugMoviePlot',
     category: 'أفلام عائلية',
+    subCategories: ['Netflix'],
     streamUrl: 'https://www.youtube.com/embed/vTtGW1iU1s8?autoplay=1',
     audioTracks: ['Arabic'],
     subtitleTracks: [],
@@ -4887,6 +4888,12 @@ export const series: Series[] = [
             title: 'entNews_ep10_title',
             description: 'entNews_ep10_desc',
             streamUrl: 'https://h.top4top.io/m_3932bbqik1.mov',
+          },
+          {
+            episodeNumber: 11,
+            title: 'entNews_ep11_title',
+            description: 'entNews_ep11_desc',
+            streamUrl: 'https://l.top4top.io/m_3976ix5nz1.mp4',
           }
         ]
       }
