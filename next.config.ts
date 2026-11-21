@@ -13,6 +13,28 @@ const nextConfig: NextConfig = {
   eslint: {
     ignoreDuringBuilds: true,
   },
+  experimental: {
+    optimizePackageImports: [
+      'lucide-react',
+      '@radix-ui/react-select',
+      '@radix-ui/react-dialog',
+      '@radix-ui/react-alert-dialog',
+      '@radix-ui/react-dropdown-menu',
+      '@radix-ui/react-popover',
+      '@radix-ui/react-tooltip',
+      '@radix-ui/react-scroll-area',
+      '@radix-ui/react-tabs',
+    ],
+  },
+  webpack: (config, { dev, isServer }) => {
+    if (!isServer) {
+      config.output.chunkLoadTimeout = 300000;
+      if (dev) {
+        config.devtool = 'eval';
+      }
+    }
+    return config;
+  },
   images: {
     loader: 'custom',
     loaderFile: './src/lib/image-loader.ts',

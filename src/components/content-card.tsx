@@ -33,7 +33,7 @@ export default function ContentCard({ id, title, subtitle, imageUrl, type, ageRa
   const aspectRatio = type === 'movie' ? 'aspect-[9/16]' : 'aspect-video';
 
   return (
-    <Link href={href} className="block group">
+    <Link href={href} prefetch={false} className="block group">
       <div className="space-y-2">
         <div className={cn('relative overflow-hidden rounded-lg shadow-lg bg-card border border-white/5', aspectRatio)}>
           {hasError ? (
