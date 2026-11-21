@@ -14,6 +14,127 @@ import type { Movie } from '@/lib/types';
 const FAVORITES_KEY = 'favorite_movies';
 const ADULT_CONTENT_KEY = 'hide_adult_content';
 
+const ACTION_EXCLUDED_IDS = new Set([
+  'enemies-to-lovers',
+  'a-minecraft-movie',
+  'mad-hound',
+  'last-modded-vs-joker',
+  'lego-ninjago-movie',
+  'the-final-revenge',
+  'spider-man-across-the-spider-verse',
+  'best-vs-mbc6',
+  'yeni-sunucu-ask-yolu',
+  'kpop-demon-hunters',
+  'bully-scholarship-edition-the-movie',
+  'mine-box-egg-wars',
+  'the-incredibles',
+  'captain-underpants-the-first-epic-movie',
+  'miraculous-world-shanghai',
+  'ladybug-cat-noir-the-movie',
+  'miraculous-world-ny',
+  'miraculous-world-tokyo',
+  'miraculous-world-london',
+  'miraculous-world-paris',
+  'yeni-sunucu-mustafadan-intikam-الماك',
+  'minescope-red-wedding',
+  'incredibles-2',
+]);
+
+const HORROR_EXCLUDED_IDS = new Set([
+  'last-modded-vs-mostafa-game-over',
+]);
+
+const DRAMA_EXCLUDED_IDS = new Set([
+  'enemies-to-lovers',
+  'frost-oath-the-boy-who-became-his-weakness',
+  'mad-hound',
+  'healing-the-bad-boy',
+  'the-final-revenge',
+  'yeni-sunucu-ask-yolu',
+  'bully-scholarship-edition-the-movie',
+  'minescope-old-and-creative-memories',
+  'al-hareefa',
+  'demo-the-terrifying-miser',
+  'creepypasta',
+  'demo-ahmed-the-iftar-breaker',
+  'demo-the-haunted-house',
+  'minescope-red-wedding',
+  'voy-voy-voy',
+  'al-hareefa-2',
+  'flight-404',
+  'pervaya',
+]);
+
+const COMEDY_EXCLUDED_IDS = new Set([
+  'hamoudi-saif-and-friends',
+  'toy-story',
+  'toy-story-2',
+  'toy-story-3',
+  'toy-story-4',
+  'toy-story-5',
+  'ralph-breaks-the-internet',
+  'wreck-it-ralph',
+  'last-modded-vs-mostafa-game-over',
+  'al-dodoor-rania-and-jiji',
+  'al-dodoor-rania-and-jiji-2',
+  'al-dodoor-rania-and-gg-3',
+  'the-emoji-movie',
+  'captain-underpants-the-first-epic-movie',
+  'demo-ahmed-the-disbeliever',
+  'demo-ahmed-the-iftar-breaker',
+  'demo-the-terrifying-miser',
+  'demo-the-haunted-house',
+  'bad-boys-ride-or-die',
+  'love-romance-chocolate',
+  'the-boss-baby',
+  'the-boss-baby-family-business',
+  'voy-voy-voy',
+  'lego-ninjago-movie',
+  'trolls',
+  'obaydfox-imitating-middle-eastern-clips',
+  'sex-tape',
+  'plagiator',
+  'pervaya',
+  'al-hareefa',
+  'al-hareefa-2',
+  'inside-out',
+  'inside-out-2',
+  'meet-the-robinsons',
+  'minescope-red-wedding',
+  'spongebob-movie-1',
+  'spongebob-movie-2',
+  'spongebob-movie-3',
+  'spongebob-movie-4',
+  'a-minecraft-movie',
+  'best-vs-mbc6',
+  'turning-red',
+  'moody-and-troublemaker-friends',
+  'soul',
+  'barbie',
+]);
+
+const FANTASY_EXCLUDED_IDS = new Set([
+  'demo-ahmed-the-disbeliever',
+  'demo-ahmed-the-iftar-breaker',
+  'demo-the-terrifying-miser',
+  'demo-the-haunted-house',
+  'yeni-sunucu-ask-yolu',
+  'yeni-sunucu-mustafadan-intikam-الماك',
+  'plagiator',
+  'al-dodoor-rania-and-jiji',
+  'al-dodoor-rania-and-jiji-2',
+  'al-dodoor-rania-and-gg-3',
+  'barbie',
+  'turning-red',
+  'last-modded-vs-joker',
+  'last-modded-vs-mostafa-game-over',
+  'soul',
+  'kpop-demon-hunters',
+  'a-minecraft-movie',
+  'enemies-to-lovers',
+  'mad-hound',
+]);
+
 export default function MoviesPage() {
   const { t, language } = useLanguage();
   
@@ -141,7 +262,7 @@ export default function MoviesPage() {
       case 'youth-cinema':
         filteredMovies = shuffledMovies.filter(movie => 
           movie.category === 'سينما الشباب' || 
-          ['the-final-revenge', 'creepypasta', 'obaydfox-imitating-middle-eastern-clips', 'minescope-red-wedding', 'best-vs-mbc6', 'master-x-home', 'mad-hound', 'enemies-to-lovers'].includes(movie.id)
+          ['the-final-revenge', 'creepypasta', 'obaydfox-imitating-middle-eastern-clips', 'minescope-red-wedding', 'best-vs-mbc6', 'mad-hound', 'enemies-to-lovers'].includes(movie.id)
         );
         break;
       case 'docstory':
@@ -213,9 +334,11 @@ export default function MoviesPage() {
         break;
       case 'action':
         filteredMovies = shuffledMovies.filter(movie => 
-          movie.category === 'أفلام الأكشن' || 
-          movie.subCategories?.includes('أفلام الأكشن') || 
-          movie.genres.includes('Action')
+          !ACTION_EXCLUDED_IDS.has(movie.id) && (
+            movie.category === 'أفلام الأكشن' || 
+            movie.subCategories?.includes('أفلام الأكشن') || 
+            movie.genres.includes('Action')
+          )
         );
         break;
       case 'egyptian':
@@ -228,16 +351,24 @@ export default function MoviesPage() {
         filteredMovies = shuffledMovies.filter(movie => movie.category === 'Russian');
         break;
       case 'horror':
-        filteredMovies = shuffledMovies.filter(movie => movie.category === 'Horror' || movie.genres.includes('Horror'));
+        filteredMovies = shuffledMovies.filter(movie => 
+          !HORROR_EXCLUDED_IDS.has(movie.id) && (movie.category === 'Horror' || movie.genres.includes('Horror'))
+        );
         break;
       case 'drama':
-        filteredMovies = shuffledMovies.filter(movie => movie.category === 'Drama' || movie.genres.includes('Drama'));
+        filteredMovies = shuffledMovies.filter(movie => 
+          !DRAMA_EXCLUDED_IDS.has(movie.id) && (movie.category === 'Drama' || movie.genres.includes('Drama'))
+        );
         break;
       case 'comedy':
-        filteredMovies = shuffledMovies.filter(movie => movie.category === 'أفلام كوميدية' || movie.genres.includes('Comedy'));
+        filteredMovies = shuffledMovies.filter(movie => 
+          !COMEDY_EXCLUDED_IDS.has(movie.id) && (movie.category === 'أفلام كوميدية' || movie.genres.includes('Comedy'))
+        );
         break;
       case 'fantasy':
-        filteredMovies = shuffledMovies.filter(movie => movie.category === 'أفلام خيالية' || movie.genres.includes('Fantasy'));
+        filteredMovies = shuffledMovies.filter(movie => 
+          !FANTASY_EXCLUDED_IDS.has(movie.id) && (movie.category === 'أفلام خيالية' || movie.genres.includes('Fantasy'))
+        );
         break;
       case 'classic':
         filteredMovies = shuffledMovies.filter(movie => 

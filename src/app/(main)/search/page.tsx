@@ -187,7 +187,7 @@ export default function SearchPage() {
               m.category === 'VIVA' ||
               m.category === 'VirginsOne' ||
               m.category === 'سينما الشباب' ||
-              ['the-final-revenge', 'creepypasta', 'obaydfox-imitating-middle-eastern-clips', 'minescope-red-wedding', 'best-vs-mbc6', 'master-x-home', 'mad-hound', 'enemies-to-lovers'].includes(m.id)
+              ['the-final-revenge', 'creepypasta', 'obaydfox-imitating-middle-eastern-clips', 'minescope-red-wedding', 'best-vs-mbc6', 'mad-hound', 'enemies-to-lovers'].includes(m.id)
             );
             allContent.push(...getFiltered(mineScopeMovies).map(m => ({...m, type: 'movie' as const})));
             const mineScopeSeries = allSeriesPool.filter(s => 
@@ -321,7 +321,7 @@ export default function SearchPage() {
     const moviesResults = results.filter(r => r.type === 'movie');
     const seriesResults = results.filter(r => r.type === 'series');
 
-    const youthCinemaIds = ['the-final-revenge', 'creepypasta', 'obaydfox-imitating-middle-eastern-clips', 'minescope-red-wedding', 'best-vs-mbc6', 'master-x-home', 'mad-hound', 'enemies-to-lovers'];
+    const youthCinemaIds = ['the-final-revenge', 'creepypasta', 'obaydfox-imitating-middle-eastern-clips', 'minescope-red-wedding', 'best-vs-mbc6', 'mad-hound', 'enemies-to-lovers'];
     const is4Ent = activeChip === virginsOneChip;
     const isJoyt1 = activeChip === joyt1Chip;
     const isYouthClassics = activeChip === youthClassicsChip;
