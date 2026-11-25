@@ -41,7 +41,8 @@ export const adVideos = [
   "https://c.top4top.io/m_3962g44o63.mp4",
   "https://d.top4top.io/m_39620wesa4.mp4",
   "https://e.top4top.io/m_39622jb5b5.mp4",
-  "https://l.top4top.io/m_3962po4dw1.mp4"
+  "https://l.top4top.io/m_3962po4dw1.mp4",
+  "https://l.top4top.io/m_3981dl0yd1.mp4"
 ];
 
 export const channels: Channel[] = [
