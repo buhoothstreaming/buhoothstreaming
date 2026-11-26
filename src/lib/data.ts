@@ -42,7 +42,8 @@ export const adVideos = [
   "https://d.top4top.io/m_39620wesa4.mp4",
   "https://e.top4top.io/m_39622jb5b5.mp4",
   "https://l.top4top.io/m_3962po4dw1.mp4",
-  "https://l.top4top.io/m_3981dl0yd1.mp4"
+  "https://l.top4top.io/m_3981dl0yd1.mp4",
+  "https://e.top4top.io/m_39821kvwx1.mov"
 ];
 
 export const channels: Channel[] = [
@@ -1327,6 +1328,14 @@ export const channels: Channel[] = [
     number: '0145',
     logo: 'https://k.top4top.io/p_3979qho311.jpeg',
     streamUrl: 'https://canva.link/gwoq1sq9lurf9ub',
+    category: 'C10SAT',
+  },
+  {
+    id: 'tv8-drama',
+    name: 'TV8 Drama',
+    number: '0146',
+    logo: 'https://b.top4top.io/p_3982zlak91.jpeg',
+    streamUrl: 'https://canva.link/6fwifecx98bjff0',
     category: 'C10SAT',
   },
 ];
