@@ -75,7 +75,7 @@ export default function EpisodeThumbnail({
       src={imgSrc}
       alt={alt}
       fill
-      className={cn('object-cover', className)}
+      className={cn('object-cover text-transparent', className)}
       referrerPolicy="no-referrer"
       onError={() => {
         const ytThumb = extractYouTubeThumbnail(streamUrl);

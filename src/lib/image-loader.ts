@@ -11,6 +11,11 @@ export default function customImageLoader({
     return '/images/placeholder-poster.png';
   }
 
+  // Allow explicit direct browser fallback when proxy cannot reach upstream host
+  if (src.endsWith('#direct')) {
+    return src.slice(0, -'#direct'.length);
+  }
+
   // Local images or data URLs do not need proxying
   if (src.startsWith('/') || src.startsWith('data:')) {
     return src;
@@ -24,5 +29,5 @@ export default function customImageLoader({
   // Route remote images through our internal image proxy endpoint to bypass:
   // 1) Vercel 402 OPTIMIZED_IMAGE_REQUEST_PAYMENT_REQUIRED quota blocks
   // 2) Upstream SSL CERT_HAS_EXPIRED errors (such as on top4top.io)
-  return `/api/image-proxy?v=2&url=${encodeURIComponent(src)}`;
+  return `/api/image-proxy?v=3&strict=1&url=${encodeURIComponent(src)}`;
 }

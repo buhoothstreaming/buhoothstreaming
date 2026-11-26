@@ -5,7 +5,7 @@ import { notFound, useParams, useRouter } from 'next/navigation';
 import { useLanguage } from '@/contexts/language-context';
 import { ArrowLeft, ArrowRight } from 'lucide-react';
 import { useState, useEffect, useRef } from 'react';
-import Image from 'next/image';
+import SafeImage from '@/components/safe-image';
 import { cn } from '@/lib/utils';
 import ChannelsSidebar from '@/components/channels-sidebar';
 import CustomVideoPlayer from '@/components/custom-video-player';
@@ -214,7 +214,7 @@ export default function ChannelPlayerPage() {
                   <p className="text-xs text-white/70">{getLocalizedChannelNumber(currentChannel)}</p>
               </div>
               <div className={cn("relative h-[30px] w-12 overflow-hidden rounded-[5px] bg-black/40 ring-1 ring-white/10")}>
-                <Image src={currentChannel.logo} alt={currentChannel.name} fill className="object-cover" />
+                <SafeImage src={currentChannel.logo} alt={currentChannel.name} fill className="object-cover" />
               </div>
           </div>
         </div>

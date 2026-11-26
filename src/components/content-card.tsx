@@ -46,7 +46,7 @@ export default function ContentCard({ id, title, subtitle, imageUrl, type, ageRa
               src={imgSrc || '/images/placeholder-poster.png'}
               alt={title}
               fill
-              className="object-cover transition-transform duration-300 group-hover:scale-105"
+              className="object-cover transition-transform duration-300 group-hover:scale-105 text-transparent"
               referrerPolicy="no-referrer"
               onError={() => {
                 if (imgSrc !== '/images/placeholder-poster.png') {

@@ -4,7 +4,7 @@ import { Button } from "@/components/ui/button";
 import { useLanguage } from "@/contexts/language-context";
 import { ArrowLeft, ArrowRight, Info, Layers } from "lucide-react";
 import Link from "next/link";
-import Image from "next/image";
+import SafeImage from "@/components/safe-image";
 import { ScrollArea } from "@/components/ui/scroll-area";
 import { channels, movies, series, adVideos } from "@/lib/data";
 import { PlaceHolderImages } from "@/lib/placeholder-images";
@@ -101,7 +101,7 @@ export default function AboutPage() {
             
             <div className="flex justify-center">
               <div className="relative w-40 h-12 shrink-0">
-                <Image 
+                <SafeImage 
                   src={logo} 
                   alt="Logo" 
                   fill 

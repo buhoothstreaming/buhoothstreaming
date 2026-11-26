@@ -1,1 +1,6 @@
-{}
+{
+  "/api/image-proxy/route": "app/api/image-proxy/route.js",
+  "/(main)/channels/page": "app/(main)/channels/page.js",
+  "/(main)/movies/page": "app/(main)/movies/page.js",
+  "/(main)/series/page": "app/(main)/series/page.js"
+}

@@ -2178,6 +2178,9 @@ video {
 .text-sidebar-foreground\/70 {
   color: hsl(var(--sidebar-foreground) / 0.7);
 }
+.text-transparent {
+  color: transparent;
+}
 .text-watch-red {
   --tw-text-opacity: 1;
   color: rgb(236 84 76 / var(--tw-text-opacity, 1));

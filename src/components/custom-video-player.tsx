@@ -1,7 +1,7 @@
 'use client';
 
 import { useState, useRef, useEffect } from 'react';
-import Image from 'next/image';
+import SafeImage from '@/components/safe-image';
 import {
   Play,
   Pause,
@@ -357,7 +357,7 @@ export default function CustomVideoPlayer({ src, onEnded, loop = false, hideCont
                             </PopoverContent>
                         </Popover>
                         
-                        <Image src={logo} alt="Logo" width={80} height={32} className="object-contain hidden sm:block" data-ai-hint="app logo"/>
+                        <SafeImage src={logo} alt="Logo" width={80} height={32} className="object-contain hidden sm:block" data-ai-hint="app logo"/>
                     </div>
                 </div>
             </div>

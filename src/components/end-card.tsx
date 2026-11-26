@@ -1,6 +1,6 @@
 'use client';
 import { useState, useEffect, useRef } from 'react';
-import Image from 'next/image';
+import SafeImage from '@/components/safe-image';
 import { Button } from '@/components/ui/button';
 import { Progress } from '@/components/ui/progress';
 import { useLanguage } from '@/contexts/language-context';
@@ -55,7 +55,7 @@ export default function EndCard({ series, nextEpisode, onPlayNext, onExit }: End
 
   return (
     <div className="relative w-screen h-screen bg-black">
-      <Image
+      <SafeImage
         src={series.posterUrl}
         alt={t(series.title)}
         fill
@@ -67,7 +67,7 @@ export default function EndCard({ series, nextEpisode, onPlayNext, onExit }: End
         <div className="w-full max-w-2xl text-center">
           <h2 className="text-xl font-semibold text-muted-foreground mb-2">{t('nextEpisode')}</h2>
           <div className="relative aspect-video w-full max-w-lg mx-auto rounded-lg overflow-hidden shadow-2xl mb-4">
-              <Image src={nextEpisode.thumbnailUrl || series.posterUrl} alt={t(nextEpisode.title)} fill className="object-cover" referrerPolicy="no-referrer" data-ai-hint="episode thumbnail" />
+              <SafeImage src={nextEpisode.thumbnailUrl || series.posterUrl} fallbackSrc={series.posterUrl} alt={t(nextEpisode.title)} fill className="object-cover" referrerPolicy="no-referrer" data-ai-hint="episode thumbnail" />
               <div className="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent" />
               <div className="absolute bottom-4 left-4 right-4">
                   <div className="flex items-center gap-2">

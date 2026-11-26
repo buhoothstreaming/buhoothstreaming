@@ -185,7 +185,7 @@ export default function MovieInfoPage() {
                     src={posterSrc} 
                     alt={t(movie.title)} 
                     fill 
-                    className="object-cover" 
+                    className="object-cover text-transparent" 
                     referrerPolicy="no-referrer" 
                     onError={() => {
                       if (posterSrc !== '/images/placeholder-poster.png') {

@@ -4,7 +4,7 @@ import { useState, useEffect, useMemo } from 'react';
 import { Sheet, SheetContent, SheetTitle } from '@/components/ui/sheet';
 import { channels, C10SAT_REMOVED_CHANNEL_IDS } from '@/lib/data';
 import { cn } from '@/lib/utils';
-import Image from 'next/image';
+import SafeImage from '@/components/safe-image';
 import { useRouter } from 'next/navigation';
 import { useLanguage } from '@/contexts/language-context';
 import { ScrollArea } from './ui/scroll-area';
@@ -212,7 +212,7 @@ export default function ChannelsSidebar({ isOpen, onOpenChange, currentChannelId
                                         <category.icon className="h-5 w-5 text-primary" />
                                 ) : (
                                     <div className="relative w-full h-full p-1">
-                                        <Image src={category.icon as string} alt={category.name} fill className="object-contain" />
+                                        <SafeImage src={category.icon as string} alt={category.name} fill className="object-contain" />
                                     </div>
                                 )}
                             </div>
@@ -249,7 +249,7 @@ export default function ChannelsSidebar({ isOpen, onOpenChange, currentChannelId
                                     dir={direction}
                                 >
                                     <div className="relative h-10 w-16 overflow-hidden rounded-md flex-shrink-0 bg-black/40 ring-1 ring-white/10 group-hover:ring-white/20">
-                                        <Image src={channel.logo} alt={channel.name} fill className="object-cover" />
+                                        <SafeImage src={channel.logo} alt={channel.name} fill className="object-cover" />
                                     </div>
                                     <div className={cn(
                                       "flex-1",

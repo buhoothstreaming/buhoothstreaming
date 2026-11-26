@@ -1,6 +1,6 @@
 "use client";
 
-import Image from 'next/image';
+import SafeImage from '@/components/safe-image';
 import { useState, useEffect, useMemo } from 'react';
 import { Carousel, CarouselContent, CarouselItem } from "@/components/ui/carousel";
 import Autoplay from "embla-carousel-autoplay";
@@ -56,7 +56,7 @@ export default function AdvertBanner() {
           {displayedImages.map((image) => (
             <CarouselItem key={image.id}>
               <div className="aspect-[4/1] relative overflow-hidden rounded-lg">
-                <Image src={image.imageUrl} alt={image.description || "Advertisement"} fill className="object-cover" referrerPolicy="no-referrer" data-ai-hint={image.imageHint} />
+                <SafeImage src={image.imageUrl} alt={image.description || "Advertisement"} fill className="object-cover" referrerPolicy="no-referrer" data-ai-hint={image.imageHint} />
               </div>
             </CarouselItem>
           ))}

@@ -1,5 +1,5 @@
 "use client";
-import Image from 'next/image';
+import SafeImage from '@/components/safe-image';
 import { Progress } from '@/components/ui/progress';
 import { useEffect, useState } from 'react';
 import { useLanguage } from '@/contexts/language-context';
@@ -48,7 +48,7 @@ export default function SplashScreen() {
   return (
     <div className="flex flex-col items-center justify-center h-screen bg-background">
       <div className="mb-8">
-        <Image src={logo} alt="بحوث Streaming Logo" width={250} height={100} priority data-ai-hint="app logo" />
+        <SafeImage src={logo} alt="بحوث Streaming Logo" width={250} height={100} priority data-ai-hint="app logo" />
       </div>
       <div className="w-64 flex flex-col items-center">
         <Progress value={progress} className="h-2 bg-primary/20 [&>div]:bg-primary" />
