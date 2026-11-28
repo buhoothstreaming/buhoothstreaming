@@ -14,6 +14,77 @@ import type { Series } from '@/lib/types';
 const FAVORITES_KEY = 'favorite_series';
 const ADULT_CONTENT_KEY = 'hide_adult_content';
 
+const FANTASY_EXCLUDED_IDS = new Set([
+  'mouhibos-s-show',
+  'the-voices-are-over',
+  'yomyat-daaboul-wa-alishko',
+  'florensa',
+  'miraculous',
+  'yeni-sunucu',
+  'yomyat-d-television-x-al-jameel',
+  'yomyat-cn-johnny-al-jameel',
+  'mystreet',
+  'chloe-the-butterfly-girl',
+  'leo-and-merae',
+  'nqrl',
+  'd4',
+  'ahmad-hero',
+  'blades-magic',
+  'ahmedIr-family',
+  'telegachers',
+  'the-music-freaks',
+]);
+
+const COMEDY_EXCLUDED_IDS = new Set([
+  'the-voices-are-over',
+  'yomyat-cn-johnny-al-jameel',
+  'yomyat-d-television-x-al-jameel',
+  'chloe-the-butterfly-girl',
+  'yomyat-fawazeer',
+  'yomyat-daaboul-wa-alishko',
+  'ahmedIr-family',
+  'the-music-freaks',
+  'telegachers',
+  'yeni-sunucu',
+  'leo-and-merae',
+  'nqrl',
+  'deviantart-arabic',
+  'troll-robber',
+  'mouhibos-s-show',
+  'poor-snake-find-home',
+  'poor-snake-troll',
+  'troll-pencil',
+  'yomyat-hamody-saif',
+  'ahmad-hero',
+  'd4',
+  'lola-mila',
+  'wednesday',
+  'the-purge',
+  'bobby-world',
+  'mystreet',
+  'blades-magic',
+  'dude-thats-my-ghost',
+]);
+
+const DRAMA_EXCLUDED_IDS = new Set([
+  'yeni-sunucu',
+  'leo-and-merae',
+  'florensa',
+  'yomyat-cn-johnny-al-jameel',
+  'yomyat-hamody-saif',
+  'yomyat-d-television-x-al-jameel',
+  'chloe-the-butterfly-girl',
+  'the-voices-are-over',
+  'dont-mess-with-the-angel',
+  'the-purge',
+  'squid-game',
+  'abousi-al-jameel',
+  'mystery-lies',
+  'yomyat-saleh-yasser',
+  'mystreet',
+  'garteam',
+]);
+
 export default function SeriesPage() {
   const { t, language } = useLanguage();
 
@@ -163,11 +234,11 @@ export default function SeriesPage() {
     } else if (activeChip === animationCategoryChip) {
       filteredSeries = shuffledSeries.filter(item => item.category === 'رسوم متحركة');
     } else if (activeChip === fantasySeriesChip) {
-        filteredSeries = shuffledSeries.filter(item => item.category === 'Fantasy Series' || item.id === 'blades-magic' || item.id === 'mystreet' || item.genres.includes('Fantasy'));
+        filteredSeries = shuffledSeries.filter(item => !FANTASY_EXCLUDED_IDS.has(item.id) && (item.category === 'Fantasy Series' || item.id === 'blades-magic' || item.id === 'mystreet' || item.genres.includes('Fantasy')));
     } else if (activeChip === comedySeriesChip) {
-        filteredSeries = shuffledSeries.filter(item => item.category === 'Comedy Series' || item.id === 'abousi-al-jameel' || item.id === 'yomyat-saleh-yasser' || item.id === 'blades-magic' || item.genres.includes('Comedy'));
+        filteredSeries = shuffledSeries.filter(item => !COMEDY_EXCLUDED_IDS.has(item.id) && (item.category === 'Comedy Series' || item.id === 'abousi-al-jameel' || item.id === 'yomyat-saleh-yasser' || item.id === 'blades-magic' || item.genres.includes('Comedy')));
     } else if (activeChip === dramaSeriesChip) {
-        filteredSeries = shuffledSeries.filter(item => item.category === 'Drama Series' || item.genres.includes('Drama'));
+        filteredSeries = shuffledSeries.filter(item => !DRAMA_EXCLUDED_IDS.has(item.id) && (item.category === 'Drama Series' || item.genres.includes('Drama')));
     } else if (activeChip === ramadanChip) {
       filteredSeries = shuffledSeries.filter(item => item.category === 'Ramadan' || item.id === 'tango' || item.id === 'cello' || item.id === 'julia' || item.id === 'abousi-al-jameel' || item.id === 'yomyat-fawazeer');
     } else if (activeChip === adultContentChip) {

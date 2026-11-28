@@ -1338,6 +1338,46 @@ export const channels: Channel[] = [
     streamUrl: 'https://canva.link/6fwifecx98bjff0',
     category: 'C10SAT',
   },
+  {
+    id: 'tv8-select',
+    name: 'TV8 Select',
+    number: '0147',
+    logo: 'https://j.top4top.io/p_3983s8l9c1.jpeg',
+    streamUrl: 'https://canva.link/6kjsqqj8l6w4mo8',
+    category: 'C10SAT',
+  },
+  {
+    id: 'tv8-classic',
+    name: 'TV8 Classic',
+    number: '0148',
+    logo: 'https://k.top4top.io/p_3983ppool2.jpeg',
+    streamUrl: 'https://canva.link/6trm95isuihi9hx',
+    category: 'C10SAT',
+  },
+  {
+    id: 'tv8-movies',
+    name: 'TV8 Movies',
+    number: '0149',
+    logo: 'https://l.top4top.io/p_39837qksa3.jpeg',
+    streamUrl: 'https://canva.link/0w60fnym7e3tgk7',
+    category: 'C10SAT',
+  },
+  {
+    id: 'tv8-massia',
+    name: 'TV8 Massia',
+    number: '0150',
+    logo: 'https://a.top4top.io/p_3983yk6jr4.jpeg',
+    streamUrl: 'https://canva.link/1n6pkx0vg9swzub',
+    category: 'C10SAT',
+  },
+  {
+    id: 'tv8-verta',
+    name: 'TV8 Verta',
+    number: '0151',
+    logo: 'https://b.top4top.io/p_3983sgm8l5.jpeg',
+    streamUrl: 'https://canva.link/248w38aluzv0s5g',
+    category: 'C10SAT',
+  },
 ];
 
 export const movies: Movie[] = [
@@ -5542,7 +5582,9 @@ export const series: Series[] = [
           { episodeNumber: 17, title: 'd4_s2e17_title', description: 'd4_s2e17_desc', streamUrl: 'https://www.youtube.com/embed/jEAejNgnPHc?autoplay=1', thumbnailUrl: 'https://img.youtube.com/vi/jEAejNgnPHc/0.jpg', ageRating: 7 },
           { episodeNumber: 18, title: 'd4_s2e18_title', description: 'd4_s2e18_desc', streamUrl: 'https://www.youtube.com/embed/GlSZEb4zLKg?autoplay=1', thumbnailUrl: 'https://img.youtube.com/vi/GlSZEb4zLKg/0.jpg', ageRating: 7 },
           { episodeNumber: 19, title: 'd4_s2e19_title', description: 'd4_s2e19_desc', streamUrl: 'https://www.youtube.com/embed/pCQEaoUA9W8?autoplay=1', thumbnailUrl: 'https://img.youtube.com/vi/pCQEaoUA9W8/0.jpg', ageRating: 7 },
-          { episodeNumber: 20, title: 'd4_s2e20_title', description: 'd4_s2e20_desc', streamUrl: 'https://www.youtube.com/embed/LqmQ8EF8sb8?autoplay=1', thumbnailUrl: 'https://img.youtube.com/vi/LqmQ8EF8sb8/0.jpg', ageRating: 7 }
+          { episodeNumber: 20, title: 'd4_s2e20_title', description: 'd4_s2e20_desc', streamUrl: 'https://www.youtube.com/embed/LqmQ8EF8sb8?autoplay=1', thumbnailUrl: 'https://img.youtube.com/vi/LqmQ8EF8sb8/0.jpg', ageRating: 7 },
+          { episodeNumber: 21, title: 'd4_s2e21_title', description: 'd4_s2e21_desc', streamUrl: 'https://www.youtube.com/embed/crUUF0eV_G8?autoplay=1', thumbnailUrl: 'https://img.youtube.com/vi/crUUF0eV_G8/0.jpg', ageRating: 7 },
+          { episodeNumber: 22, title: 'd4_s2e22_title', description: 'd4_s2e22_desc', streamUrl: 'https://www.youtube.com/embed/PUUcvTZZyyU?autoplay=1', thumbnailUrl: 'https://img.youtube.com/vi/PUUcvTZZyyU/0.jpg', ageRating: 7 }
         ]
       }
     ]
@@ -7195,6 +7237,73 @@ export const series: Series[] = [
             "thumbnailUrl": "https://j.top4top.io/p_3957hotab1.jpeg",
             "ageRating": 14
           }
+        ]
+      }
+    ]
+  },
+  {
+    id: 'garteam',
+    title: 'garteamTitle',
+    year: '2023-2024',
+    posterUrl: 'https://j.top4top.io/p_39833qntu1.jpeg',
+    ageRating: 16,
+    rating: 8.5,
+    genres: ['Comedy', 'Drama'],
+    description: 'garteamPlot',
+    category: 'VirginsOne',
+    audioTracks: ['Arabic'],
+    subtitleTracks: [],
+    seasons: [
+      {
+        seasonNumber: 1,
+        episodes: [
+          { episodeNumber: 1, title: 'Episode 1', streamUrl: 'https://g.top4top.io/m_3983qcu2b1.mp4', thumbnailUrl: 'https://j.top4top.io/p_39833qntu1.jpeg', ageRating: 16 },
+          { episodeNumber: 2, title: 'Episode 2', streamUrl: 'https://h.top4top.io/m_3983hbiaf2.mp4', thumbnailUrl: 'https://j.top4top.io/p_39833qntu1.jpeg', ageRating: 16 },
+          { episodeNumber: 3, title: 'Episode 3', streamUrl: 'https://i.top4top.io/m_3983ynkjk3.mp4', thumbnailUrl: 'https://j.top4top.io/p_39833qntu1.jpeg', ageRating: 16 },
+          { episodeNumber: 4, title: 'Episode 4', streamUrl: 'https://j.top4top.io/m_39839po324.mp4', thumbnailUrl: 'https://j.top4top.io/p_39833qntu1.jpeg', ageRating: 16 },
+          { episodeNumber: 5, title: 'Episode 5', streamUrl: 'https://k.top4top.io/m_398310ne45.mp4', thumbnailUrl: 'https://j.top4top.io/p_39833qntu1.jpeg', ageRating: 16 },
+          { episodeNumber: 6, title: 'garteam_s1e6_title', description: 'garteam_s1e6_title', streamUrl: 'https://www.youtube.com/embed/g3FaWvGaQHg?autoplay=1', thumbnailUrl: 'https://img.youtube.com/vi/g3FaWvGaQHg/0.jpg', ageRating: 16 },
+          { episodeNumber: 7, title: 'garteam_s1e7_title', description: 'garteam_s1e7_title', streamUrl: 'https://www.youtube.com/embed/6-ttPmsc5SE?autoplay=1', thumbnailUrl: 'https://img.youtube.com/vi/6-ttPmsc5SE/0.jpg', ageRating: 16 },
+          { episodeNumber: 8, title: 'garteam_s1e8_title', description: 'garteam_s1e8_title', streamUrl: 'https://www.youtube.com/embed/vK6l7WkJMyk?autoplay=1', thumbnailUrl: 'https://img.youtube.com/vi/vK6l7WkJMyk/0.jpg', ageRating: 16 },
+          { episodeNumber: 9, title: 'garteam_s1e9_title', description: 'garteam_s1e9_title', streamUrl: 'https://www.youtube.com/embed/R9zG8q89oVo?autoplay=1', thumbnailUrl: 'https://img.youtube.com/vi/R9zG8q89oVo/0.jpg', ageRating: 16 },
+          { episodeNumber: 10, title: 'garteam_s1e10_title', description: 'garteam_s1e10_title', streamUrl: 'https://www.youtube.com/embed/epkLlz0D9kU?autoplay=1', thumbnailUrl: 'https://img.youtube.com/vi/epkLlz0D9kU/0.jpg', ageRating: 16 },
+          { episodeNumber: 11, title: 'garteam_s1e11_title', description: 'garteam_s1e11_title', streamUrl: 'https://www.youtube.com/embed/mJJjzZnh9mA?autoplay=1', thumbnailUrl: 'https://img.youtube.com/vi/mJJjzZnh9mA/0.jpg', ageRating: 16 },
+          { episodeNumber: 12, title: 'garteam_s1e12_title', description: 'garteam_s1e12_title', streamUrl: 'https://www.youtube.com/embed/Up-kA7rfM4c?autoplay=1', thumbnailUrl: 'https://img.youtube.com/vi/Up-kA7rfM4c/0.jpg', ageRating: 16 },
+          { episodeNumber: 13, title: 'garteam_s1e13_title', description: 'garteam_s1e13_title', streamUrl: 'https://www.youtube.com/embed/qnkYz-_7aQE?autoplay=1', thumbnailUrl: 'https://img.youtube.com/vi/qnkYz-_7aQE/0.jpg', ageRating: 16 },
+          { episodeNumber: 14, title: 'garteam_s1e14_title', description: 'garteam_s1e14_title', streamUrl: 'https://www.youtube.com/embed/Rr3WsVNWwgs?autoplay=1', thumbnailUrl: 'https://img.youtube.com/vi/Rr3WsVNWwgs/0.jpg', ageRating: 16 }
+        ]
+      },
+      {
+        seasonNumber: 2,
+        episodes: [
+          { episodeNumber: 1, title: 'garteam_s2e1_title', description: 'garteam_s2e1_title', streamUrl: 'https://www.youtube.com/embed/rhWqmtBZAJA?autoplay=1', thumbnailUrl: 'https://img.youtube.com/vi/rhWqmtBZAJA/0.jpg', ageRating: 16 },
+          { episodeNumber: 2, title: 'garteam_s2e2_title', description: 'garteam_s2e2_title', streamUrl: 'https://www.youtube.com/embed/gjPs2id-6nM?autoplay=1', thumbnailUrl: 'https://img.youtube.com/vi/gjPs2id-6nM/0.jpg', ageRating: 16 },
+          { episodeNumber: 3, title: 'garteam_s2e3_title', description: 'garteam_s2e3_title', streamUrl: 'https://www.youtube.com/embed/Yfv8X3D1ey4?autoplay=1', thumbnailUrl: 'https://img.youtube.com/vi/Yfv8X3D1ey4/0.jpg', ageRating: 16 },
+          { episodeNumber: 4, title: 'garteam_s2e4_title', description: 'garteam_s2e4_title', streamUrl: 'https://www.youtube.com/embed/MoIrcH8SYTk?autoplay=1', thumbnailUrl: 'https://img.youtube.com/vi/MoIrcH8SYTk/0.jpg', ageRating: 16 },
+          { episodeNumber: 5, title: 'garteam_s2e5_title', description: 'garteam_s2e5_title', streamUrl: 'https://www.youtube.com/embed/r6kbk0O-rxM?autoplay=1', thumbnailUrl: 'https://img.youtube.com/vi/r6kbk0O-rxM/0.jpg', ageRating: 16 },
+          { episodeNumber: 6, title: 'garteam_s2e6_title', description: 'garteam_s2e6_title', streamUrl: 'https://www.youtube.com/embed/QX-wQ6L6dvk?autoplay=1', thumbnailUrl: 'https://img.youtube.com/vi/QX-wQ6L6dvk/0.jpg', ageRating: 16 },
+          { episodeNumber: 7, title: 'garteam_s2e7_title', description: 'garteam_s2e7_title', streamUrl: 'https://www.youtube.com/embed/HDmiVVbW4Ps?autoplay=1', thumbnailUrl: 'https://img.youtube.com/vi/HDmiVVbW4Ps/0.jpg', ageRating: 16 },
+          { episodeNumber: 8, title: 'garteam_s2e8_title', description: 'garteam_s2e8_title', streamUrl: 'https://www.youtube.com/embed/1-j9Sm6rsvE?autoplay=1', thumbnailUrl: 'https://img.youtube.com/vi/1-j9Sm6rsvE/0.jpg', ageRating: 16 },
+          { episodeNumber: 9, title: 'garteam_s2e9_title', description: 'garteam_s2e9_title', streamUrl: 'https://www.youtube.com/embed/e_7ewb5ZWHk?autoplay=1', thumbnailUrl: 'https://img.youtube.com/vi/e_7ewb5ZWHk/0.jpg', ageRating: 16 },
+          { episodeNumber: 10, title: 'garteam_s2e10_title', description: 'garteam_s2e10_title', streamUrl: 'https://www.youtube.com/embed/PfnlffMyH2g?autoplay=1', thumbnailUrl: 'https://img.youtube.com/vi/PfnlffMyH2g/0.jpg', ageRating: 16 },
+          { episodeNumber: 11, title: 'garteam_s2e11_title', description: 'garteam_s2e11_title', streamUrl: 'https://www.youtube.com/embed/kJd0ycwcrC4?autoplay=1', thumbnailUrl: 'https://img.youtube.com/vi/kJd0ycwcrC4/0.jpg', ageRating: 16 },
+          { episodeNumber: 12, title: 'garteam_s2e12_title', description: 'garteam_s2e12_title', streamUrl: 'https://www.youtube.com/embed/sJuGBwtzDiw?autoplay=1', thumbnailUrl: 'https://img.youtube.com/vi/sJuGBwtzDiw/0.jpg', ageRating: 16 },
+          { episodeNumber: 13, title: 'garteam_s2e13_title', description: 'garteam_s2e13_title', streamUrl: 'https://www.youtube.com/embed/vBVyOKYjKgw?autoplay=1', thumbnailUrl: 'https://img.youtube.com/vi/vBVyOKYjKgw/0.jpg', ageRating: 16 },
+          { episodeNumber: 14, title: 'garteam_s2e14_title', description: 'garteam_s2e14_title', streamUrl: 'https://www.youtube.com/embed/SKXH4kBDr38?autoplay=1', thumbnailUrl: 'https://img.youtube.com/vi/SKXH4kBDr38/0.jpg', ageRating: 16 },
+          { episodeNumber: 15, title: 'garteam_s2e15_title', description: 'garteam_s2e15_title', streamUrl: 'https://www.youtube.com/embed/bVkbF79qabo?autoplay=1', thumbnailUrl: 'https://img.youtube.com/vi/bVkbF79qabo/0.jpg', ageRating: 16 },
+          { episodeNumber: 16, title: 'garteam_s2e16_title', description: 'garteam_s2e16_title', streamUrl: 'https://www.youtube.com/embed/C_SJ6mLb-bM?autoplay=1', thumbnailUrl: 'https://img.youtube.com/vi/C_SJ6mLb-bM/0.jpg', ageRating: 16 },
+          { episodeNumber: 17, title: 'garteam_s2e17_title', description: 'garteam_s2e17_title', streamUrl: 'https://www.youtube.com/embed/jaCl-mh2Jwc?autoplay=1', thumbnailUrl: 'https://img.youtube.com/vi/jaCl-mh2Jwc/0.jpg', ageRating: 16 },
+          { episodeNumber: 18, title: 'garteam_s2e18_title', description: 'garteam_s2e18_title', streamUrl: 'https://www.youtube.com/embed/_z7jJkI4nns?autoplay=1', thumbnailUrl: 'https://img.youtube.com/vi/_z7jJkI4nns/0.jpg', ageRating: 16 },
+          { episodeNumber: 19, title: 'garteam_s2e19_title', description: 'garteam_s2e19_title', streamUrl: 'https://www.youtube.com/embed/yZ_UmT1Uxos?autoplay=1', thumbnailUrl: 'https://img.youtube.com/vi/yZ_UmT1Uxos/0.jpg', ageRating: 16 }
+        ]
+      },
+      {
+        seasonNumber: 3,
+        episodes: [
+          { episodeNumber: 1, title: 'garteam_s3e1_title', description: 'garteam_s3e1_title', streamUrl: 'https://www.youtube.com/embed/0RTUtWC3PVs?autoplay=1', thumbnailUrl: 'https://img.youtube.com/vi/0RTUtWC3PVs/0.jpg', ageRating: 16 },
+          { episodeNumber: 2, title: 'garteam_s3e2_title', description: 'garteam_s3e2_title', streamUrl: 'https://www.youtube.com/embed/DD-JIXrT9mk?autoplay=1', thumbnailUrl: 'https://img.youtube.com/vi/DD-JIXrT9mk/0.jpg', ageRating: 16 },
+          { episodeNumber: 3, title: 'garteam_s3e3_title', description: 'garteam_s3e3_title', streamUrl: 'https://www.youtube.com/embed/BF6_c_ArIyM?autoplay=1', thumbnailUrl: 'https://img.youtube.com/vi/BF6_c_ArIyM/0.jpg', ageRating: 16 },
+          { episodeNumber: 4, title: 'garteam_s3e4_title', description: 'garteam_s3e4_title', streamUrl: 'https://www.youtube.com/embed/ac_Wy4Op-g0?autoplay=1', thumbnailUrl: 'https://img.youtube.com/vi/ac_Wy4Op-g0/0.jpg', ageRating: 16 }
         ]
       }
     ]

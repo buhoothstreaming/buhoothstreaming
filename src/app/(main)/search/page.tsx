@@ -196,7 +196,7 @@ export default function SearchPage() {
               s.category === 'Verta' || 
               s.category === 'VIVA' || 
               s.category === 'VirginsOne' ||
-              ['yomyat-daaboul-wa-alishko', 'yomyat-hamody-saif', 'kaido-moon-craft', 'sharara-show', 'deviantart-arabic', 'dont-mess-with-the-angel', 'love-island-minescope', 'mystery-lies', 'bobby-world', 'the-purge', 'kvgd69', 'blades-magic', 'mystreet', 'yuzumi-rinelia', 'karusel-disney-9', 'speedpaint'].includes(s.id)
+              ['yomyat-daaboul-wa-alishko', 'yomyat-hamody-saif', 'kaido-moon-craft', 'sharara-show', 'deviantart-arabic', 'dont-mess-with-the-angel', 'love-island-minescope', 'mystery-lies', 'bobby-world', 'the-purge', 'kvgd69', 'blades-magic', 'mystreet', 'yuzumi-rinelia', 'karusel-disney-9', 'speedpaint', 'garteam'].includes(s.id)
             );
             allContent.push(...getFiltered(mineScopeSeries).map(s => ({...s, type: 'series' as const})));
         } else if (activeChip === joyt1Chip) {
